@@ -6,3 +6,4 @@ South
 smartypants==1.6.0.3
 Markdown==2.0.3
 gunicorn==0.6.5
+django-fixture-generator==0.2.0

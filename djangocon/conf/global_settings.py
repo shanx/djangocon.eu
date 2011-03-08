@@ -100,10 +100,12 @@ INSTALLED_APPS = (
 
     'staticfiles',
     'south',
+    'fixture_generator',
 
     'djangocon.core',
     'djangocon.subscribers',
     'djangocon.blog',
+    'djangocon.accommodation',
 )
 
 SERVER_EMAIL = 'webmaster@djangocon.eu'
