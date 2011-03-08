@@ -1,10 +1,33 @@
-*.pyc
-*.db3
-.DS_Store
+# Python compiled files
+*.py[co]
+
+# Packages
+*.egg
+*.egg-info
+
+# Ignore all directories/files created by virtualenv
+bin
+build
+include
+lib
+.Python
+
+# Installer logs
 pip-log.txt
-uploads/
-settings.py
+
+# Ignore documentation builds
 docs/_build
-djangocon.egg-info/
-djangocon.db
-djangocon/static/.sass-cache/
+
+# Ignore evil mac files
+.DS_Store
+
+# Ignore local databases
+*.db3
+*.db
+*.sqlite
+
+# Ignore local uploads
+uploads/
+
+# Ignore local settings file
+settings.py
