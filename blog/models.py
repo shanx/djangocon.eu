@@ -34,7 +34,7 @@ class Post(DateAwareModel):
         return self.title
     
     def save(self, *args, **kwargs):
-        self.body = unicode(markdown(smartyPants(self.body_markdown)))
+        self.body = unicode(smartyPants(markdown(self.body_markdown)))
         super(BlogPost, self).save(*args, **kwargs)
     
     @permalink
