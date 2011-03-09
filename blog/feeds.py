@@ -1,6 +1,6 @@
 from django.contrib.syndication.feeds import Feed
 
-from djangocon.blog.models import Post
+from blog.models import Post
 
 class LatestBlogPostFeed(Feed):
     title = 'djangocon.eu'

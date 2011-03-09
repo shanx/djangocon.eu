@@ -1,6 +1,6 @@
 from django.views.decorators.cache import cache_page
 from django.views.generic.simple import direct_to_template as render
-from djangocon.subscribers.forms import SubscriberForm
+from subscribers.forms import SubscriberForm
 
 @cache_page(60*60) # Cache for 1hr.
 def placeholder(

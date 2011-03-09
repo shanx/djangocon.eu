@@ -4,8 +4,8 @@ from django.views.generic.simple import direct_to_template as render
 from django.conf import settings
 from django.http import HttpResponse, HttpResponseBadRequest
 
-from djangocon.subscribers.models import Subscriber
-from djangocon.subscribers.forms import SubscriberForm
+from subscribers.models import Subscriber
+from subscribers.forms import SubscriberForm
 
 
 @require_POST

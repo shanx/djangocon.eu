@@ -3,7 +3,7 @@ import datetime
 
 from django.db import models
 
-from djangocon.utils.models import TimeStampedModel
+from utils.models import TimeStampedModel
 
 class Subscriber(TimeStampedModel):
     """

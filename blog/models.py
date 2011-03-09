@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 from markdown import markdown
 from smartypants import smartyPants
-from djangocon.utils.models import DateAwareModel
+from utils.models import DateAwareModel
 
 
 class PublicManager(models.Manager):

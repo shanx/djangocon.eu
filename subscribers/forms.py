@@ -1,7 +1,7 @@
 from django import forms
 
-from djangocon.utils.html5widgets import EmailInput
-from djangocon.subscribers.models import Subscriber
+from utils.html5widgets import EmailInput
+from subscribers.models import Subscriber
 
 class SubscriberForm(forms.ModelForm):
     class Meta:

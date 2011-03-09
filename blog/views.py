@@ -1,7 +1,7 @@
 from django.views.decorators.cache import cache_page
 from django.views.generic import date_based, list_detail
 
-from djangocon.blog.models import Post
+from blog.models import Post
 
 @cache_page(60*5) # Cache for 5min.
 def blogpost_detail(request, year, month, day, slug):

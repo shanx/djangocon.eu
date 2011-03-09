@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from djangocon.blog.models import Post
+from blog.models import Post
 
 class BlogPostAdmin(admin.ModelAdmin):
     list_display = ('author', 'draft', 'title', 'publish_date',)
