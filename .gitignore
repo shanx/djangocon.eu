@@ -2,6 +2,7 @@
 *.db3
 .DS_Store
 pip-log.txt
+settings/local.py
 uploads/
 settings.py
 docs/_build
