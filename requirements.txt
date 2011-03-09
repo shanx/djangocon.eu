@@ -1,8 +1,13 @@
 Django
+South
+Markdown
+smartypants
+Unipath
+django-extensions
 django-gravatar
 django-staticfiles
-Fabric
-South
-smartypants==1.6.0.3
-Markdown==2.0.3
-gunicorn==0.6.5
+PIL
+django-taggit
+redis
+-e git+https://github.com/sebleier/django-redis-cache.git#egg=django_redis_cache
+epio
