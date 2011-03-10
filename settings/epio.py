@@ -12,7 +12,10 @@ DATABASES = {
     }
 }
 
-CACHE_BACKEND = 'redis_cache.cache://{0}:{1}'.format(
+CACHE_BACKEND = 'redis_cache.cache://{0}:{1}?password={2}'.format(
         config['redis']['host'],
-        config['redis']['port'])
+        config['redis']['port'],
+        config['redis']['password'])
+
+STATIC_URL = '/static/'
 

@@ -27,7 +27,7 @@ MEDIA_ROOT = PROJECT_DIR.child('media')
 MEDIA_URL = '/media/'
 
 STATIC_ROOT = PROJECT_DIR.child('static_root')
-STATIC_URL = 'http://djangocon.eu/static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     str(PROJECT_DIR.child('static')),
 )
