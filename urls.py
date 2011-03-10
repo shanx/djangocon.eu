@@ -16,3 +16,6 @@ urlpatterns = patterns('',
     (r'^barn/', include(admin.site.urls)),
 )
 
+urlpatterns += patterns('utils.views',
+    url(r'^flush_cache/$', 'flush_cache', name='flush_cache'),
+)

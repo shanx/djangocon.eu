@@ -4,16 +4,27 @@ from django.template import RequestContext, Context, loader
 from django.shortcuts import render_to_response
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
+from django.core.cache import cache
+from django.contrib.admin.views.decorators import staff_member_required
 
-from djangocon.subscribers.models import Subscriber
-from djangocon.subscribers.forms import SubscriberForm
-from djangocon.blog.models import Post
-from djangocon.attendees.models import TicketType
+from subscribers.models import Subscriber
+from subscribers.forms import SubscriberForm
+from blog.models import Post
+from attendees.models import TicketType
 
 try:
     subscription_cookie = getattr(settings, 'SUBSCRIPTION_COOKIE_NAME')
 except AttributeError:
     raise ImproperlyConfigured("SUBSCRIPTION_COOKIE_NAME must be specified in settings.")
+
+@staff_member_required
+def flush_cache(request):
+    """
+    Flushes the whole cache. A kludge, to be sure.
+    """
+    cache.clear()
+    messages.info(request, 'Cache Busted.')
+    return HttpResponseRedirect('../')
 
 def server_error(request, template_name='500.html'):
     """
