@@ -1,11 +1,8 @@
 *.pyc
 *.db3
+*.swp
 .DS_Store
 pip-log.txt
 settings/local.py
 uploads/
-settings.py
-docs/_build
-djangocon.egg-info/
 djangocon.db
-djangocon/static/.sass-cache/
