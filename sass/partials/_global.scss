@@ -1,19 +1,24 @@
 // Global style definitions
 
 h1 {
-  @extend .huge; }
+    @extend .huge;
+}
 
 h2 {
-  @extend .large; }
+    @extend .large;
+}
 
 h3 {
-  @extend .bigger; }
+    @extend .bigger;
+}
 
 h4 {
-  @extend .big; }
+    @extend .big;
+}
 
 small {
-  @extend .small; }
+    @extend .small;
+}
 
 body {
   background: rgb(232, 232, 232);
