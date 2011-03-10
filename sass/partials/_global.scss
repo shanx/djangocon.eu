@@ -40,4 +40,5 @@ html {
 body#placeholder {
     @include sans-family;
     font-weight: $sans-bold;
+    margin: 0 auto;
 }
