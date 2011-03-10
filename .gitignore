@@ -7,3 +7,4 @@ settings/local.py
 uploads/
 djangocon.db
 .sass-cache/
+static_root/
