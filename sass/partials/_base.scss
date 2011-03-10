@@ -1,0 +1,28 @@
+// compass overridden defaults
+$default-transition-duration: 0.3s;
+$default-transition-function: 'ease';
+
+
+// Global values
+$base-color: #b32017;
+$dark-color: #7e0008;
+$cream-color: #f5e6d2;
+$sub-error-color: #ebe187;
+$sub-ok-color: white;
+
+$sans-normal: 300;
+$sans-bold: 700;
+@mixin sans-family {
+    font-family: "ronnia-condensed-1","ronnia-condensed-2";
+    font-weight: $sans-normal;
+}
+
+$serif-normal: 500;
+$serif-bold: 700;
+@mixin serif-family {
+    font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+    font-weight: $serif-normal;
+}
+
+
+

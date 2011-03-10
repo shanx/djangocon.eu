@@ -23,3 +23,11 @@ body {
 
 // Selection colors (easy to forget)
 @include selection-color(unquote("rgb(255,255,158)"));
+
+
+html {
+    height: 100%;
+    width: 100%;
+    background: $base-color url(../img/bg_tiling.png) repeat left top;
+    background: $base-color url(../img/bg.png) repeat-x left top, url(../img/bg_tiling.png) repeat left top;
+}

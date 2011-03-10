@@ -6,3 +6,4 @@ pip-log.txt
 settings/local.py
 uploads/
 djangocon.db
+.sass-cache/
