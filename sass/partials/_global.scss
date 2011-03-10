@@ -21,10 +21,10 @@ small {
 }
 
 body {
-  background: rgb(232, 232, 232);
-  color: rgb(60, 60, 60);
-  // Stops Mobile Safari from auto-adjusting font-sizes
-  -webkit-text-size-adjust: 100%; }
+    background: transparent;
+    // Stops Mobile Safari from auto-adjusting font-sizes
+    -webkit-text-size-adjust: 100%;
+}
 
 // Selection colors (easy to forget)
 @include selection-color(unquote("rgb(255,255,158)"));
@@ -34,5 +34,10 @@ html {
     height: 100%;
     width: 100%;
     background: $base-color url(../img/bg_tiling.png) repeat left top;
-    background: $base-color url(../img/bg.png) repeat-x left top, url(../img/bg_tiling.png) repeat left top;
+    background: url(../img/bg.png) repeat-x left top, $base_color url(../img/bg_tiling.png) repeat left top;
+}
+
+body#placeholder {
+    @include sans-family;
+    font-weight: $sans-bold;
 }
