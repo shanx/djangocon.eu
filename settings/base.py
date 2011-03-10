@@ -25,12 +25,13 @@ CACHE_MIDDLEWARE_ANONYMOUS_ONLY = True
 
 MEDIA_ROOT = PROJECT_DIR.child('media')
 MEDIA_URL = '/media/'
-ADMIN_MEDIA_PREFIX = '/static/admin/'
 
-STATIC_URL = '/static/'
+STATIC_ROOT = PROJECT_DIR.child('static_root')
+STATIC_URL = 'http://djangocon.eu/static/'
 STATICFILES_DIRS = (
-        ('', PROJECT_DIR.child('static')),
+    str(PROJECT_DIR.child('static')),
 )
+ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.cache.UpdateCacheMiddleware',        
@@ -48,7 +49,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.debug',
     'django.core.context_processors.media',
     'django.core.context_processors.request',
-    'staticfiles.context_processors.static_url',
+    'staticfiles.context_processors.static',
 )
 
 TEMPLATE_DIRS = (PROJECT_DIR.child('templates'),)
