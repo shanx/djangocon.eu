@@ -19,9 +19,10 @@ src
 pip-log.txt
 
 # Ignore project local or generated files
+*.db
 uploads/
 settings/local.py
 .sass-cache/
 static_root/
-*.[db|db3|sqlite]
 docs/_build
+.epio-app
