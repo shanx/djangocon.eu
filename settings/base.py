@@ -6,7 +6,7 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Remco Wendt', 'remco.wendt@gmail.com'),
+    ('Remco Wendt', 'chairman@djangocon.eu'),
     ('Idan Gazit', 'idan@gazit.me'),
 )
 MANAGERS = ADMINS
@@ -34,7 +34,7 @@ STATICFILES_DIRS = (
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.cache.UpdateCacheMiddleware',        
+    'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -69,6 +69,7 @@ INSTALLED_APPS = (
     'core',
     'subscribers',
     'blog',
+    'accommodation',
 )
 
 SERVER_EMAIL = 'webmaster@djangocon.eu'
