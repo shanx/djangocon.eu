@@ -4,23 +4,28 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 
 from .models import Hotel
-from .forms import ReservationForm
+from .forms import ReservationForm, CreditcardForm
 
 def reservation(request):
     hotels = Hotel.objects.all()
 
     if request.method == 'POST':
-        form = ReservationForm(request.POST)
-        if form.is_valid():
-            reservation = form.save()
+        reservation_form = ReservationForm(request.POST)
+        creditcard_form = CreditcardForm(request.POST)
+
+        if reservation_form.is_valid() and creditcard_form.is_valid():
+            reservation = reservation_form.save()
 
             # TODO: send email
+            # TODO: redirect to thank you page
 
             return HttpResponseRedirect()
     else:
-        form = ReservationForm()
+        reservation_form = ReservationForm()
+        creditcard_form = CreditcardForm()
 
     return render_to_response("accommodation/reservation.html", {
-        'form': form,
+        'reservation_form': reservation_form,
+        'creditcard_form': creditcard_form,
         'hotels': hotels,
     }, context_instance=RequestContext(request))

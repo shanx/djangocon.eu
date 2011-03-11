@@ -36,11 +36,24 @@
 <section>
     <form id="reservation" action="." method="post" accept-charset="utf-8">
         <table>
-            {{ form.as_table}}
+            {{ reservation_form.as_table}}
+        </table>
+
+        <strong>GUARANTEE</strong> (requests without the guarantee details will not be accepted)
+
+        <table>
+            {{ creditcard_form.as_table}}
         </table>
         <input id="submit" type="submit" value="send" />
         <div id="feedback"></div>
     </form>
+
+    <p>
+        <em>YOUR CREDITCARD WILL ONLY BE CHARGED IN CASE OF A LATE CANCELLATION OR NO SHOW. PAYMENT UPON DEPARTURE.</em><br/>
+
+        You will receive the written confirmation within 48 hours by email.
+    </p>
+
 </section>
 
 <footer>
