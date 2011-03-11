@@ -1,10 +1,27 @@
-*.pyc
-*.db3
-*.swp
+# Python compiled files
+*.py[co]
+
+# Packages
+*.egg
+*.egg-info
+
+# Tmp files
 .DS_Store
+*.swp
+
+# Ignore all directories/files created by virtualenv/pip
+bin
+build
+include
+lib
+src
+.Python
 pip-log.txt
-settings/local.py
+
+# Ignore project local or generated files
 uploads/
-djangocon.db
+settings/local.py
 .sass-cache/
 static_root/
+*.[db|db3|sqlite]
+docs/_build

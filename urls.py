@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     (r'^', include('core.urls')),
     (r'^', include('subscribers.urls')),
     (r'^blog/', include('blog.urls')),
+    (r'^accommodation/', include('accommodation.urls')),
     (r'^barn/', include(admin.site.urls)),
 )
 
