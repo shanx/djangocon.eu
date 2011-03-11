@@ -5,13 +5,35 @@
 
 {% block body %}
 <header>
-<h1>DjangoCon Europe</h1>
-<h2>Hotel reservations</h2>
+    <h1>DjangoCon Europe</h1>
+    <h2>Hotel reservations</h2>
+
+    <p>Hotel reservations for DjangoCon Europe 2011 will be provided by Preferred Hotel Reservations. Special rates and conditions are available for delegates at the following hotels in the city centre of Amsterdam:</p>
 </header>
 
-<p>Hotel reservations for DjangoCon Europe 2011 will be provided by Preferred Hotel Reservations. Special rates and conditions are available for delegates at the following hotels in the city centre of Amsterdam:</p>
+{% for hotel in hotels %}
+<section class="hotel">
+    <p>
+        <strong>{{ hotel.name }} {{ hotel.get_nrofstars_display }}</strong><br/>
+        {{ hotel.address }}, {{ hotel.postal_code }} {{ hotel.place }}
+    </p>
 
-<section id="capture" class="webfont">
+    <p>{{ hotel.description }}</p>
+
+    <ul>
+        <li>Room for single use: &euro; {{ hotel.rate_single }} per room per night</li>
+        <li>Room for twin use: &euro; {{ hotel.rate_double }} per room per night</li>
+        <li>Breakfast: {{ hotel.breakfast }}</li>
+        <li>City-tax: {{ hotel.city_tax }}%</li>
+        <li>Wifi: {{ hotel.wifi }}</li>
+        <li>Cancellation policy: {{ hotel.cancellation_policy }}
+    </ul>
+
+    <p>This roomblock is available until: <em>{{ hotel.date_available }}</em></p>
+</section>
+{% endfor %}
+
+<section>
     <form id="reservation" action="." method="post" accept-charset="utf-8">
         <table>
             {{ form.as_table}}
@@ -21,14 +43,14 @@
     </form>
 </section>
 
-<p>For more than a decade Preferred is a leading intermediary in hotel reservations for the corporate market. Preferred offers independent hotel consultancy which meets the travelers requirements best. Preferred is specialised in making hotel reservations for the business traveller in both The Netherlands as well as worldwide.</p>
+<footer>
+    <p>For more than a decade Preferred is a leading intermediary in hotel reservations for the corporate market. Preferred offers independent hotel consultancy which meets the travelers requirements best. Preferred is specialised in making hotel reservations for the business traveller in both The Netherlands as well as worldwide.</p>
 
-<p>If you require more information or advise in arranging your hotel accommodation please contact Preferred Hotel Reservations.</p>
+    <p>If you require more information or advise in arranging your hotel accommodation please contact Preferred Hotel Reservations.</p>
 
-
-   +31 299 65 65 27 /     laura@preferredhotelreservations.nl
-Open from Monday - Friday, from 9am until 5pm.
-
-
-
+    <p>
+        +31 299 65 65 27 / laura@preferredhotelreservations.nl<br/>
+        Open from Monday - Friday, from 9am until 5pm.
+    </p>
+</footer>
 {% endblock body %}

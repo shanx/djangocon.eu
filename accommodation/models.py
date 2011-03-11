@@ -17,7 +17,10 @@ class Hotel(models.Model):
     date_available = models.DateField(_('special rate available until'), null=False)
 
     class Meta:
-        pass
+        ordering = ['nr_of_stars', 'name']
+
+    def get_nrofstars_display(self):
+        return ''.join(['*' for star in range(self.nr_of_stars)])
 
     def __unicode__(self):
         return self.name

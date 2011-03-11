@@ -15,6 +15,7 @@ build
 include
 lib
 src
+share
 .Python
 pip-log.txt
 
