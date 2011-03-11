@@ -6,7 +6,7 @@ from fixture_generator import fixture_generator
 from .models import Hotel
 
 @fixture_generator(Hotel)
-def create_hotels():
+def hotel():
     Hotel.objects.create(
         name = 'Ibis Hotel Amsterdam Centre',
         description = """Ibis Amsterdam Centre is situated next to the main
