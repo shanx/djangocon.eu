@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block typekit %}{% endblock typekit %}
+{% block css %}{% endblock css %}
+
+{% block body %}
+<header>
+<h1>DjangoCon Europe</h1>
+<h2>Hotel reservations</h2>
+</header>
+
+<p>Hotel reservations for DjangoCon Europe 2011 will be provided by Preferred Hotel Reservations. Special rates and conditions are available for delegates at the following hotels in the city centre of Amsterdam:</p>
+
+<section id="capture" class="webfont">
+    <form id="reservation" action="." method="post" accept-charset="utf-8">
+        <table>
+            {{ form.as_table}}
+        </table>
+        <input id="submit" type="submit" value="send" />
+        <div id="feedback"></div>
+    </form>
+</section>
+
+<p>For more than a decade Preferred is a leading intermediary in hotel reservations for the corporate market. Preferred offers independent hotel consultancy which meets the travelers requirements best. Preferred is specialised in making hotel reservations for the business traveller in both The Netherlands as well as worldwide.</p>
+
+<p>If you require more information or advise in arranging your hotel accommodation please contact Preferred Hotel Reservations.</p>
+
+
+   +31 299 65 65 27 /     laura@preferredhotelreservations.nl
+Open from Monday - Friday, from 9am until 5pm.
+
+
+
+{% endblock body %}

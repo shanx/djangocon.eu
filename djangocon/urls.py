@@ -12,6 +12,7 @@ handler500 = 'djangocon.utils.views.server_error'
 urlpatterns = patterns('',
     (r'^', include('djangocon.core.urls')),
     (r'^', include('djangocon.subscribers.urls')),
+    (r'^accommodation/', include('djangocon.accommodation.urls', app_name='accommodation')),
     (r'^blog/', include('djangocon.blog.urls')),
     (r'^barn/', include(admin.site.urls)),
 )

@@ -9,3 +9,5 @@ DATABASE_PORT = ''             # Set to empty string for default. Not used with 
 
 SERVE_STATIC_FILES = True
 DEBUG = True
+
+STATIC_ROOT = ''
