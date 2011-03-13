@@ -19,7 +19,7 @@ def submit(request):
             speaker = speaker_form.save()
 
             talk = talk_form.save(commit=False)
-            talk.speaker = speaker.pk
+            talk.speakers.add(speaker)
             talk.save()
 
             context['message'] = 'Thanks for your proposal! We will review it and let you know … Wanna propose another one?'
