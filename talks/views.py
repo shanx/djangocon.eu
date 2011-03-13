@@ -6,6 +6,7 @@ from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template import RequestContext
 
 from djangocon.speakers.forms import SpeakerForm
+from djangocon.speakers.models import Speaker
 
 from .forms import TalkForm
 from .models import Talk
@@ -17,7 +18,10 @@ def submit(request):
         talk_form = TalkForm(request.POST)
 
         if talk_form.is_valid() and speaker_form.is_valid():
-            speaker = speaker_form.save()
+            # If a speaker submits multiple talks, just add the speaker once
+            # Email uniquely identifies the speaker
+            email = speaker_form.cleaned_data.pop('email')
+            speaker, created = Speaker.objects.get_or_create(email=email, defaults=speaker_form.cleaned_data)
 
             talk = talk_form.save()
             talk.speakers.add(speaker)
