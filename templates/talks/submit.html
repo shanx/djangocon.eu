@@ -1,10 +1,6 @@
-{% extends 'base.html' %}
+{% extends 'empty_base.html' %}
 
 {% load talk_tags %}
-
-{# NOTE: Ignore layout for now #}
-{% block typekit %}{% endblock typekit %}
-{% block css %}{% endblock css %}
 
 {% block title %}Submit a talk{% endblock title %}
 
@@ -25,8 +21,6 @@
                 You can assume that all attendees have a good understanding about
                 the Django framework and will understand and welcome an in-depth talk.
             </p>
-
-
 
             {% if message %}
             <p id="talks_message">{{ message }}</p>
