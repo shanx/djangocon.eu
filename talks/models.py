@@ -3,7 +3,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from djangocon.speakers.models import Speaker
+from speakers.models import Speaker
 
 class Talk(models.Model):
     LEVEL_CHOICES = (

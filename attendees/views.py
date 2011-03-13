@@ -3,8 +3,8 @@ from django.template import RequestContext
 from django.core.urlresolvers import reverse
 from django.utils import simplejson as json
 from django.http import HttpResponse, HttpResponseRedirect
-from djangocon.attendees.models import Attendee, TicketBlock, TicketType
-from djangocon.attendees.forms import RegisterForm
+from attendees.models import Attendee, TicketBlock, TicketType
+from attendees.forms import RegisterForm
 from django.conf import settings
 from django.core.mail import send_mail
 from django.template.loader import render_to_string

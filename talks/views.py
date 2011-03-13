@@ -5,8 +5,8 @@ from __future__ import absolute_import
 from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template import RequestContext
 
-from djangocon.speakers.forms import SpeakerForm
-from djangocon.speakers.models import Speaker
+from speakers.forms import SpeakerForm
+from speakers.models import Speaker
 
 from .forms import TalkForm
 from .models import Talk
