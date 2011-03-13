@@ -2,7 +2,15 @@ from django.views.decorators.cache import cache_page
 from django.views.generic.simple import direct_to_template as render
 from subscribers.forms import SubscriberForm
 
-@cache_page(60*60) # Cache for 1hr.
+@cache_page(60*5) # Cache for 5 minutes
+def home(
+        request,
+        template_name="core/home.html",
+        extra_context=None):
+    ctx = extra_context and extra_context.copy() or {}
+    return render(request, template_name, ctx)
+
+@cache_page(60*5) # Cache for 5 minutes
 def placeholder(
         request,
         template_name="core/placeholder.html",
@@ -11,7 +19,7 @@ def placeholder(
     ctx['form'] = SubscriberForm()
     return render(request, template_name, ctx)
 
-@cache_page(60*60) # Cache for 1hr
+@cache_page(60*5) # Cache for 5 minutes
 def cached_direct(request, template_name, extra_context=None):
     ctx = extra_context and extra_context.copy() or {}
     return render(request, template_name, ctx)

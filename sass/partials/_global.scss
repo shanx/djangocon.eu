@@ -35,10 +35,11 @@ html {
     width: 100%;
     background: $base-color url(../img/bg_tiling.png) repeat left top;
     background: url(../img/bg.png) repeat-x left top, $base_color url(../img/bg_tiling.png) repeat left top;
+    @include serif-family;
+    font-weight: $serif-normal;
 }
 
-body#placeholder {
-    @include sans-family;
-    font-weight: $sans-bold;
-    margin: 0 auto;
+.amp {
+    font-family: Baskerville, Constantia, "Palatino Linotype", serif;
+    font-style: italic;
 }
