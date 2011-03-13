@@ -6,7 +6,7 @@ from django.template import RequestContext
 from .models import Hotel
 from .forms import ReservationForm, CreditcardForm
 
-def reservation(request):
+def reserve(request):
     hotels = Hotel.objects.all()
 
     if request.method == 'POST':
