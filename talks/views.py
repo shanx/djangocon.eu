@@ -27,6 +27,10 @@ def submit(request):
             talk.speakers.add(speaker)
 
             context['message'] = 'Thanks for your proposal! We will review it and let you know … Wanna propose another one?'
+
+            # If submit is succesfull, empty the talk form so
+            # the speaker can easily submit another talk
+            talk_form = TalkForm()
     else:
         speaker_form = SpeakerForm()
         talk_form = TalkForm()
