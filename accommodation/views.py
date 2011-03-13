@@ -3,6 +3,7 @@ from __future__ import absolute_import
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.core.urlresolvers import reverse
+from django.views.generic.simple import direct_to_template
 
 from .models import Hotel
 from .forms import ReservationForm, CreditcardForm
@@ -29,5 +30,5 @@ def reserve(request):
         'hotels': hotels,
     }, context_instance=RequestContext(request))
 
-def reservation_received(request):
-    pass
+def reservation_received(request, template_name='accommodation/reservation_received.html', extra_context=None):
+    return direct_to_template(request, template_name, extra_context)
