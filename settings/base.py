@@ -70,7 +70,8 @@ INSTALLED_APPS = (
     'subscribers',
     'blog',
     'accommodation',
-    'submission',
+    'speakers',
+    'talks',
 )
 
 SERVER_EMAIL = 'webmaster@djangocon.eu'
