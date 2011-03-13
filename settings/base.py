@@ -70,7 +70,6 @@ INSTALLED_APPS = (
     'subscribers',
     'blog',
     'accommodation',
-    'submission',
     'speakers',
     'talks',
 )
