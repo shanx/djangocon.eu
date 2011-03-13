@@ -11,6 +11,7 @@ from .forms import TalkForm
 from .models import Talk
 
 def submit(request):
+    context = {}
     if request.method == 'POST':
         speaker_form = SpeakerForm(request.POST)
         talk_form = TalkForm(request.POST)
@@ -18,18 +19,17 @@ def submit(request):
         if talk_form.is_valid() and speaker_form.is_valid():
             speaker = speaker_form.save()
 
-            talk = talk_form.save(commit=False)
+            talk = talk_form.save()
             talk.speakers.add(speaker)
-            talk.save()
 
             context['message'] = 'Thanks for your proposal! We will review it and let you know … Wanna propose another one?'
     else:
         speaker_form = SpeakerForm()
         talk_form = TalkForm()
 
-    context = {
+    context.update({
         'speaker_form': speaker_form,
         'talk_form': talk_form,
-    }
+    })
 
     return render_to_response('talks/submit.html', context, context_instance=RequestContext(request))
