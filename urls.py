@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     (r'^', include('subscribers.urls')),
     (r'^blog/', include('blog.urls')),
     (r'^accommodation/', include('accommodation.urls')),
+    (r'^talks/', include('talks.urls')),
     (r'^submission/', include('submission.urls')),
     (r'^barn/', include(admin.site.urls)),
 )
