@@ -36,68 +36,70 @@
                     <legend>Speaker details</legend>
 
                     <div class="formrow infield clearfix">
-                        {{ form.speaker_twitter.label_tag }}
-                        {{ form.speaker_twitter }}
-                        <p class="helptext">{{ form.speaker_twitter.helptext }}</p>
-                        {{ form.speaker_twitter.errors }}
+                        {{ speaker_form.name.label_tag }}
+                        {{ speaker_form.name }}
+                        {{ speaker_form.name.errors }}
                     </div>
 
                     <div class="formrow infield clearfix">
-                        {{ form.speaker_name.label_tag }}
-                        {{ form.speaker_name }}
-                        {{ form.speaker_name.errors }}
+                        {{ speaker_form.email.label_tag }}
+                        {{ speaker_form.email }}
+                        {{ speaker_form.email.errors }}
+                    </div>
+
+
+                    <div class="formrow infield clearfix">
+                        {{ speaker_form.twitter.label_tag }}
+                        {{ speaker_form.twitter }}
+                        <p class="helptext">{{ speaker_form.twitter.helptext }}</p>
+                        {{ speaker_form.twitter.errors }}
                     </div>
 
                     <div class="formrow infield clearfix">
-                        {{ form.speaker_website.label_tag }}
-                        {{ form.speaker_website }}
-                        {{ form.speaker_website.errors }}
+                        {{ speaker_form.website.label_tag }}
+                        {{ speaker_form.website }}
+                        {{ speaker_form.website.errors }}
                     </div>
 
-                    <div class="formrow infield clearfix">
-                        {{ form.speaker_email.label_tag }}
-                        {{ form.speaker_email }}
-                        {{ form.speaker_email.errors }}
-                    </div>
                 </fieldset>
 
                 <fieldset id="fieldset_talk_details">
                     <legend>Talk details</legend>
 
                     <div class="formrow infield clearfix">
-                        {{ form.title.label_tag }}
-                        {{ form.title }}
-                        {{ form.title.errors }}
+                        {{ talk_form.title.label_tag }}
+                        {{ talk_form.title }}
+                        {{ talk_form.title.errors }}
                     </div>
                     <div class="formrow infield clearfix">
-                        {{ form.length.label_tag }}
-                        {{ form.length }}
-                        <p class="helptext">{{ form.length.help_text }}</p>
-                        {{ form.length.errors }}
+                        {{ talk_form.length.label_tag }}
+                        {{ talk_form.length }}
+                        <p class="helptext">{{ talk_form.length.help_text }}</p>
+                        {{ talk_form.length.errors }}
                     </div>
                     <div class="formrow infield clearfix">
-                        {{ form.abstract.label_tag }}
-                        {{ form.abstract }}
-                        <p class="helptext">{{ form.abstract.help_text }}</p>
-                        {{ form.abstract.errors }}
+                        {{ talk_form.abstract.label_tag }}
+                        {{ talk_form.abstract }}
+                        <p class="helptext">{{ talk_form.abstract.help_text }}</p>
+                        {{ talk_form.abstract.errors }}
                     </div>
                     <div class="formrow infield clearfix">
-                        {{ form.description.label_tag }}
-                        {{ form.description }}
-                        <p class="helptext">{{ form.description.help_text }}</p>
-                        {{ form.description.errors }}
+                        {{ talk_form.description.label_tag }}
+                        {{ talk_form.description }}
+                        <p class="helptext">{{ talk_form.description.help_text }}</p>
+                        {{ talk_form.description.errors }}
                     </div>
                     <div class="formrow clearfix">
                         <h2>Audience Level</h2>
                         <div id="talk_audience_level">
-                            {{ form.level }}
+                            {{ talk_form.level }}
                         </div>
-                        {{ form.level.errors }}
+                        {{ talk_form.level.errors }}
                     </div>
                     <div class="formrow clearfix">
-                        {{ form.allow_recording }}
-                        {{ form.allow_recording.label_tag }}
-                        {{ form.allow_recording.errors }}
+                        {{ talk_form.allow_recording }}
+                        {{ talk_form.allow_recording.label_tag }}
+                        {{ talk_form.allow_recording.errors }}
                     </div>
 
                 </fieldset>

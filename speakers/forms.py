@@ -5,7 +5,7 @@ from django import forms
 from .models import Speaker
 
 
-class TalkForm(forms.ModelForm):
+class SpeakerForm(forms.ModelForm):
     class Meta:
         model = Speaker
         # fields = ('title', 'abstract', 'description', 'level',)
