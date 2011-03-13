@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load talk_tags %}
+
 {# NOTE: Ignore layout for now #}
 {% block typekit %}{% endblock typekit %}
 {% block css %}{% endblock css %}
@@ -35,66 +37,30 @@
                 <fieldset id="fieldset_speaker_details">
                     <legend>Speaker details</legend>
 
-                    <div class="formrow infield clearfix">
-                        {{ speaker_form.name.label_tag }}
-                        {{ speaker_form.name }}
-                        {{ speaker_form.name.errors }}
-                    </div>
+                    {% form_field speaker_form.name %}
 
-                    <div class="formrow infield clearfix">
-                        {{ speaker_form.email.label_tag }}
-                        {{ speaker_form.email }}
-                        {{ speaker_form.email.errors }}
-                    </div>
+                    {% form_field speaker_form.email %}
 
+                    {% form_field speaker_form.twitter %}
 
-                    <div class="formrow infield clearfix">
-                        {{ speaker_form.twitter.label_tag }}
-                        {{ speaker_form.twitter }}
-                        <p class="helptext">{{ speaker_form.twitter.helptext }}</p>
-                        {{ speaker_form.twitter.errors }}
-                    </div>
-
-                    <div class="formrow infield clearfix">
-                        {{ speaker_form.website.label_tag }}
-                        {{ speaker_form.website }}
-                        {{ speaker_form.website.errors }}
-                    </div>
+                    {% form_field speaker_form.website %}
 
                 </fieldset>
 
                 <fieldset id="fieldset_talk_details">
                     <legend>Talk details</legend>
 
-                    <div class="formrow infield clearfix">
-                        {{ talk_form.title.label_tag }}
-                        {{ talk_form.title }}
-                        {{ talk_form.title.errors }}
-                    </div>
-                    <div class="formrow infield clearfix">
-                        {{ talk_form.length.label_tag }}
-                        {{ talk_form.length }}
-                        <p class="helptext">{{ talk_form.length.help_text }}</p>
-                        {{ talk_form.length.errors }}
-                    </div>
-                    <div class="formrow infield clearfix">
-                        {{ talk_form.abstract.label_tag }}
-                        {{ talk_form.abstract }}
-                        <p class="helptext">{{ talk_form.abstract.help_text }}</p>
-                        {{ talk_form.abstract.errors }}
-                    </div>
-                    <div class="formrow infield clearfix">
-                        {{ talk_form.description.label_tag }}
-                        {{ talk_form.description }}
-                        <p class="helptext">{{ talk_form.description.help_text }}</p>
-                        {{ talk_form.description.errors }}
-                    </div>
-                    <div class="formrow infield clearfix">
-                        {{ talk_form.comments.label_tag }}
-                        {{ talk_form.comments }}
-                        <p class="helptext">{{ talk_form.comments.help_text }}</p>
-                        {{ talk_form.comments.errors }}
-                    </div>
+
+                    {% form_field talk_form.title %}
+
+                    {% form_field talk_form.length %}
+
+                    {% form_field talk_form.abstract %}
+
+                    {% form_field talk_form.description %}
+
+                    {% form_field talk_form.comments %}
+
                     <div class="formrow clearfix">
                         <h2>Audience Level</h2>
                         <div id="talk_audience_level">
@@ -102,6 +68,7 @@
                         </div>
                         {{ talk_form.level.errors }}
                     </div>
+
                     <div class="formrow clearfix">
                         {{ talk_form.allow_recording }}
                         {{ talk_form.allow_recording.label_tag }}
