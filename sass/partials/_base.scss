@@ -18,7 +18,6 @@ $sans-bold: 700;
 }
 
 $serif-normal: 500;
-$serif-bold: 700;
 @mixin serif-family {
     font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
     font-weight: $serif-normal;

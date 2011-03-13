@@ -2,8 +2,8 @@ from django import forms
 from django.utils.translation import gettext_lazy as _
 from django.conf import settings
 
-from djangocon.attendees.models import Voucher, Attendee, TicketType, TicketBlock
-from djangocon.attendees.utils import validate_vatid
+from attendees.models import Voucher, Attendee, TicketType, TicketBlock
+from attendees.utils import validate_vatid
 
 class RegisterForm(forms.Form):
     ticket_type = forms.ModelChoiceField(label=_('Ticket type'), queryset=TicketType.objects.available(), required=True)

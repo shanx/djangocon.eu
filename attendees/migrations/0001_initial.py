@@ -1,7 +1,7 @@
 
 from south.db import db
 from django.db import models
-from djangocon.attendees.models import *
+from attendees.models import *
 
 class Migration:
     

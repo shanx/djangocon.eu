@@ -1,7 +1,7 @@
 
 from south.db import db
 from django.db import models
-from djangocon.speakers.models import *
+from speakers.models import *
 
 class Migration:
     

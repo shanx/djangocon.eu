@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block body %}
+<nav id="main_nav">
+    <div id="main_nav_wrap">
+    <ul>
+        <li><a href="{% url home %}">Home</a></li>
+        <li><a href="tickets">Tickets</a></li>
+        <li><a href="talks">Talks</a></li>
+        <li><a href="location">Location</a></li>
+        <li><a href="lodging">Lodging</a></li>
+        <li><a href="sponsors">Sponsors</a></li>
+        <li><a href="about">About</a></li>
+    </ul>
+    </div>
+</nav>
+<header id="masthead">
+<h1><a href="{% url home %}">DjangoCon Europe 2011</a></h1>
+<div id="masthead_right">
+    <h2>June 6<sup>th</sup>, 7<sup>th</sup> <span class="amp">&amp;</span> 8<sup>th</sup> 2011</h2>
+    <h3>Amsterdam &bull; Sprints to follow on the 9<sup>th</sup> and 10<sup>th</sup></h3>
+</div>
+</header>
+
+
+
+{% endblock body %}

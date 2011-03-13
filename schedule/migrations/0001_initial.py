@@ -1,7 +1,7 @@
 
 from south.db import db
 from django.db import models
-from djangocon.schedule.models import *
+from schedule.models import *
 
 class Migration:
     

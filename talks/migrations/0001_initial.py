@@ -2,7 +2,7 @@
 
 from south.db import db
 from django.db import models
-from djangocon.talks.models import *
+from talks.models import *
 
 class Migration:
     

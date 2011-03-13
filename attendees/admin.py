@@ -1,5 +1,5 @@
 from django.contrib import admin
-from djangocon.attendees.models import Attendee, Voucher, TicketType, TicketBlock
+from attendees.models import Attendee, Voucher, TicketType, TicketBlock
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings

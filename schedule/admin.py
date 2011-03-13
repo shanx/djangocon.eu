@@ -1,5 +1,5 @@
 from django.contrib import admin
-from djangocon.schedule.models import Track, Day, Slot
+from schedule.models import Track, Day, Slot
 
 class TrackAdmin(admin.ModelAdmin):
     pass
