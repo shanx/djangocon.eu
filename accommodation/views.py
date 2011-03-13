@@ -28,3 +28,6 @@ def reserve(request):
         'creditcard_form': creditcard_form,
         'hotels': hotels,
     }, context_instance=RequestContext(request))
+
+def reservation_received(request):
+    pass
