@@ -89,6 +89,12 @@
                         <p class="helptext">{{ talk_form.description.help_text }}</p>
                         {{ talk_form.description.errors }}
                     </div>
+                    <div class="formrow infield clearfix">
+                        {{ talk_form.comments.label_tag }}
+                        {{ talk_form.comments }}
+                        <p class="helptext">{{ talk_form.comments.help_text }}</p>
+                        {{ talk_form.comments.errors }}
+                    </div>
                     <div class="formrow clearfix">
                         <h2>Audience Level</h2>
                         <div id="talk_audience_level">

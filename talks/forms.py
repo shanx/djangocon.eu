@@ -13,4 +13,4 @@ class TalkForm(forms.ModelForm):
 
     class Meta:
         model = Talk
-        fields = ('title', 'abstract', 'description', 'level', 'length',)
+        fields = ('title', 'abstract', 'description', 'level', 'length', 'comments', )
