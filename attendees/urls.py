@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
 
-urlpatterns = patterns('djangocon.attendees.views',
+urlpatterns = patterns('attendees.views',
     url(r'^$', 'register', name='attendees_register'),
     url(r'^payment/(?P<id>\d+)/$', 'paypal_redirect', name='attendees_paypal_redirect'),
     url(r'^payment/callback/$', 'paypal_callback', name='attendees_paypal_callback'),
