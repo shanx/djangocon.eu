@@ -22,9 +22,10 @@
     background-color: #620000;
     background-color: rgba(0,0,0,0.5);
     ul {
-        @include column(10);
+        @include grid(10);
         margin: 0 auto;
-        padding: 0;
+        padding-top: 0;
+        padding-bottom: 0;
         height: 48px;
         list-style-type: none;
         li {
