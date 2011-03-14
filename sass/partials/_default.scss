@@ -205,25 +205,38 @@ a#next_hotel, a#prev_hotel {
         @include sans-family;
         font-weight: $sans-bold;
         text-transform: uppercase;
-        color: $dark-color;
+        color: #222;
         letter-spacing: 0;
     }
-
+    
     h2 {
+        font-size: 20px;
+        line-height: 24px;
+        color: $dark-color;
+
+    }
+        
+    h3 {
         font-size: 16px;
         font-weight: $serif-normal;
         font-style: italic;
         letter-spacing: 0;
-        color: desaturate(lighten($dark-color, 10%), 30%);
+        //color: desaturate(lighten($dark-color, 10%), 30%);
+        color: #777;
     }
 
-    .hotelmap img {
-        border: 3px solid white;
+    .hotelmap {
+        margin-bottom: 18px;
+        a {
+            display: block;
+            width: 500px;
+            height: 100px;
+            border: 3px solid white;
+            @include transition;
+            &:hover {
+                border-color: $gold-color;
+            }
+        }
     }
-    
+   
 }
-
-
-
-
-
