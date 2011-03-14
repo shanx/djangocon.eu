@@ -233,12 +233,13 @@ html {
   font-size: 0.7em;
 }
 
-#content {
+.content {
   width: 896px;
   padding: 72px 48px 84px;
+  padding-top: 0;
   margin: 0 auto;
 }
-#content p {
+.content p {
   width: 896px;
 }
 
