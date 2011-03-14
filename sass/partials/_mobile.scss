@@ -4,5 +4,6 @@
  * Inherits styles from: Default Layout.  */
 
 @media only screen and (max-width: 767px) {
-  #{$less-grid-element} {
-    @include grid(3); } }
+  //#{$less-grid-element} {
+    //@include grid(3); }
+}
