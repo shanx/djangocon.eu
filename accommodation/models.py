@@ -1,5 +1,8 @@
+import datetime
+
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+
 
 class Hotel(models.Model):
     name = models.CharField(_('name'), blank=False, max_length=50)
@@ -38,7 +41,26 @@ class Reservation(models.Model):
         (2, '2'),
     )
 
-    hotel = models.ForeignKey(Hotel)
+    ARRIVAL_CHOICES = (
+        (datetime.date(2011, 6, 3), 'Friday, June 3th 2011'),
+        (datetime.date(2011, 6, 4), 'Saturday, June 4th 2011'),
+        (datetime.date(2011, 6, 5), 'Sunday, June 5th 2011'),
+        (datetime.date(2011, 6, 6), 'Monday, June 6th 2011'),
+        (datetime.date(2011, 6, 7), 'Tuseday, June 7th 2011'),
+        (datetime.date(2011, 6, 8), 'Wednesday, June 8th 2011'),
+        (datetime.date(2011, 6, 9), 'Thursday, June 9th 2011'),
+        (datetime.date(2011, 6, 10), 'Friday, June 10th 2011'),
+    )
+
+    DEPARTURE_CHOICES = (
+        (datetime.date(2011, 6, 6), 'Monday, June 6th 2011'),
+        (datetime.date(2011, 6, 7), 'Tuesday, June 7th 2011'),
+        (datetime.date(2011, 6, 8), 'Wednesday, June 8th 2011'),
+        (datetime.date(2011, 6, 9), 'Thursday, June 9th 2011'),
+        (datetime.date(2011, 6, 10), 'Friday, June 10th 2011'),
+        (datetime.date(2011, 6, 11), 'Saturday, June 11th 2011'),
+        (datetime.date(2011, 6, 12), 'Sunday, June 12th 2011'),
+    )
 
     title = models.CharField(_('title'), blank=False, null=False, max_length=4, choices=TITLE_CHOICES)
     surname = models.CharField(_('surname'), blank=False, null=False, max_length=50)
@@ -47,11 +69,12 @@ class Reservation(models.Model):
     town = models.CharField(_('town'), blank=False, max_length=50)
     country = models.CharField(_('country'), blank=False, max_length=50)
     phone_number = models.CharField(_('phone number'), blank=False, max_length=50)
-    email_address = models.CharField(_('email address'), blank=False, max_length=50)
+    email_address = models.EmailField(_('email address'), blank=False, max_length=50)
 
-    arrival_date = models.DateField(_('arrival date'), null=False)
-    departure_date = models.DateField(_('departure date'), null=False)
-    nr_of_nights = models.IntegerField(_('number of nights'), null=False)
+    hotel = models.ForeignKey(Hotel, verbose_name=_('hotel'), related_name='reservation_set')
+    hotel_alternative = models.ForeignKey(Hotel, name=_('hotel alternative'), related_name='alternative_set', null=True)
+    arrival_date = models.DateField(_('arrival date'), choices=ARRIVAL_CHOICES, null=False)
+    departure_date = models.DateField(_('departure date'), choices=DEPARTURE_CHOICES, null=False)
     nr_of_guests = models.IntegerField(_('number of guests'), null=False, choices=NROFGUEST_CHIOCES)
 
     name_second_guest = models.CharField(_('name second guest'), blank=True, max_length=100)
