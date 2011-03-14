@@ -2,10 +2,9 @@ from __future__ import absolute_import
 
 from django.conf.urls.defaults import *
 
-from .views import reservation
-
 urlpatterns = patterns('accommodation.views',
-    url(r'^reservation/$', reservation, name='reservation'),
+    url(r'^reserve/$', 'reserve', name='reserve'),
+    url(r'^reservation_received/$', 'reservation_received', name='reservation_received'),
 )
 
 

@@ -11,9 +11,10 @@ class HotelAdmin(admin.ModelAdmin):
 admin.site.register(Hotel, HotelAdmin)
 
 class ReservationAdmin(admin.ModelAdmin):
-    list_display = ('email_address', 'title', 'surname', 'initials',
+    list_display = ('email_address', 'hotel', 'hotel_alternative',
+                    'title', 'surname', 'initials',
                     'town', 'country', 'phone_number', 'arrival_date',
-                     'departure_date', 'nr_of_nights', 'nr_of_guests',
+                     'departure_date', 'nr_of_guests',
                      'name_second_guest', )
 
 admin.site.register(Reservation, ReservationAdmin)
