@@ -20,7 +20,7 @@ class Hotel(models.Model):
         ordering = ['nr_of_stars', 'name']
 
     def get_nrofstars_display(self):
-        return ''.join(['*' for star in range(self.nr_of_stars)])
+        return ''.join([u'\u2605' for star in range(self.nr_of_stars)])
 
     def __unicode__(self):
         return self.name
