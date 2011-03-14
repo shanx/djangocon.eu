@@ -22,6 +22,9 @@ class Hotel(models.Model):
     def get_nrofstars_display(self):
         return ''.join([u'\u2605' for star in range(self.nr_of_stars)])
 
+    def get_address_display(self):
+        return "%s, %s %s" % (self.address, self.postal_code, self.place)
+
     def __unicode__(self):
         return self.name
 
