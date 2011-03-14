@@ -13,22 +13,20 @@
 #main_nav {
     width: 100%;
     height: 48px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
     padding: 0;
-    margin: 0 0 24px 0;
+    margin: 0;
     background-color: #620000;
     background-color: rgba(0,0,0,0.5);
-    #main_nav_wrap {
-        @include column(10, true);
-        margin: 0 auto;
-        height: 48px;
-    }
     ul {
-        margin: 0;
+        @include column(10);
+        margin: 0 auto;
         padding: 0;
         height: 48px;
         list-style-type: none;
-        text-align: right;
-        float: right;
         li {
             display: block-inline;
             float: left;
@@ -39,6 +37,19 @@
             line-height: 48px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            &.right {
+                float: right;
+            }
+            #home {
+                font-weight: $sans-bold;
+            }
+            #twitter {
+                width: 30px;
+                text-indent: -9999px;
+                background-image: url(../img/twitter.png);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
             a {
                 display: block;
                 height: 48px;
@@ -50,7 +61,7 @@
                 &:hover {
                     color: white;
                     background: black;
-                    background: rgba(0,0,0,0.35);
+                    background: rgba(0,0,0,0.45);
                 }
             }
         }
@@ -59,46 +70,58 @@
 
 #masthead {
     @include grid(10);
-    margin: 0 auto;
+    margin: 48px auto 0;
     padding-top: 0;
+    padding-bottom: 0;
     @include clearfix;
+    height: 312px;
+    background: transparent url(../img/masthead_10col_left.png) no-repeat center top;
     h1 {
-        @include column(4);
-        float: left;
-        //width: 344px;
-        height: 379px;
-        text-indent: -9999px;
-        background-image: url(../img/masthead_4col.png);
+        display: none;
     }
-    #masthead_right {
-        @include column(6, true);
-        float: left;
-        padding-top: 192px;
+    h2,h3 {
+        padding-left: 344px;
     }
     h2 {
+        padding-top: 105px;
         @include serif-family;
         font-weight: $serif-normal;
         color: $cream-color;
         text-shadow: 0 3px 0 $dark-color;
         sup {
             font-size: 0.35em;
+            text-shadow: 0 2px 0 $dark-color;
         }
         em {
             font-style: normal;
             color: white;
             text-shadow: 0 4px 0 $dark-color;
-            font-size: 1.2em;
+            font-size: 1.3em;
         }
     }
     h3 {
-        @extend .big;
-        @include serif-family;
-        font-weight: $serif-normal;
-        font-style: italic;
-        
+        font-size: 18px;
+        @include sans-family;
+        font-weight: $sans-normal;
+        font-style: normal;
+        color: darken($dark-color, 10%);
+        text-shadow: 0 1px 0 rgba(255,255,255,0.1);
+        em {
+            //color: darken($dark-color, 20%);
+            font-style: normal;
+            font-weight: $sans-bold;
+        }
         sup {
             font-size: 0.7em;
         }
+    }
+}
+
+#content {
+    @include grid(10);
+    margin: 0 auto;
+    p {
+        @include column(10, true);
     }
 }
 

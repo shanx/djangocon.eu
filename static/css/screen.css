@@ -45,7 +45,7 @@ a img {
   line-height: 36px;
 }
 
-.big, h4, #masthead h3 {
+.big, h4 {
   font-size: 22px;
   line-height: 30px;
 }
@@ -112,23 +112,22 @@ html {
 #main_nav {
   width: 100%;
   height: 48px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   padding: 0;
-  margin: 0 0 24px 0;
+  margin: 0;
   background-color: #620000;
   background-color: rgba(0, 0, 0, 0.5);
 }
-#main_nav #main_nav_wrap {
-  width: 896px;
-  margin: 0 auto;
-  height: 48px;
-}
 #main_nav ul {
-  margin: 0;
+  width: 896px;
+  margin-right: 24px;
+  margin: 0 auto;
   padding: 0;
   height: 48px;
   list-style-type: none;
-  text-align: right;
-  float: right;
 }
 #main_nav ul li {
   display: block-inline;
@@ -141,6 +140,19 @@ html {
   line-height: 48px;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+#main_nav ul li.right {
+  float: right;
+}
+#main_nav ul li #home {
+  font-weight: 700;
+}
+#main_nav ul li #twitter {
+  width: 30px;
+  text-indent: -9999px;
+  background-image: url(../img/twitter.png);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 #main_nav ul li a {
   display: block;
@@ -165,31 +177,28 @@ html {
 #main_nav ul li a:hover {
   color: white;
   background: black;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 #masthead {
   width: 896px;
   padding: 72px 48px 84px;
-  margin: 0 auto;
+  margin: 48px auto 0;
   padding-top: 0;
+  padding-bottom: 0;
   overflow: hidden;
   *zoom: 1;
+  height: 312px;
+  background: transparent url(../img/masthead_10col_left.png) no-repeat center top;
 }
 #masthead h1 {
-  width: 344px;
-  margin-right: 24px;
-  float: left;
-  height: 379px;
-  text-indent: -9999px;
-  background-image: url(../img/masthead_4col.png);
+  display: none;
 }
-#masthead #masthead_right {
-  width: 528px;
-  float: left;
-  padding-top: 192px;
+#masthead h2, #masthead h3 {
+  padding-left: 344px;
 }
 #masthead h2 {
+  padding-top: 105px;
   font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
   font-weight: 500;
   font-weight: 500;
@@ -198,21 +207,38 @@ html {
 }
 #masthead h2 sup {
   font-size: 0.35em;
+  text-shadow: 0 2px 0 #7e0008;
 }
 #masthead h2 em {
   font-style: normal;
   color: white;
   text-shadow: 0 4px 0 #7e0008;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 #masthead h3 {
-  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
-  font-weight: 500;
-  font-weight: 500;
-  font-style: italic;
+  font-size: 18px;
+  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-weight: 300;
+  font-weight: 300;
+  font-style: normal;
+  color: #4b0005;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+#masthead h3 em {
+  font-style: normal;
+  font-weight: 700;
 }
 #masthead h3 sup {
   font-size: 0.7em;
+}
+
+#content {
+  width: 896px;
+  padding: 72px 48px 84px;
+  margin: 0 auto;
+}
+#content p {
+  width: 896px;
 }
 
 /* Tablet Layout: 768px.
