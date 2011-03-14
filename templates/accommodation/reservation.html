@@ -1,37 +1,87 @@
-{% extends "empty_base.html" %}
+{% extends "standard_layout.html" %}
 
-{% block body %}
+{% block extra_js %}
+<script src="{{STATIC_URL}}js/jquery.cycle.all.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#hotelcycle").cycle({
+            fx: 'scrollHorz',
+            timeout: 0,
+            prev: '#prev_hotel',
+            next: '#next_hotel',
+            pagerAnchorBuilder: pagerFactory,
+            speed: 500
+        });
+
+        var pagerFactory = function(idx, slide) {
+            return '<li'+idx+'><a href="#">'+(idx+1)+'</a></li>';
+        }
+    });
+</script>
+{% endblock extra_js %}
+
+{% block subtitle %} &mdash; Hotels{% endblock subtitle %}
+
+{% block extra_content %}id="hotels"{% endblock extra_content %}
+
+{% block content %}
+
 <header>
-    <h1>DjangoCon Europe</h1>
-    <h2>Hotel reservations</h2>
-
-    <p>Hotel reservations for DjangoCon Europe 2011 will be provided by Preferred Hotel Reservations. Special rates and conditions are available for delegates at the following hotels in the city centre of Amsterdam:</p>
+    <h1>Hotel Reservations</h1>
 </header>
 
-{% for hotel in hotels %}
-<section class="hotel">
-    <p>
-        <strong>{{ hotel.name }} {{ hotel.get_nrofstars_display }}</strong><br/>
-        {{ hotel.address }}, {{ hotel.postal_code }} {{ hotel.place }}
-    </p>
+<section id="hotels" class="subsection">
+    <header>
+        <h1>Choices</h1>
+        <p>Hotel reservations for the conference will be provided by Preferred Hotel Reservations. Special rates and conditions are available for delegates at the following hotels in the city centre of Amsterdam.</p>
+        <nav id="nav_hotels">
+            <a href="#" id="prev_hotel">&larr; previous</a>
+            <a href="#" id="next_hotel">next &rarr;</a>
+        </nav>
+    </header>
+    <div id="hotelcycle" class="subsection_body">
+        {% for hotel in hotels %}
+        <section class="hotel">
+            <header>
+            <hgroup>
+                <h1>{{ hotel.name }}</h1>
+                <h2>{{ hotel.get_address_display }}</h2>
+                <h3>{{ hotel.get_nrofstars_display }}</h3>
+                </hgroup>
+            <header>
+            <div class="hotelmap">
+                {% with hotel.get_address_display|urlencode as hoteladdr %}
+                <img src="http://maps.google.com/maps/api/staticmap?center={{hoteladdr}}&size=500x100&sensor=false&markers={{hoteladdr}}&zoom=15">
+                {% endwith %}
+            </div>
+            <p>{{ hotel.description }}</p>
 
-    <p>{{ hotel.description }}</p>
+            <table>
+                <tr>
 
-    <ul>
-        <li>Room for single use: &euro; {{ hotel.rate_single }} per room per night</li>
-        <li>Room for twin use: &euro; {{ hotel.rate_double }} per room per night</li>
-        <li>Breakfast: {{ hotel.breakfast }}</li>
-        <li>City-tax: {{ hotel.city_tax }}%</li>
-        <li>Wifi: {{ hotel.wifi }}</li>
-        <li>Cancellation policy: {{ hotel.cancellation_policy }}
-    </ul>
-
-    <p>This roomblock is available until: <em>{{ hotel.date_available }}</em></p>
-</section>
-{% endfor %}
-
+                </tr>
+            </table>
+            <ul>
+                <li>Room for single use: &euro; {{ hotel.rate_single }} per room per night</li>
+                <li>Room for twin use: &euro; {{ hotel.rate_double }} per room per night</li>
+                <li>Breakfast: {{ hotel.breakfast }}</li>
+                <li>City-tax: {{ hotel.city_tax }}%</li>
+                <li>Wifi: {{ hotel.wifi }}</li>
+                <li>Cancellation policy: {{ hotel.cancellation_policy }}
+            </ul>
+            <p>This roomblock is available until: <em>{{ hotel.date_available }}</em></p>
+        </section>
+        {% endfor %}
+    </div>
+    </section>
 <section>
-    <form id="reservation" action="." method="post" accept-charset="utf-8">
+
+<form id="reservation" action="." method="post" accept-charset="utf-8">
+        {% for field in reservation_form %}
+            <div class="formrow">
+                
+            </div>
+        {% endfor %}
         <table>
             {{ reservation_form.as_table}}
         </table>
@@ -63,4 +113,4 @@
         Open from Monday - Friday, from 9am until 5pm.
     </p>
 </footer>
-{% endblock body %}
+{% endblock content %}

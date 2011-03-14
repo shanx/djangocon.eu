@@ -20,7 +20,8 @@
     padding: 0;
     margin: 0;
     background-color: #620000;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
+    z-index: 9999;
     ul {
         @include grid(10);
         margin: 0 auto;
@@ -62,7 +63,7 @@
                 &:hover {
                     color: white;
                     background: black;
-                    background: rgba(0,0,0,0.45);
+                    background: rgba(0,0,0,0.65);
                 }
             }
         }
@@ -76,7 +77,7 @@
     padding-bottom: 0;
     @include clearfix;
     height: 312px;
-    background: transparent url(../img/masthead_10col_left.png) no-repeat center top;
+    background: transparent url(../img/masthead_10col_left_gradient.png) no-repeat center top;
     h1 {
         display: none;
     }
@@ -120,11 +121,106 @@
 
 .content {
     @include grid(10);
-    padding-top: 0;
+    padding-top: 24px;
     margin: 0 auto;
-    p {
+    &>header>h1 {
         @include column(10, true);
+        @include sans-family;
+        font-weight: $sans-normal;
+        text-transform: uppercase;
+        @extend .huge;
+        letter-spacing: 1px;
+        color: $cream-color;
+        text-shadow: 0 2px 0 $dark-color;
     }
+    
+}
+
+.subsection {
+    @include column(10, true);
+    margin-top: 48px;
+    @include clearfix;
+    &>header {
+        @include column(4);
+        float: left;
+        h1 {
+            @extend .large;
+            margin-bottom: 0.5em;
+            color: $cream-color;
+            @include serif-family;
+            font-weight: $serif-normal;
+            font-style: italic;
+            letter-spacing: 0;
+        }
+    }
+    .subsection_body {
+        @include column(6, true);
+        float: left;
+    }
+}
+
+#nav_hotels {
+    display: block;
+    margin-top: 1em;
+}
+
+a#next_hotel, a#prev_hotel {
+    position: relative;
+    background-color: $dark-color;
+    color: $cream-color;
+    font-size: 1.25em;
+    padding: 0.4em;
+    @include border-radius(3px);
+    text-decoration: none;
+    font-weight: $sans-normal;
+    @include sans-family;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    &:hover {
+        color: white;
+        background-color: lighten($dark-color, 2%);
+        top: -1px;
+        @include box-shadow(rgba(0,0,0,0.5) 0 1px 0);
+    }
+    &:active {
+        color: white;
+        background-color: lighten($dark-color, 2%);
+        top: 0;
+        @include box-shadow(none);
+    }
+}
+
+.hotel {
+    background-color: $cream-color;
+    @include border-radius(8px);
+    border: 1px solid white;
+    padding: 10px;
+    width: 506px;
+    @include box-shadow(rgba(0,0,0,0.5) 0 1px 0);
+    
+    h1 {
+        @extend .bigger;
+        @include sans-family;
+        font-weight: $sans-bold;
+        text-transform: uppercase;
+        color: $dark-color;
+        letter-spacing: 0;
+    }
+
+    h2 {
+        font-size: 16px;
+        font-weight: $serif-normal;
+        font-style: italic;
+        letter-spacing: 0;
+        color: desaturate(lighten($dark-color, 10%), 30%);
+    }
+
+    .hotelmap img {
+        border: 3px solid white;
+    }
+    
 }
 
 
