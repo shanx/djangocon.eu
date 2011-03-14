@@ -65,11 +65,11 @@ body {
 }
 
 ::selection {
-  background: rgb(255,255,158);
+  background: #ffff9e;
 }
 
 ::-moz-selection {
-  background: rgb(255,255,158);
+  background: #ffff9e;
 }
 
 img::selection {
@@ -81,7 +81,7 @@ img::-moz-selection {
 }
 
 body {
-  -webkit-tap-highlight-color: rgb(255,255,158);
+  -webkit-tap-highlight-color: #ffff9e;
 }
 
 html {
