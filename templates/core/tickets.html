@@ -10,112 +10,135 @@
     <h1>Tickets</h1>
 </header>
 
-<section id="tickets" class="subsection">
+<section id="rates" class="subsection">
     <header>
-        <h1>Attending DjangoCon Europe 2011</h1>
+        <h1>Rates</h1>
+        <p>
+            DjangoCon is a community conference, help the organisation by buying
+            your tickets early.
+        </p>
     </header>
 
-    <p>
-        DjangoCon Europe 2011 Tickets can be booked through: <a href="https://v1.paylogic.nl/frontoffice/?command=paymentMenu&merchantModuleID=48029&language=en">Paylogic</a>
-        (a Dutch Python/Django company). Before you do that: please read all the info below.
-    </p>
+    <section id="rates_overview" class="subsection_body">
+        <h1>Registration is open!</h1>
+        <p>
+            DjangoCon Europe 2011 tickets can be bought through: <a href="https://v1.paylogic.nl/frontoffice/?command=paymentMenu&merchantModuleID=48029&language=en">Paylogic ticket service</a>
+            (a Dutch Python/Django company). Before you do that: please read all the info below.
+        </p>
+        <table>
+            <tr>
+                <th></th>
+                <th>Early bird</th>
+                <th>Regular rate</th>
+                <th>Night owl rate</th>
+            </tr>
+            <tr>
+                <td>Corporate</td>
+                <td>&euro; 529,-</td>
+                <td>&euro; 599,-</td>
+                <td>&euro; 699,-</td>
+            </tr>
+            <tr>
+                <td>Individual</td>
+                <td>&euro; 349,-</td>
+                <td>&euro; 399,-</td>
+                <td>&euro; 469,-</td>
+            </tr>
+            <tr>
+                <td>Student</td>
+                <td>&euro; 179,-</td>
+                <td>&euro; 199,-</td>
+                <td>&euro; 229,-</td>
+            </tr>
+        </table>
 
-    <h2>Rates</h2>
-    <ul>
-        <li><em>Early bird registration will end on: Friday, April 1st.</em></li>
-        <li><em>Regular rate will be available until: Friday, May 13th. (friggatriskaidekaphobia!)</em></li>
-    <ul>
-
-    <table>
-        <tr>
-            <th></th>
-            <th>Early bird</th>
-            <th>Regular rate</th>
-            <th>Night owl rate</th>
-        </tr>
-        <tr>
-            <td>Corporate</td>
-            <td>&euro; 529,-</td>
-            <td>&euro; 599,-</td>
-            <td>&euro; 699,-</td>
-        </tr>
-        <tr>
-            <td>Individual</td>
-            <td>&euro; 349,-</td>
-            <td>&euro; 399,-</td>
-            <td>&euro; 469,-</td>
-        </tr>
-        <tr>
-            <td>Student</td>
-            <td>&euro; 179,-</td>
-            <td>&euro; 199,-</td>
-            <td>&euro; 229,-</td>
-        </tr>
-    </table>
-
-    <h2>Which rate should I pay?</h2>
-    <h3>The short answer</h3>
-    <p>
-        If you are paying your own way to the conference, select <strong>Individual</strong>. If
-        your employer is paying for you to attend DjangoCon, select <strong>Corporate</strong>.
-        This is a community-supported conference; <strong>please be honest when choosing a ticket type</strong>.
-    </p>
-
-    <h3>Corporate rate</h2>
-    <p>
-        If you have your own company or your employer is paying for your trip (which he should): please opt for the corporate rate.
-        Included in your ticket purchase is the warm fuzzy feeling of knowing you enabled more students to afford their attendance
-        fee <em>and</em> food for the month.
-    </p>
-
-    <h3>Individual rate</h2>
-    <p>
-        If you use Django for personal projects and want to attend the conference on your own expense. In that case:
-        the individual rate is all you ever wanted.
-    </p>
-
-    <h3>Student rate</h3>
-    <p>
-        The student rate is for full-time students only and is limited in number. Students who have
-        bought a ticket should email us a scan of a valid student ID as proof within 48 hours or risk
-        their ticket being cancelled.
-    </p>
-    <p>
-        Academics and employees of non-profits should register at the normal rates, depending on whether
-        you are paying your own way to the conference (see above).
-    </p>
-
-    <h2>What you're getting</h2>
-    <p>
-        Registration for the conference includes:
-    </p>
-    <ul>
-        <li>Access to all talks and sessions</li>
-        <li>Free lunch</li>
-        <li>Coffee and snacks during breaks</li>
-        <li>Free wifi at the conference</li>
-        <li>And... a beautiful t-shirt, of course</li>
-    </ul>
-
-    <h2>Buy tickets early</h2>
-    <p>
-        DjangoCon is a community effort, organised by Djangonauts like you.
-        If you plan to attend the conference (which you do, right?) then
-        please buy your tickets early, it will allow us to get our financial
-        picture clear earlier, which helps the organisation <em>a lot</em>.
-    </p>
-    <p>
-        Furthermore buying your ticket <em>before April 1st</em> gives you
-        the early bird discount.
-    </p>
-
-    <h2>Hotel and lodging</h2>
-    <p>
-        We strongly encourage you to book a room at the very moment you book your tickets,
-        see: <a href="{% url accommodation:reserve %}">hotels</a>. If you do so you can
-        make use of the special price and conditions available to us through our DjangoCon room blocks.
-        <em>The room blocks will expire at: April 1st</em>
-    </p>
+        <h1>Deadlines</h1>
+        <ul>
+            <li><em>Early bird registration will end on: Friday, April 1st.</em></li>
+            <li><em>Regular rate will be available until: Friday, May 13th.</em></li>
+        </ul>
+    </section>
 </section>
+
+<section id="guidelines" class="subsection">
+    <header>
+        <h1>Additional info</h1>
+        <p>
+            All those little things you need to know before giving us your money.
+        </p>
+    </header>
+
+    <section class="subsection_body">
+
+        <h1>Which rate should I pay?</h1>
+        <h2>The short answer</h2>
+        <p>
+            If you are paying your own way to the conference, select <strong>Individual</strong>. If
+            your employer is paying for you to attend DjangoCon, select <strong>Corporate</strong>.
+            This is a community-supported conference; <strong>please be honest when choosing a ticket type</strong>.
+        </p>
+
+        <h2>Corporate rate</h2>
+        <p>
+            If you have your own company or your employer is paying for your trip (which he should): please opt for the corporate rate.
+            Included in your ticket purchase is the warm fuzzy feeling of knowing you enabled more students to afford their attendance
+            fee <em>and</em> food for the month.
+        </p>
+
+        <h2>Individual rate</h2>
+        <p>
+            If you use Django for personal projects and want to attend the conference on your own expense. In that case:
+            the individual rate is all you ever wanted.
+        </p>
+
+        <h2>Student rate</h2>
+        <p>
+            The student rate is for full-time students only and is limited in number. Students who have
+            bought a ticket should email us a scan of a valid student ID as proof within 48 hours or risk
+            their ticket being cancelled.
+        </p>
+        <p>
+            Academics and employees of non-profits should register at the normal rates, depending on whether
+            you are paying your own way to the conference (see above).
+        </p>
+
+        <h1>What you're getting</h1>
+        <p>
+            Registration for the conference includes:
+        </p>
+        <ul>
+            <li>Access to all talks and sessions</li>
+            <li>Free lunch</li>
+            <li>Coffee and snacks during breaks</li>
+            <li>Free wifi at the conference</li>
+            <li>And... a beautiful t-shirt, of course</li>
+        </ul>
+
+        <h1>Buy tickets early</h1>
+        <p>
+            DjangoCon is a community effort, organised by Djangonauts like you.
+            If you plan to attend the conference (which you do, right?) then
+            please buy your tickets early, it will allow us to get our financial
+            picture clear earlier, which helps the organisation <em>a lot</em>.
+        </p>
+        <p>
+            Furthermore buying your ticket <em>before April 1st</em> gives you
+            the early bird discount.
+        </p>
+
+        <h1>Hotel and lodging</h1>
+        <p>
+            We strongly encourage you to book a room at the very moment you book your tickets,
+            see: <a href="{% url accommodation:reserve %}">hotels</a>. If you do so you can
+            make use of the special price and conditions available to us through our DjangoCon room blocks.
+        </p>
+        <p>
+            <em>The room blocks will expire at: April 1st</em>
+        </p>
+    </section>
+</section>
+
+
+
 
 {% endblock content %}
