@@ -3,9 +3,9 @@
 {% block body %}
 <nav id="main_nav">
     <ul>
-        <li><a href="{% url home %}" id="home">Home</a></li>
+        <li><a href="{% url core:home %}" id="home">Home</a></li>
         <li><a href="blog">Blog</a></li>
-        <li><a href="tickets">Tickets</a></li>
+        <li><a href="{% url core:tickets %}">Tickets</a></li>
         <li><a href="{% url accommodation:reserve %}">Hotels</a></li>
         <li><a href="{% url talks:submit %}">Talks</a></li>
         <li><a href="location">Location</a></li>
@@ -16,7 +16,7 @@
     </ul>
 </nav>
 <header id="masthead">
-<h1><a href="{% url home %}">DjangoCon Europe 2011</a></h1>
+<h1><a href="{% url core:home %}">DjangoCon Europe 2011</a></h1>
 <h2>June <em>6<sup>th</sup></em>, <em>7<sup>th</sup></em> <span class="amp">&amp;</span> <em>8<sup>th</sup></em> 2011</h2>
 <h3>Join us in <em>Amsterdam</em> for <em>talks</em>, <em>sprints</em> and a ton of <em>fun</em>!</h3>
     <!--Sprints to follow on the 9<sup>th</sup> and 10<sup>th</sup></h3>-->

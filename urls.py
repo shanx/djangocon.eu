@@ -10,7 +10,7 @@ admin.autodiscover()
 handler500 = 'utils.views.server_error'
 
 urlpatterns = patterns('',
-    (r'^', include('core.urls')),
+    (r'^', include('core.urls', namespace='core', app_name='core')),
     (r'^', include('subscribers.urls')),
     (r'^blog/', include('blog.urls')),
     (r'^accommodation/', include('accommodation.urls', namespace='accommodation', app_name='accommodation')),
