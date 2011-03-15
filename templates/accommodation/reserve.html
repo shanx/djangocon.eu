@@ -93,36 +93,19 @@
         {% endfor %}
     </div>
     </section>
+
+
 <section>
+<p>To make a reservation please download the <a href="/static/downloads/djangocon-europe-2011-hotel-reservation-form.pdf">reservation form</a> and send it per fax or e-mail to Mrs. Laura Peters, our contact at Preferred Hotel Reservations. If you have any additional questions you can call or email Mrs. Laura Peters. Please refer to DjangoCon when doing so.
+</p>
 
-<form id="reservation" action="." method="post" accept-charset="utf-8">
-        {% for field in reservation_form %}
-            <div class="formrow">
-                
-            </div>
-        {% endfor %}
-        <table>
-            {{ reservation_form.as_table}}
-        </table>
-
-        <input id="submit" type="submit" value="send" />
-        <div id="feedback"></div>
-    </form>
-
-    <p>
-        <em>You will be contacted by Preferred Hotel Reservations within 48 hours to collect billing details.</em>
-    </p>
+<p>
+    Mrs. Laura Peters.<br/>
+    Tel: +31 299 65 65 27<br/>
+    Fax: +31 299 65 54 94<br/>
+    Email: laura@preferredhotelreservations.nl<br/>
+    Open from Monday - Friday, from 9am until 5pm.
+</p>
 
 </section>
-
-<footer>
-    <p>For more than a decade Preferred is a leading intermediary in hotel reservations for the corporate market. Preferred offers independent hotel consultancy which meets the travelers requirements best. Preferred is specialised in making hotel reservations for the business traveller in both The Netherlands as well as worldwide.</p>
-
-    <p>If you require more information or advise in arranging your hotel accommodation please contact Preferred Hotel Reservations.</p>
-
-    <p>
-        +31 299 65 65 27 / laura@preferredhotelreservations.nl<br/>
-        Open from Monday - Friday, from 9am until 5pm.
-    </p>
-</footer>
 {% endblock content %}
