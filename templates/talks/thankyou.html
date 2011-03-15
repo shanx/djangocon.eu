@@ -1,0 +1,29 @@
+{% extends 'standard_layout.html' %}
+{% load talk_tags %}
+
+{% block subtitle %} &mdash; Talk submission received{% endblock subtitle %}
+
+{% block extra_content %}id="talk_thankyou"{% endblock extra_content %}
+
+{% block content %}
+<header>
+    <h1>Talk Submitted</h1>
+</header>
+<section id="talk_whatsnext" class="subsection">
+    <header>
+        <h1>What's next?</h1>
+        <ol>
+            <li>Submit a talk.</li>
+            <li>? ? ?</li>
+            <li>Profit!</li>
+        </ol>
+    </header>
+    <section class="subsection_body">
+        <h1>How exciting!</h1>
+        <p>
+            We're terribly happy that you want to speak at DjangoCon Europe.
+            You'll be notified about your talk(s) by the 1<sup>st</sup> of May.
+        </p>
+        <p>Feel free to <a href="{% url talks:submit %}">submit more talk propossals</a>, if you like.</p>
+
+{% endblock content %}

@@ -152,12 +152,19 @@
             font-style: italic;
             letter-spacing: 0;
         }
-        p {
+        p,li {
             color: $cream-color;
             font-size: 16px;
             @include sans-family;
             font-weight: $sans-normal;
             text-transform: uppercase;
+        }
+        ol {
+            list-style: decimal inside;
+            
+        }
+        ul {
+            list-style: disc inside;
         }
         a {
             display: inline-block;
@@ -217,12 +224,12 @@
         ul {
             list-style-position: inside;
         }
-        
-
         input[type=text], textarea {
             width: 568px;
         }
-        
+        button {
+            width: 100%;
+        }
     }
 }
 
@@ -265,6 +272,15 @@ form {
             @include box-shadow(rgba(0,0,0,0.5) 0 1px 0);
             @include border-radius(2px);
         }
+    }
+    .formrow.error {
+        &>label, &>.required>label {
+            font-weight: $sans-bold;
+            color: $dark-color;
+        }
+    }
+    .errorlist {
+        color: $dark-color;
     }
     input[type=text], textarea {
         @include serif-family;
@@ -318,13 +334,7 @@ a#next_hotel, a#prev_hotel {
 }
 
 .hotel {
-    background-color: $cream-color;
-    @include border-radius(8px);
-    border: 1px solid white;
-    padding: 10px;
-    width: 506px;
-    @include box-shadow(rgba(0,0,0,0.5) 0 1px 0);
-    
+    padding: 10px 15px;
     h1 {
         @extend .bigger;
         @include sans-family;
@@ -349,7 +359,7 @@ a#next_hotel, a#prev_hotel {
         margin-bottom: 18px;
         a {
             display: block;
-            width: 500px;
+            width: 584px;
             height: 100px;
             border: 3px solid white;
             @include transition;

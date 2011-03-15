@@ -10,7 +10,9 @@
             prev: '#prev_hotel',
             next: '#next_hotel',
             pagerAnchorBuilder: pagerFactory,
-            speed: 500
+            speed: 500,
+            height: 750
+
         });
 
         var pagerFactory = function(idx, slide) {
@@ -33,7 +35,7 @@
 <section id="hotels" class="subsection">
     <header>
         <h1>Choices</h1>
-        <p>Hotel reservations for the conference will be provided by Preferred Hotel Reservations. Special rates and conditions are available for delegates at the following hotels in the city centre of Amsterdam.</p>
+        <p><a href="http://www.preferredhotelreservations.nl/?l=en">Preferred Hotel Reservations</a> is providing room booking services for the conference. Special rates and conditions are available for delegates at the following hotels in the city centre of Amsterdam.</p>
         <nav id="nav_hotels">
             <a href="#" id="prev_hotel">&larr; previous</a>
             <a href="#" id="next_hotel">next &rarr;</a>
@@ -43,7 +45,7 @@
         {% for hotel in hotels %}
         <section class="hotel">
             <header>
-            <hgroup>
+                <hgroup>
                 <h1>{{ hotel.name }}</h1>
                 <h2>{{ hotel.get_nrofstars_display }}</h2>
                 <h3>{{ hotel.get_address_display }}</h3>
@@ -52,12 +54,11 @@
             <div class="hotelmap">
                 {% with hotel.get_address_display|urlencode as hoteladdr %}
                 <a href="http://maps.google.com/maps?q={{hoteladdr}}">
-                    <img width="500" height="100" src="http://maps.google.com/maps/api/staticmap?center={{hoteladdr}}&size=500x100&sensor=false&markers={{hoteladdr}}&zoom=15">
+                    <img width="584" height="100" src="http://maps.google.com/maps/api/staticmap?center={{hoteladdr}}&size=584x100&sensor=false&markers={{hoteladdr}}&zoom=15">
                 </a>
                 {% endwith %}
             </div>
             <p>{{ hotel.description }}</p>
-
             <table>
                 <caption>All rates are per room, per night.</caption>
                 <tr>
@@ -74,7 +75,7 @@
                 </tr>
                 <tr>
                     <th>Municipal tax</th>
-                    <td>{{ hotel.city_tax }}</td>
+                    <td>{{ hotel.city_tax }}%</td>
                 </tr>
                 <tr>
                     <th>WiFi</th>
@@ -94,18 +95,29 @@
     </div>
     </section>
 
-
-<section>
-<p>To make a reservation please download the <a href="/static/downloads/djangocon-europe-2011-hotel-reservation-form.pdf">reservation form</a> and send it per fax or e-mail to Mrs. Laura Peters, our contact at Preferred Hotel Reservations. If you have any additional questions you can call or email Mrs. Laura Peters. Please refer to DjangoCon when doing so.
-</p>
-
-<p>
-    Mrs. Laura Peters.<br/>
-    Tel: +31 299 65 65 27<br/>
-    Fax: +31 299 65 54 94<br/>
-    Email: laura@preferredhotelreservations.nl<br/>
-    Open from Monday - Friday, from 9am until 5pm.
-</p>
-
+<section class="subsection">
+    <header>
+        <h1>Book a Room</h1>
+        <p>For when you've finished deliberating.</p>
+    </header>
+    <section class="subsection_body">
+        <h1>Send me a postcard, fill in a form</h1>
+        <p>
+            To make a reservation please download the <a
+                href="/static/downloads/djangocon-europe-2011-hotel-reservation-form.pdf">reservation
+                form</a> and send it by fax or e-mail to Mrs. Laura Peters, our
+            contact at Preferred Hotel Reservations. If you have any additional
+            questions you can call or email her—remember to reference
+            “DjangoCon” when doing so!
+        </p>
+        <h1>Booking Contact</h1>
+        <p>
+            <strong>Mrs. Laura Peters</strong><br/>
+            <em>Tel:</em> +31 299 65 65 27<br/>
+            <em>Fax:</em> +31 299 65 54 94<br/>
+            <em>Email:</em> laura@preferredhotelreservations.nl<br/>
+            Open from Monday - Friday, from 9am until 5pm.
+        </p>
+    </section>
 </section>
 {% endblock content %}
