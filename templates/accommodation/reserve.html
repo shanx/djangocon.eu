@@ -33,7 +33,7 @@
 <section id="hotels" class="subsection">
     <header>
         <h1>Choices</h1>
-        <p>Hotel reservations for the conference will be provided by Preferred Hotel Reservations. Special rates and conditions are available for delegates at the following hotels in the city centre of Amsterdam.</p>
+        <p><a href="http://www.preferredhotelreservations.nl/?l=en">Preferred Hotel Reservations</a> is providing room booking services for the conference. Special rates and conditions are available for delegates at the following hotels in the city centre of Amsterdam.</p>
         <nav id="nav_hotels">
             <a href="#" id="prev_hotel">&larr; previous</a>
             <a href="#" id="next_hotel">next &rarr;</a>
@@ -43,7 +43,7 @@
         {% for hotel in hotels %}
         <section class="hotel">
             <header>
-            <hgroup>
+                <hgroup>
                 <h1>{{ hotel.name }}</h1>
                 <h2>{{ hotel.get_nrofstars_display }}</h2>
                 <h3>{{ hotel.get_address_display }}</h3>
@@ -57,7 +57,6 @@
                 {% endwith %}
             </div>
             <p>{{ hotel.description }}</p>
-
             <table>
                 <caption>All rates are per room, per night.</caption>
                 <tr>
@@ -74,7 +73,7 @@
                 </tr>
                 <tr>
                     <th>Municipal tax</th>
-                    <td>{{ hotel.city_tax }}</td>
+                    <td>{{ hotel.city_tax }}%</td>
                 </tr>
                 <tr>
                     <th>WiFi</th>
@@ -93,28 +92,28 @@
         {% endfor %}
     </div>
     </section>
-<section>
 
-<form id="reservation" action="." method="post" accept-charset="utf-8">
+<section class="subsection">
+    <header>
+        <h1>Book a Room</h1>
+        <p>Use the form to book a room with at one of the partner hotels. You will be contacted by Preferred Hotel Reservations within 48 hours to collect billing details.</p>
+    </header>
+    <form id="reservation" class="subsection_body" action="." method="post" accept-charset="utf-8">
         {% for field in reservation_form %}
-            <div class="formrow">
-                
-            </div>
+        <div class="formrow {% if field.errors %}error{% endif %}">
+            {% if field.required %}
+                <div class="required">{{ field.label_tag }}</div>
+            {% else %}
+                {{ field.label_tag }}
+            {% endif %}
+            {{ field.errors }}
+            {{ field }}
+        </div>
         {% endfor %}
-        <table>
-            {{ reservation_form.as_table}}
-        </table>
-
         <input id="submit" type="submit" value="send" />
         <div id="feedback"></div>
     </form>
-
-    <p>
-        <em>You will be contacted by Preferred Hotel Reservations within 48 hours to collect billing details.</em>
-    </p>
-
 </section>
-
 <footer>
     <p>For more than a decade Preferred is a leading intermediary in hotel reservations for the corporate market. Preferred offers independent hotel consultancy which meets the travelers requirements best. Preferred is specialised in making hotel reservations for the business traveller in both The Netherlands as well as worldwide.</p>
 
