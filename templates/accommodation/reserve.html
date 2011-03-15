@@ -96,34 +96,26 @@
 <section class="subsection">
     <header>
         <h1>Book a Room</h1>
-        <p>Use the form to book a room with at one of the partner hotels. You will be contacted by Preferred Hotel Reservations within 48 hours to collect billing details.</p>
+        <p>For when you've finished deliberating.</p>
     </header>
-    <form id="reservation" class="subsection_body" action="." method="post" accept-charset="utf-8">
-        {% for field in reservation_form %}
-        <div class="formrow {% if field.errors %}error{% endif %}">
-            {% if field.required %}
-                <div class="required">{{ field.label_tag }}</div>
-            {% else %}
-                {{ field.label_tag }}
-            {% endif %}
-            {{ field.errors }}
-            {{ field }}
-        </div>
-        {% endfor %}
-        <input id="submit" type="submit" value="send" />
-        <div id="feedback"></div>
-    </form>
+    <section class="subsection_body">
+        <h1>Send me a postcard, fill in a form</h1>
+        <p>
+            To make a reservation please download the <a
+                href="/static/downloads/djangocon-europe-2011-hotel-reservation-form.pdf">reservation
+                form</a> and send it by fax or e-mail to Mrs. Laura Peters, our
+            contact at Preferred Hotel Reservations. If you have any additional
+            questions you can call or email her—remember to reference
+            “DjangoCon” when doing so!
+        </p>
+        <h1>Booking Contact</h1>
+        <p>
+            <strong>Mrs. Laura Peters</strong><br/>
+            <em>Tel:</em> +31 299 65 65 27<br/>
+            <em>Fax:</em> +31 299 65 54 94<br/>
+            <em>Email:</em> laura@preferredhotelreservations.nl<br/>
+            Open from Monday - Friday, from 9am until 5pm.
+        </p>
+    </section>
 </section>
-<footer>
-<p>To make a reservation please download the <a href="/static/downloads/djangocon-europe-2011-hotel-reservation-form.pdf">reservation form</a> and send it per fax or e-mail to Mrs. Laura Peters, our contact at Preferred Hotel Reservations. If you have any additional questions you can call or email Mrs. Laura Peters. Please refer to DjangoCon when doing so.
-</p>
-
-<p>
-    Mrs. Laura Peters.<br/>
-    Tel: +31 299 65 65 27<br/>
-    Fax: +31 299 65 54 94<br/>
-    Email: laura@preferredhotelreservations.nl<br/>
-    Open from Monday - Friday, from 9am until 5pm.
-</p>
-</footer>
 {% endblock content %}
