@@ -37,4 +37,4 @@ def submit(request, template='talks/submit.html', extra_context=None):
 
 def thankyou(request, template='talks/thankyou.html', extra_context=None):
     ctx = extra_context and extra_context.copy() or {}
-    return direct_to_template(request, 'talks/thankyou.html', ctx)
+    return render(request, 'talks/thankyou.html', ctx)
