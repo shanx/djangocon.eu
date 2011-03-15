@@ -152,12 +152,19 @@
             font-style: italic;
             letter-spacing: 0;
         }
-        p {
+        p,li {
             color: $cream-color;
             font-size: 16px;
             @include sans-family;
             font-weight: $sans-normal;
             text-transform: uppercase;
+        }
+        ol {
+            list-style: decimal inside;
+            
+        }
+        ul {
+            list-style: disc inside;
         }
         a {
             display: inline-block;

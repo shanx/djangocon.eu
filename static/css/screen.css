@@ -321,13 +321,19 @@ button:disabled:active, button:disabled:hover {
   font-style: italic;
   letter-spacing: 0;
 }
-.subsection > header p {
+.subsection > header p, .subsection > header li {
   color: #f5e6d2;
   font-size: 16px;
   font-family: "ronnia-condensed-1","ronnia-condensed-2";
   font-weight: 300;
   font-weight: 300;
   text-transform: uppercase;
+}
+.subsection > header ol {
+  list-style: decimal inside;
+}
+.subsection > header ul {
+  list-style: disc inside;
 }
 .subsection > header a {
   display: inline-block;
