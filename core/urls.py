@@ -9,4 +9,5 @@ urlpatterns = patterns('core.views',
 # Static pages that have no interaction go here
 urlpatterns += patterns('',
     url(r'^tickets/$', cache_page(direct_to_template), {'template': 'core/tickets.html'}, name='tickets'),
+    url(r'^sponsors/$', cache_page(direct_to_template), {'template': 'core/sponsors.html'}, name='sponsors'),
 )
