@@ -43,3 +43,45 @@ html {
     font-family: Baskerville, Constantia, "Palatino Linotype", serif;
     font-style: italic;
 }
+
+button {
+    border: 0;
+    margin-top: 30px;
+    background: $dark-color url(../img/button_overlay.png) repeat-x;
+    //background-color: $dark-color;
+    display: inline-block;
+    padding: 8px 10px;
+    color: #fff;
+    text-decoration: none;
+    @include sans-family;
+    font-weight: $sans-bold;
+    font-size: 16px;
+    line-height: 1em;
+    letter-spacing: 0.1em;
+    @include border-radius(5px);
+    // for stupid browsers
+    @include box-shadow(0 1px 3px #999);
+    text-shadow: 0 -1px 1px #222;
+    border-bottom: 1px solid #222;
+    // for smart browsers
+    @include box-shadow(0 1px 3px rgba(0,0,0,0.5));
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+    &:hover {
+        background-color: $base-color;
+    }
+    &:active {
+        top: 1px;
+    }
+    &:disabled {
+        background-color: #666;
+        &:active, &:hover {
+            top: 0;
+            cursor: default;
+        }
+    }
+}
+

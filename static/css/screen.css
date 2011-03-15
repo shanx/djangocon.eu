@@ -99,6 +99,56 @@ html {
   font-style: italic;
 }
 
+button {
+  border: 0;
+  margin-top: 30px;
+  background: #7e0008 url(../img/button_overlay.png) repeat-x;
+  display: inline-block;
+  padding: 8px 10px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-weight: 300;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 1px 3px #999999;
+  -webkit-box-shadow: 0 1px 3px #999999;
+  -o-box-shadow: 0 1px 3px #999999;
+  box-shadow: 0 1px 3px #999999;
+  text-shadow: 0 -1px 1px #222222;
+  border-bottom: 1px solid #222;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+button:hover {
+  background-color: #b32017;
+}
+button:active {
+  top: 1px;
+}
+button:disabled {
+  background-color: #666;
+}
+button:disabled:active, button:disabled:hover {
+  top: 0;
+  cursor: default;
+}
+
 /* Default Layout: 992px.
  * Gutters: 24px.
  * Outer margins: 48px.
@@ -365,6 +415,9 @@ html {
 .subsection .subsection_body input[type=text], .subsection .subsection_body textarea {
   width: 568px;
 }
+.subsection .subsection_body button {
+  width: 100%;
+}
 
 form .formrow {
   margin-bottom: 36px;
@@ -413,6 +466,13 @@ form .formrow > .required em {
   -ms-border-radius: 2px;
   -khtml-border-radius: 2px;
   border-radius: 2px;
+}
+form .formrow.error > label, form .formrow.error > .required > label {
+  font-weight: 700;
+  color: #7e0008;
+}
+form .errorlist {
+  color: #7e0008;
 }
 form input[type=text], form textarea {
   font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;

@@ -222,6 +222,10 @@
         input[type=text], textarea {
             width: 568px;
         }
+
+        button {
+            width: 100%;
+        }
         
     }
 }
@@ -265,6 +269,15 @@ form {
             @include box-shadow(rgba(0,0,0,0.5) 0 1px 0);
             @include border-radius(2px);
         }
+    }
+    .formrow.error {
+        &>label, &>.required>label {
+            font-weight: $sans-bold;
+            color: $dark-color;
+        }
+    }
+    .errorlist {
+        color: $dark-color;
     }
     input[type=text], textarea {
         @include serif-family;
