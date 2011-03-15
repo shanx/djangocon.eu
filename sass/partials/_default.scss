@@ -238,5 +238,24 @@ a#next_hotel, a#prev_hotel {
             }
         }
     }
-   
+
+    table {
+        margin: 20px 0;
+        caption {
+            color: rgba(0,0,0,0.4);
+            font-size: 12px;
+            font-style: italic;
+            text-align: left;
+        }
+        th,td {
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        th {
+            @include sans-family;
+            font-size: 14px;
+            font-weight: $sans-normal;
+            text-transform: uppercase;
+            width: 150px;
+        }
+    }
 }

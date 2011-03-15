@@ -381,6 +381,26 @@ a#next_hotel:active, a#prev_hotel:active {
 .hotel .hotelmap a:hover {
   border-color: #ffff9e;
 }
+.hotel table {
+  margin: 20px 0;
+}
+.hotel table caption {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 12px;
+  font-style: italic;
+  text-align: left;
+}
+.hotel table th, .hotel table td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.hotel table th {
+  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-weight: 300;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 150px;
+}
 
 /* Tablet Layout: 768px.
  * Gutters: 24px.

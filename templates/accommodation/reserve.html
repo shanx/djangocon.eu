@@ -59,19 +59,36 @@
             <p>{{ hotel.description }}</p>
 
             <table>
+                <caption>All rates are per room, per night.</caption>
                 <tr>
-
+                    <th>Single room rate</th>
+                    <td>&euro; {{ hotel.rate_single }}</td>
+                </tr>
+                <tr>
+                    <th>Double room rate</th>
+                    <td>&euro; {{ hotel.rate_double }}</td>
+                </tr>
+                <tr>
+                    <th>Breakfast</th>
+                    <td>{{ hotel.breakfast }}</td>
+                </tr>
+                <tr>
+                    <th>Municipal tax</th>
+                    <td>{{ hotel.city_tax }}</td>
+                </tr>
+                <tr>
+                    <th>WiFi</th>
+                    <td>{{ hotel.wifi }}</td>
+                </tr>
+                <tr>
+                    <th>Cancellation Policy</th>
+                    <td>{{ hotel.cancellation_policy }}</td>
+                </tr>
+                <tr>
+                    <th>Offer Valid Through</th>
+                    <td>{{ hotel.date_available }}</td>
                 </tr>
             </table>
-            <ul>
-                <li>Room for single use: &euro; {{ hotel.rate_single }} per room per night</li>
-                <li>Room for twin use: &euro; {{ hotel.rate_double }} per room per night</li>
-                <li>Breakfast: {{ hotel.breakfast }}</li>
-                <li>City-tax: {{ hotel.city_tax }}%</li>
-                <li>Wifi: {{ hotel.wifi }}</li>
-                <li>Cancellation policy: {{ hotel.cancellation_policy }}
-            </ul>
-            <p>This roomblock is available until: <em>{{ hotel.date_available }}</em></p>
         </section>
         {% endfor %}
     </div>
