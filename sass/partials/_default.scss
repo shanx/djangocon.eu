@@ -141,21 +141,146 @@
     margin-top: 48px;
     @include clearfix;
     &>header {
-        @include column(4);
+        @include column(3);
         float: left;
         h1 {
-            @extend .large;
-            margin-bottom: 0.5em;
+            @extend .bigger;
+            margin-bottom: 24px;
             color: $cream-color;
             @include serif-family;
             font-weight: $serif-normal;
             font-style: italic;
             letter-spacing: 0;
         }
+        p {
+            color: $cream-color;
+            font-size: 16px;
+            @include sans-family;
+            font-weight: $sans-normal;
+            text-transform: uppercase;
+        }
+        a {
+            display: inline-block;
+            color: $cream-color;
+            background-color: $dark-color;
+            text-decoration: none;
+            padding: 1px 4px;
+            position: relative;
+            @include border-radius(3px);
+            text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+            &:hover {
+                color: white;
+                background-color: lighten($dark-color, 2%);
+                top: -1px;
+                @include box-shadow(rgba(0,0,0,0.5) 0 1px 0);
+            }
+            &:active {
+                color: white;
+                background-color: lighten($dark-color, 2%);
+                top: 0;
+                @include box-shadow(none);
+            }
+
+        }
     }
     .subsection_body {
-        @include column(6, true);
+        //@include column(7, true);
+        width: 590px;
+        padding: 10px 15px;
         float: left;
+        margin-top: 60px;
+        background-color: $cream-color;
+        @include border-radius(4px);
+        h1 {
+            @include sans-family;
+            font-weight: $sans-bold;
+            @extend .bigger;
+            color: $dark-color;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            margin-top: 32px;
+            margin-bottom: 8px;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        p, ul, li {
+            margin-bottom: 1.0em;
+        }
+        a {
+            color: $dark-color;
+            @include transition;
+            &:hover {
+                color: $base-color
+            }
+        }
+        ul {
+            list-style-position: inside;
+        }
+        
+
+        input[type=text], textarea {
+            width: 568px;
+        }
+        
+    }
+}
+
+form {
+    .formrow {
+        margin-bottom: 36px;
+    }
+    .formrow>label, .formrow>.required>label {
+        @include sans-family;
+        font-weight: $sans-normal;
+        color: #333;
+        font-size: 20px;
+        letter-spacing: 0;
+        display: block;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+    .formrow>.required {
+        display: block;
+        @include clearfix;
+
+        &>label {
+            float: left;
+        }
+        em {
+            display: block;
+            float: left;
+            @include sans-family;
+            font-weight: $sans-normal;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 4px;
+            margin: 1px 0 0 15px;
+            color: $cream-color;
+            font-style: normal;
+            background-color: $base-color;
+            line-height: 1em;
+            //text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+            @include box-shadow(rgba(0,0,0,0.5) 0 1px 0);
+            @include border-radius(2px);
+        }
+    }
+    input[type=text], textarea {
+        @include serif-family;
+        font-size: 18px;
+        line-height: 24px;
+        padding: 5px;
+        border: 6px solid $tan-color;
+        background-color: white;
+        &:focus {
+            background-color: white;
+        }
+    }
+    p.help {
+        color: desaturate(darken($tan-color, 30%), 20%);
+        font-style: italic;
+        margin-bottom: 0 !important;
     }
 }
 
@@ -208,23 +333,18 @@ a#next_hotel, a#prev_hotel {
         color: #222;
         letter-spacing: 0;
     }
-    
     h2 {
         font-size: 20px;
         line-height: 24px;
         color: $dark-color;
-
     }
-        
     h3 {
         font-size: 16px;
         font-weight: $serif-normal;
         font-style: italic;
         letter-spacing: 0;
-        //color: desaturate(lighten($dark-color, 10%), 30%);
         color: #777;
     }
-
     .hotelmap {
         margin-bottom: 18px;
         a {
@@ -238,7 +358,6 @@ a#next_hotel, a#prev_hotel {
             }
         }
     }
-
     table {
         margin: 20px 0;
         caption {
@@ -259,3 +378,15 @@ a#next_hotel, a#prev_hotel {
         }
     }
 }
+
+#reservation {
+    display: block;
+
+    input {
+        width: 502px;
+    }
+
+
+
+}
+

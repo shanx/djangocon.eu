@@ -1,156 +1,144 @@
-{% extends 'empty_base.html' %}
-
+{% extends 'standard_layout.html' %}
 {% load talk_tags %}
 
-{% block title %}Submit a talk{% endblock title %}
+{% block subtitle %} &mdash; Submit A Talk{% endblock subtitle %}
 
-{% block body %}
-    <div class="container_12 clearfix">
-        <section class="grid_7 suffix_1" id="talk_proposal">
-            <h1>Propose a talk</h1>
-            <p><strong>Please read the talk submission guidelines before submitting your talk.</strong></p>
+{% block extra_content %}id="talk_submit"{% endblock extra_content %}
 
-            <p>
-                Because DjangoCon Europe is a community conference, we want to
-                hear from <em>you</em> about the cool new extension to Django
-                you've created, the best way to scale a Django project, how to
-                make apps that are reusable, etc.
-            </p>
-            <p>
-                We are aiming for a conference with a focus on advanced topics.
-                You can assume that all attendees have a good understanding about
-                the Django framework and will understand and welcome an in-depth talk.
-            </p>
+{% block content %}
+<header>
+    <h1>Talk Submission</h1>
+</header>
+<section id="talk_guidelines" class="subsection">
+    <header>
+        <h1>Guidelines</h1>
+        <p>We've done our best to keep the administrativa to a minimum, please read the guidelines carefully before submitting a talk.</p>
+    </header>
+    <section class="subsection_body">
+        <h1>This is a community conference</h1>
+        <p>
+            Because DjangoCon Europe is a community conference, we want to
+            hear from <em>you</em> about the cool new extension to Django
+            you've created, the best way to scale a Django project, how to
+            make apps that are reusable, etc.
+        </p>
+        <p>
+            We are aiming for a conference with a focus on advanced topics.
+            You can assume that all attendees have a good understanding about
+            the Django framework and will understand (and welcome) an in-depth
+            talk.
+        </p>
+        <h1>Make it easy to review</h1>
+        <p>
+            We have to use the information you provide to decide whether or not
+            to accept your proposal. Keep it brief and focused; the reviewers
+            are all seasoned Django professionals.
+        </p>
+        <h1>Important Dates</h1>
+        <ul>
+            <li><strong>April 15<sup>th</sup></strong>: submission deadline</li>
+            <li><strong>May 1<sup>st</sup></strong>: acceptance announcements</li>
+        </ul>
+        <h1>Speakers must register, too</h1>
+        <p>
+            DjangoCon Europe is a volunteer-run conference funded mainly by ticket sales;
+            everybody pays to attend (including speakers). Talk submission is not a substitute
+            for purchasing a ticket. If you plan on giving a talk, please make sure to purchase
+            conference tickets and arrange transportation/lodging for yourself.
+        </p>
+        <h1>Talks are Public</h1>
+        <p>
+            <strong>All talks</strong> given at DjangoCon will be recorded and
+            published online; people submitting a talk must explicitly
+            authorize the recording and publishing of their talk by checking
+            the <em>{{ talk_form.allow_recording.label_tag }}</em> checkbox.
+        </p>
+        <h1>Format Guidelines</h1>
+        <p>
+            There are two types of talks that can be given at DjangoCon:
+            <ul>
+                <li>
+                    Short (20 minutes): Speakers should budget <strong>15 minutes</strong>
+                    for the actual presentation and <strong>5 minutes</strong> for answering questions from the audience.
+                </li>
+                <li>
+                    Normal (45 minutes): Speakers should budget <strong>30 minutes</strong>
+                    for the actual presentation and <strong>15 minutes</strong> for answering questions from the audience.
+                </li>
+            </ul>
+        </p>
 
+        <h1>Talk Alternatives</h1>
+        <p>
+            If a short presentation is overkill for your topic, consider giving
+            a 5-minute lightning talk! There will be several lightning-talk
+            sessions throughout the conference, as well as adjoining "Open
+            Spaces" for informal and spontaneous presentations. Lightning talks
+            can be on a wide variety of topics! Talk about a cool project
+            you're working on, some technique or tool that you want to
+            highlight, or a cool story you wish to share with the Django
+            community&mdash;so long as your talk fits into 5 minutes.
+        </p>
+        <p>
+            Lightning talks and open-space registration is ad-hoc and will take
+            place during DjangoCon; instructions on how to register will be
+            posted to the site. Registration for these will be
+            first-come-first-served.
+        </p>
+
+        <h1>Questions?</h1>
+        <p>
+            If you have any further questions don't hestitate to contact us at
+            <a href="mailto:speakers@djangocon.eu">speakers@djangocon.eu</a>.
+        </p>
+    </section>
+</section>
+
+<section id="talk_form" class="subsection">
+    <header>
+        <h1>Propose a Talk</h1>
+        <p>Use this form to submit your talk proposal.</p>
+    </header>
+    <form action="." class="subsection_body" method="POST" accept-charset="utf-8" id="form-talk-submit">
+        <h1>Your Details</h1>
+        {% for field in speaker_form %}
+        <div class="formrow {% if field.errors %}error{% endif %}">
+            {% if field.field.required %}
+            <div class="required">{{ field.label_tag }} <em>required</em></div>
+            {% else %}
+                {{ field.label_tag }}
+            {% endif %}
+            {{ field.errors }}
+            {% if field.help_text %}
+            <p class="help">{{ field.help_text }}</p>
+            {% endif %}
+            {{ field }}
+        </div>
+        {% endfor %}
+
+        <h1>Talk Proposal</h1>
+        {% for field in talk_form %}
+        <div class="formrow {% if field.errors %}error{% endif %}">
+            {% if field.field.required %}
+            <div class="required">{{ field.label_tag }} <em>required</em></div>
+            {% else %}
+                {{ field.label_tag }}
+            {% endif %}
+            {{ field.errors }}
+            {% if field.help_text %}
+            <p class="help">{{ field.help_text }}</p>
+            {% endif %}
+            {{ field }}
+        </div>
+        {% endfor %}
+        <p><input type="submit" value="Submit" id="talk_submit"></p>
+    </form>
+
+    
+
+</section>
             {% if message %}
             <p id="talks_message">{{ message }}</p>
             {% endif %}
 
-            <form action="." method="POST" accept-charset="utf-8" id="form-talk-submit">
-
-                <fieldset id="fieldset_speaker_details">
-                    <legend>Speaker details</legend>
-
-                    {% form_field speaker_form.name %}
-
-                    {% form_field speaker_form.organisation %}
-
-                    {% form_field speaker_form.email %}
-
-                    {% form_field speaker_form.twitter %}
-
-                    {% form_field speaker_form.linkedin %}
-
-                    {% form_field speaker_form.website %}
-
-                    {% form_field speaker_form.biography %}
-
-                </fieldset>
-
-                <fieldset id="fieldset_talk_details">
-                    <legend>Talk details</legend>
-
-
-                    {% form_field talk_form.title %}
-
-                    {% form_field talk_form.length %}
-
-                    {% form_field talk_form.abstract %}
-
-                    {% form_field talk_form.description %}
-
-                    {% form_field talk_form.comments %}
-
-                    <div class="formrow clearfix">
-                        <h2>Audience Level</h2>
-                        <div id="talk_audience_level">
-                            {{ talk_form.level }}
-                        </div>
-                        {{ talk_form.level.errors }}
-                    </div>
-
-                    <div class="formrow clearfix">
-                        {{ talk_form.allow_recording }}
-                        {{ talk_form.allow_recording.label_tag }}
-                        {{ talk_form.allow_recording.errors }}
-                    </div>
-
-                </fieldset>
-
-                <p><input type="submit" value="Submit" id="talk_submit"></p>
-            </form>
-        </section>
-
-        <section class="grid_4 sidebar" id="talk_guidelines">
-            <h1>Talk Submission Guidelines</h1>
-            <p>We've done our best to keep the administrativa to a minimum, please read the guidelines carefully before submitting a talk.</p>
-
-            <h2>Submission form</h2>
-            <p>
-                Keep in mind that we have to use the
-                information you provide to decide whether or not to accept your
-                proposal. Try to explain your proposal as good as
-                possible to someone from the Django community, but remain
-                to the point.
-            </p>
-
-            <h2>Dates</h2>
-            <ul>
-                <li><strong>April 15<sup>th</sup></strong>: submission deadline</li>
-                <li><strong>May 1<sup>st</sup></strong>: acceptance announcements</li>
-            </ul>
-
-            <h2>Speaker Registration</h2>
-            <p>
-                DjangoCon Europe is a volunteer-run conference funded mainly by ticket sales;
-                everybody pays to attend (including speakers). Talk submission is not a substitute
-                for purchasing a ticket. If you plan on giving a talk, please make sure to purchase
-                conference tickets and arrange transportation/lodging for yourself.
-            </p>
-
-
-            <h2>Talks are Public</h2>
-            <p>
-                <strong>All talks</strong> given at DjangoCon will be recorded and published online; people submitting a talk, need to
-                explicitly authorize the recording and publishing of their talk by checking the
-                '{{ talk_form.allow_recording.label_tag }}' checkbox.
-            </p>
-
-            <h2>Format Guidelines</h2>
-            <p>
-                There are two types of talks that can be given at DjangoCon:
-                <ul>
-                    <li>
-                        Shorter 20 minutes talk: Speakers should budget <strong>15 minutes</strong>
-                        for the actual presentation and <strong>5 minutes</strong> for answering questions from the audience.
-                    </li>
-                    <li>
-                        Full length 45 minutes talk: Speakers should budget <strong>30 minutes</strong>
-                        for the actual presentation and <strong>15 minutes</strong> for answering questions from the audience.
-                    </li>
-                </ul>
-            </p>
-
-            <h2>Talk Alternatives</h2>
-            <p>
-                If a short or full-length presentation is overkill for your topic, consider giving a 5-minute lightning talk! There will
-                be several lightning-talk sessions throughout the conference, as well as adjoining "Open Spaces" for
-                informal and spontaneous presentations. Lightning talks can be on a wide variety of topics! Talk about a cool project
-                you're working on, some technique or tool that you want to highlight, or a cool story you wish to share with the
-                Django community&mdash;so long as your talk fits into 5 minutes.
-            </p>
-            <p>
-                Lightning talks and open-space registration is ad-hoc and will take place during DjangoCon; instructions on how
-                to register will be posted to the site. Registration for these will be first-come-first-served.
-            </p>
-
-            <h2>Questions?</h2>
-            <p>
-                If you have any further questions don't hestitate to contact us at
-                <a href="mailto:speakers@djangocon.eu">speakers@djangocon.eu</a>.
-            </p>
-
-        </section>
-    </div>
-
-{% endblock body %}
+{% endblock content %}

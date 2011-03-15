@@ -9,7 +9,7 @@ class Speaker(models.Model):
     website = models.URLField(_('website'), blank=True, max_length=100)
 
     twitter = models.CharField(_('twitter username'), blank=True, max_length=100)
-    linkedin = models.CharField(_('linkeden'), blank=True, max_length=100)
+    linkedin = models.CharField(_('linkedin username'), help_text=_('Found in your profile url; "http://linkedin.com/in/<your_username>".'), blank=True, max_length=100)
 
     biography = models.TextField(_('short biography'))
 

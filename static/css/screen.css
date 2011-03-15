@@ -35,12 +35,12 @@ a img {
   letter-spacing: -1px;
 }
 
-.large, h2, .subsection > header h1 {
+.large, h2 {
   font-size: 42px;
   line-height: 48px;
 }
 
-.bigger, h3, .hotel h1 {
+.bigger, h3, .subsection > header h1, .subsection .subsection_body h1, .hotel h1 {
   font-size: 26px;
   line-height: 36px;
 }
@@ -258,12 +258,12 @@ html {
   *zoom: 1;
 }
 .subsection > header {
-  width: 344px;
+  width: 252px;
   margin-right: 24px;
   float: left;
 }
 .subsection > header h1 {
-  margin-bottom: 0.5em;
+  margin-bottom: 24px;
   color: #f5e6d2;
   font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
   font-weight: 500;
@@ -271,9 +271,165 @@ html {
   font-style: italic;
   letter-spacing: 0;
 }
+.subsection > header p {
+  color: #f5e6d2;
+  font-size: 16px;
+  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-weight: 300;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.subsection > header a {
+  display: inline-block;
+  color: #f5e6d2;
+  background-color: #7e0008;
+  text-decoration: none;
+  padding: 1px 4px;
+  position: relative;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+.subsection > header a:hover {
+  color: white;
+  background-color: #880009;
+  top: -1px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
+}
+.subsection > header a:active {
+  color: white;
+  background-color: #880009;
+  top: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
 .subsection .subsection_body {
-  width: 528px;
+  width: 590px;
+  padding: 10px 15px;
   float: left;
+  margin-top: 60px;
+  background-color: #f5e6d2;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+}
+.subsection .subsection_body h1 {
+  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-weight: 300;
+  font-weight: 700;
+  color: #7e0008;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+.subsection .subsection_body h1:first-child {
+  margin-top: 0;
+}
+.subsection .subsection_body p, .subsection .subsection_body ul, .subsection .subsection_body li {
+  margin-bottom: 1.0em;
+}
+.subsection .subsection_body a {
+  color: #7e0008;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+.subsection .subsection_body a:hover {
+  color: #b32017;
+}
+.subsection .subsection_body ul {
+  list-style-position: inside;
+}
+.subsection .subsection_body input[type=text], .subsection .subsection_body textarea {
+  width: 568px;
+}
+
+form .formrow {
+  margin-bottom: 36px;
+}
+form .formrow > label, form .formrow > .required > label {
+  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-weight: 300;
+  font-weight: 300;
+  color: #333;
+  font-size: 20px;
+  letter-spacing: 0;
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+form .formrow > .required {
+  display: block;
+  overflow: hidden;
+  *zoom: 1;
+}
+form .formrow > .required > label {
+  float: left;
+}
+form .formrow > .required em {
+  display: block;
+  float: left;
+  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-weight: 300;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px;
+  margin: 1px 0 0 15px;
+  color: #f5e6d2;
+  font-style: normal;
+  background-color: #b32017;
+  line-height: 1em;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+}
+form input[type=text], form textarea {
+  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 5px;
+  border: 6px solid #dbcbb3;
+  background-color: white;
+}
+form input[type=text]:focus, form textarea:focus {
+  background-color: white;
+}
+form p.help {
+  color: #8e7e67;
+  font-style: italic;
+  margin-bottom: 0 !important;
 }
 
 #nav_hotels {
@@ -400,6 +556,13 @@ a#next_hotel:active, a#prev_hotel:active {
   font-weight: 300;
   text-transform: uppercase;
   width: 150px;
+}
+
+#reservation {
+  display: block;
+}
+#reservation input {
+  width: 502px;
 }
 
 /* Tablet Layout: 768px.

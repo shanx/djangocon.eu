@@ -18,12 +18,12 @@ class Talk(models.Model):
 
     title = models.CharField(_("talk title"), max_length=255)
     speakers = models.ManyToManyField(Speaker, related_name='speakers')
-    abstract = models.TextField(_('abstract'), help_text=_("Max 100 words; will be published in the schedule"))
-    description = models.TextField(_('description'), help_text=_("Detailed outline for review; will not be published"))
+    abstract = models.TextField(_('abstract'), help_text=_("Maximum 100 words; will be published in the schedule."))
+    description = models.TextField(_('description'), help_text=_("Detailed outline for review; will not be published."))
     level = models.CharField(_("audience level"), max_length=20, choices=LEVEL_CHOICES, db_index=True)
     length = models.CharField(_("talk length"), max_length=20, choices=LENGTH_CHOICES, db_index=True)
 
-    comments = models.TextField(_('comments'), blank=True, help_text=_('Any other comments / requirements'))
+    comments = models.TextField(_('comments'), blank=True, help_text=_('Any other comments or requirements.'))
 
     accepted = models.BooleanField(_('accepted'))
     scheduled = models.BooleanField(_('scheduled'))
