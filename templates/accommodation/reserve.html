@@ -10,7 +10,9 @@
             prev: '#prev_hotel',
             next: '#next_hotel',
             pagerAnchorBuilder: pagerFactory,
-            speed: 500
+            speed: 500,
+            height: 750
+
         });
 
         var pagerFactory = function(idx, slide) {
@@ -52,7 +54,7 @@
             <div class="hotelmap">
                 {% with hotel.get_address_display|urlencode as hoteladdr %}
                 <a href="http://maps.google.com/maps?q={{hoteladdr}}">
-                    <img width="500" height="100" src="http://maps.google.com/maps/api/staticmap?center={{hoteladdr}}&size=500x100&sensor=false&markers={{hoteladdr}}&zoom=15">
+                    <img width="584" height="100" src="http://maps.google.com/maps/api/staticmap?center={{hoteladdr}}&size=584x100&sensor=false&markers={{hoteladdr}}&zoom=15">
                 </a>
                 {% endwith %}
             </div>
