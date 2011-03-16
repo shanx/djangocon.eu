@@ -545,6 +545,20 @@ a#next_hotel, a#prev_hotel {
     }
 }
 
+.venue_map {
+    margin-bottom: 18px;
+    a {
+        display: block;
+        width: 584px;
+        height: 100px;
+        border: 3px solid white;
+        @include transition;
+        &:hover {
+            border-color: $gold-color;
+        }
+    }
+}
+
 #blog {
     &>header {
         margin-bottom: 48px;
