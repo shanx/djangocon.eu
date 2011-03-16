@@ -455,3 +455,54 @@ a#next_hotel, a#prev_hotel {
         @include box-shadow(none);
     }
 }
+
+#admin {
+    width: auto;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+    color: $cream-color;
+    header {
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+    section {
+        margin-bottom: 50px;
+    }
+    h1 {
+        @include sans-family;
+        font-weight: $sans-normal;
+        text-transform: uppercase;
+        @extend .large;
+        margin-bottom: 40px;
+    }
+    a {
+        position: relative;
+        background-color: $dark-color;
+        color: $cream-color;
+        font-size: 1.2em;
+        line-height: 2em;
+        text-align: center;
+        padding: 10px;
+        @include border-radius(3px);
+        text-decoration: none;
+        font-weight: $serif-normal;
+        @include serif-family;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+        margin: 24px 0;
+        @include transition-property("color, background-color");
+        &:hover {
+            color: white;
+            background-color: lighten($dark-color, 4%);
+            top: -2px;
+            @include box-shadow(rgba(0,0,0,0.6) 0 2px 0);
+        }
+        &:active {
+            color: white;
+            background-color: lighten($dark-color, 4%);
+            top: 0;
+            @include box-shadow(none);
+        }
+    }
+
+}

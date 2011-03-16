@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block subtitle %} &mdash; Admin{% endblock subtitle %}
+
+{% block extra_body %}id="admin"{% endblock extra_body %}
+
+{% block body %}
+
+<header>
+    <img src="{{STATIC_URL}}img/masthead.png" width="490" height="540">
+</header>
+
+<section>
+<h1>Seriously, you had to check?</h1>
+<p><a href="{% url core:tickets %}">Buy a ticket already.</a></p>
+</section>
+{% endblock body %}
+
