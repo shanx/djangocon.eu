@@ -12,7 +12,7 @@ handler500 = 'utils.views.server_error'
 urlpatterns = patterns('',
     (r'^', include('core.urls', namespace='core', app_name='core')),
     (r'^', include('subscribers.urls')),
-    (r'^blog/', include('blog.urls')),
+    (r'^blog/', include('blog.urls', namespace='blog', app_name='blog')),
     (r'^accommodation/', include('accommodation.urls', namespace='accommodation', app_name='accommodation')),
     (r'^talks/', include('talks.urls', namespace='talks', app_name='talks')),
     (r'^barn/', include(admin.site.urls)),
