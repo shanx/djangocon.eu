@@ -1,16 +1,16 @@
-# Ticket sales started and more
+# Ticket sales online and more
 
-We are so happy to be able to announce to you all that as of this moment [ticket sales](/tickets/ "Tickets page"), [hotel reservations](/accommodation/reserve/ "Hotels page") and [talk submission](/talks/submit/ "Talk submission page") are alive and kicking! For your information, please be aware of the following _deadlines_:
+We are so happy to announce to all of you that as of this moment [ticket sales](/tickets/ "Tickets page"), [hotel reservations](/accommodation/reserve/ "Hotels page") and [talk submission](/talks/submit/ "Talk submission page") are alive and kicking! For your information, please be aware of the following _deadlines_:
 
 ## Ticket registration Deadlines:
 
-* Early bird registration is available until: <em>Friday, April 1st</em>.
-* Regular rate is available until: <em>Friday, May 13th</em> (no kidding)
+* Early bird registration is available until: _Friday, April 1st_.
+* Regular rate is available until: _Friday, May 13th_ (no kidding)
 
 ## Speaker registration deadlines:
 
-* Submission deadline is: <em>Friday, April 15th</em>.
-* Acceptance announcements are on: <em>Sunday, May 1st</em>.
+* Submission deadline is: _Friday, April 15th_.
+* Acceptance announcements are on: _Sunday, May 1st_.
 
 ## Talks
 
@@ -24,6 +24,7 @@ W're hoping to welcome more sponsors in supporting this edition of DjangoCon. Ha
 
 Buying your tickets early helps twice: the conference organizers get a better picture of the finances and you enjoy a lower rate. Attendance anxiety is a leading cause of emotional meltdown among conference organizers; please help fight this awful disease by booking [your tickets](/tickets/ "Tickets page") as early as possible.
 
-## We hope to...
+We would like to thank all volunteers who have helped until now, and who will help us out in the near future, into making this a fabulous edition of DjangoCon!
 
-See you all in Amsterdam in June! And are looking forward to having a _fabulous third edition of DjangoCon Europe_!
+We hope to see you all in Amsterdam in June for the _third edition of DjangoCon Europe_!
+
