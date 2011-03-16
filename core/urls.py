@@ -10,4 +10,5 @@ urlpatterns = patterns('core.views',
 urlpatterns += patterns('',
     url(r'^tickets/$', cache_page(direct_to_template), {'template': 'core/tickets.html'}, name='tickets'),
     url(r'^sponsors/$', cache_page(direct_to_template), {'template': 'core/sponsors.html'}, name='sponsors'),
+    url(r'^about/$', cache_page(direct_to_template), {'template': 'core/about.html'}, name='about'),
 )
