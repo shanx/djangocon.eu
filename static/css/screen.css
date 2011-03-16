@@ -836,6 +836,10 @@ a#next_hotel:active, a#prev_hotel:active {
   border-color: #ffff9e;
 }
 
+.venue_photos {
+  margin-bottom: 18px;
+}
+
 #blog > header {
   margin-bottom: 48px;
 }
