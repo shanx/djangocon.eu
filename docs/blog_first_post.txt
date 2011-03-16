@@ -1,0 +1,29 @@
+# Ticket sales started and more
+
+We are so happy to be able to announce to you all that as of this moment [ticket sales](/tickets/ "Tickets page"), [hotel reservations](/accommodation/reserve/ "Hotels page") and [talk submission](/talks/submit/ "Talk submission page") are alive and kicking! For your information, please be aware of the following _deadlines_:
+
+## Ticket registration Deadlines:
+
+* Early bird registration is available until: <em>Friday, April 1st</em>.
+* Regular rate is available until: <em>Friday, May 13th</em> (no kidding)
+
+## Speaker registration deadlines:
+
+* Submission deadline is: <em>Friday, April 15th</em>.
+* Acceptance announcements are on: <em>Sunday, May 1st</em>.
+
+## Talks
+
+This edition of DjangoCon will focus on advanced topics. If you have anything in-depth and interesting to present to your fellow Djangonauts, please [submit a talk](/talks/submit/ "Talk submission page").
+
+## Sponsors
+
+W're hoping to welcome more sponsors in supporting this edition of DjangoCon. Have a look at the [sponsor page](/sponsors/ "Sponsor page") if you, or someone you know, may want to become our beloved sponsor.
+
+## Last request
+
+Buying your tickets early helps twice: the conference organizers get a better picture of the finances and you enjoy a lower rate. Attendance anxiety is a leading cause of emotional meltdown among conference organizers; please help fight this awful disease by booking [your tickets](/tickets/ "Tickets page") as early as possible.
+
+## We hope to...
+
+See you all in Amsterdam in June! And are looking forward to having a _fabulous third edition of DjangoCon Europe_!
