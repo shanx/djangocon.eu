@@ -1,0 +1,16 @@
+<article>
+    <header>
+        {% if post_list %}
+        <h1><a href="{{ post.get_absolute_url }}"><strong>&rArr;</strong> {{ post.title }}</a></h1>
+        {% else %}
+            <h1>{{ post.title }}</h1>
+        {% endif %}
+    </header>
+    <aside>
+        <time pubdate="true" datetime="{{post.publish_date|date:'c'}}">{{ post.publish_date|date:'M j' }}<sup>{{ post.publish_date|date:'S' }}</sup></time>
+        <p class="author"><em>by</em> {{ post.author.get_full_name }}</p>
+    </aside>
+    <section class="post_body">
+        {{ post.body|safe }}
+    </section>
+</article>

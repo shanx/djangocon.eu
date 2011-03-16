@@ -1,5 +1,6 @@
 {% extends "blog/base.html" %}
-{% block subtitle %}{{ block.super }} &mdash; {{ post.title }}{% endblock subtitle %}
 {% block blog_body %}
+{% for post in post_list %}
     {% include "blog/post_snippet.html" %}
+{% endfor %}
 {% endblock blog_body %}

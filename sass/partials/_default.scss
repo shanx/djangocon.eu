@@ -458,6 +458,7 @@ a#next_hotel, a#prev_hotel {
 
 #admin {
     width: auto;
+    min-width: 600px;
     margin: 0 auto;
     padding: 50px;
     text-align: center;
@@ -504,5 +505,106 @@ a#next_hotel, a#prev_hotel {
             @include box-shadow(none);
         }
     }
-
 }
+
+#blog {
+    &>header {
+        margin-bottom: 48px;
+    }
+    article {
+        @include column(10, true);
+        @include clearfix;
+        margin: 50px 0;
+        header {
+            h1, h1 a {
+                @include serif-family;
+                font-weight: $serif-normal;
+                @extend .large;
+                color: $cream-color;
+                text-decoration: none;
+                @include transition;
+                margin-bottom: 0.75em;
+                width: 100%;
+                text-shadow: 0 2px 0 $dark-color;
+            }
+            h1 a:hover {
+                text-decoration: underline;
+                color: white;
+            }
+            strong {
+                color: $dark-color;
+                font-style: normal;
+                font-weight: $serif-normal;
+                text-shadow: none;
+            }
+        }
+        aside {
+            @include column(3);
+            float: left;
+            @include sans-family;
+            text-transform: uppercase;
+            color: $cream-color;
+            time {
+                font-size: 24px;
+                letter-spacing: 1px;
+                display: block;
+                margin-bottom: 12px;
+                sup {
+                    font-size: 14px;
+                    vertical-align: 6px;
+                }
+            }
+            .author {
+                em {
+                    @include serif-family;
+                    font-weight: $serif-normal;
+                    font-style: italic;
+                    text-transform: lowercase;
+                    font-size: 14px;
+                }
+            }
+        }
+        .post_body {
+            //@include column(7,true);
+            width: 590px;
+            padding: 10px 15px;
+            float: left;
+            background-color: $cream-color;
+            @include border-radius(4px);
+            p, ul, ol, li {
+                margin-bottom: 1.0em;
+            }
+            ul, ol {
+                list-style-position: inside;
+            }
+            h1 {
+                color: $dark-color;
+                @include sans-family;
+                font-weight: $sans-bold;
+                letter-spacing: 0;
+                @extend .bigger;
+                margin: 10px 0;
+                text-transform: uppercase;
+            }
+            h2 {
+                color: $dark-color;
+                @include serif-family;
+                font-weight: $sans-bold;
+                @extend .big;
+                margin: 10px 0;
+            }
+            a {
+                color: $dark-color;
+                text-decoration: none;
+                @include transition;
+                font-weight: $serif-bold;
+                &:hover {
+                    color: $base-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
