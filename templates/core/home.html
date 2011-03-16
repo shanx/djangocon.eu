@@ -38,7 +38,15 @@
         </p>
     </div>
 </section>
-
+<section class="homesection" id="home_blog">
+    <h1>Latest News</h1>
+    <div class="homesection_body">
+        <p class="post">
+            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+        </p>
+        <p class="meta">Posted by {{ post.author.get_full_name }} on {{ post.publish_date|date:'M j' }}<sup>{{ post.publish_date|date:'S' }}</sup> &bull; <a href="{% url blog:blog %}">More posts…</a></p>
+    </div>
+</section>
 <section id="home_venue">
     <h1>Conference Venue <strong>&#9733;</strong> <a href="{% url core:venues %}#conference_venue">Pakhuis de Zwijger</a></h1>
     <h1>Sprints Venue <strong>&#9733;</strong> <a href="{% url core:venues %}#sprint_venue">De Waag</a></h1>
@@ -51,15 +59,6 @@
     <iframe width="884" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.nl/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=201031125106460952811.00049e95db8eecc0fb55f&amp;ll=52.375835,4.907498&amp;spn=0.019728,0.055747&amp;output=embed"></iframe>
 </section>
 
-<section class="homesection" id="blog">
-    <h1>News</h1>
-    <div class="homesection_body">
-        <p>
-        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-        </p>
-        <p>Posted by {{ post.author.get_full_name }} on {{ post.publish_date|date:'M j' }}<sup>{{ post.publish_date|date:'S' }}</sup></p>
-    </div>
-</section>
 
 
 {% endblock content %}

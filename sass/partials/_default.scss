@@ -733,6 +733,30 @@ a#next_hotel, a#prev_hotel {
             margin-bottom: 1.0em;
             color: $cream-color;
         }
+
+        a {
+            color: $gold-color;
+            text-decoration: none;
+            @include transition;
+            &:hover {
+                color: white;
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    #home_blog {
+        .post {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        .meta {
+            @include sans-family;
+            font-weight: $sans-normal;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
     }
 
     #home_venue {
