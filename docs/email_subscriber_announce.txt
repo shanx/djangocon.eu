@@ -1,0 +1,8 @@
+Dear Subscriber,
+
+A little while ago you left your e-mail address on the DjangoCon Europe website to be notified of any news regarding DjangoCon. W're happy you did that, because we can bring the news to you right away, 'stop the presses!':
+
+The Dutch Django Association is happy to announce the new DjangoCon Europe website is online and awaiting your full inspection. As of this moment ticket sales has started. We happily refer you to the first blog post that carries additional info: http://www.djangocon.eu/blog/
+
+With kind regards,
+The DjangoCon Europe 2011 team
