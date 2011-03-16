@@ -7,96 +7,59 @@
 
 {% block content %}
 
-<section id="home_where">
-    <h1>Where</h1>
+<nav id="cta_tickets">
+    <a href="{% url core:tickets %}">Tickets</a> <span class="star">&#9733;</span> <a href="{% url talks:submit %}">Talks</a> <span class="star">&#9733;</span> <a href="{% url accommodation:reserve %}">Hotels</a>
+</nav>
+
+<section class="homesection" id="welcome">
+    <h1>Welcome</h1>
+    <div class="homesection_body">
+        <p>
+            The European Django community would like to welcome you to the city of
+            Amsterdam for DjangoCon Europe 2011.
+        </p>
+        <p>
+            Throughout history, Amsterdam has been known for its open-mindedness,
+            tolerance, and trade. We're proud to host the conference this year, and
+            we've been working hard to make this conference <em>even better</em> than the
+            stellar successes of Prague and Berlin.
+        </p>
+    </div>
 </section>
 
-<section id="home_tickets">
-
+<section class="homesection" id="topics">
+    <h1>Theme</h1>
+    <div class="homesection_body">
+        <p>
+            Django has matured into a framework with a wealth of applications and
+            techniques created by talented developers like you. The focus of this
+            year’s conference will be on sharing these advanced tools and
+            techniques.
+        </p>
+    </div>
 </section>
 
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.nl/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=201031125106460952811.00049e95db8eecc0fb55f&amp;ll=52.375835,4.907498&amp;spn=0.019728,0.055747&amp;output=embed"></iframe><br /><small>View <a href="http://maps.google.nl/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=201031125106460952811.00049e95db8eecc0fb55f&amp;ll=52.375835,4.907498&amp;spn=0.019728,0.055747&amp;source=embed" style="color:#0000FF;text-align:left">DjangoCon Europe 2011</a> in a larger map</small>
-
-
-<section id="conference" class="subsection">
-    <header>
-        <h1>Conference</h1>
-        <p><em>The</em> European conference on the Django framework.</p>
-    </header>
-
-    <section id="welcome" class="subsection_body">
-        <h1>Welcome</h1>
-
-        <p>
-            This year the European Django community would like to welcome you all
-            in the city of Amsterdam, the Netherlands.
-        </p>
-        <p>
-            Amsterdam has been known throughout history as a city of
-            open mindedness, tolerance and trade. And we hope we can show this
-            by organizing <em>a fabulous DjangoCon in the very heart of the city!</em>
-        </p>
-
-        <h1>Focus: Advanced topics</h1>
-        <p>
-            Amsterdam will be the successor of two amazing editions held
-            earlier: <em>2009 in Prague</em> and <em>2010 in Berlin</em>.
-        </p>
-        <p>
-            Over the years the Django framework has shown a definate growth
-            to becoming a mature framework with a wealthy ecosystem of
-            plugins and applications developed by many talented developers, like you.
-        </p>
-        <p>
-            We want to honour this by organising a conference that focusses
-            on advanced topics.
-        </p>
-    </section>
-</section>
-<section id="organizer" class="subsection">
-    <header>
-        <h1>Organizer</h1>
-        <p>Your proud host</p>
-    </header>
-
-    <section id="association" class="subsection_body">
-        <h1>Dutch Django Association</h1>
-        <p>
-            DjangoCon is organized by the non-profit Dutch Django Assocation.
-            See <a href="{% url core:about %}">about</a> for more info.
-        </p>
-    </section>
+<section id="home_venue">
+    <h1>Conference Venue <strong>&#9733;</strong> <a href="{% url core:venues %}#conference_venue">Pakhuis de Zwijger</a></h1>
+    <h1>Sprints Venue <strong>&#9733;</strong> <a href="{% url core:venues %}#sprint_venue">De Waag</a></h1>
+    <div id="venue_photos">
+        <img src="{{ STATIC_URL }}img/venues/pakhuis-de-zwijger-front_sm.jpg" alt="Pakhuis de Zwijger from the outside" width="200"/>
+        <img src="{{ STATIC_URL }}img/venues/pakhuis-de-zwijger-inside_sm.jpg" alt="Pakhuis de Zwijger on the inside" width="200"/>
+        <img src="{{ STATIC_URL }}img/venues/de-waag-front_sm.jpg" alt="de Waag from the outside" width="200"/>
+        <img src="{{ STATIC_URL }}img/venues/de-waag-inside_sm.jpg" alt="de Waag on the inside" width="200"/>
+    </div>
+    <iframe width="884" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.nl/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=201031125106460952811.00049e95db8eecc0fb55f&amp;ll=52.375835,4.907498&amp;spn=0.019728,0.055747&amp;output=embed"></iframe>
 </section>
 
-<section id="area" class="subsection">
-    <header>
-        <h1>Area</h1>
-        <p>The old eastern docks and trade area</p>
-    </header>
-
-    <section id="area_description" class="subsection_body">
-        <h1>General conference area</h1>
+<section class="homesection" id="blog">
+    <h1>News</h1>
+    <div class="homesection_body">
         <p>
-            DjangoCon will be held in the area
-            {# TODO: Add map #}
+        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
         </p>
-    </section>
+        <p>Posted by {{ post.author.get_full_name }} on {{ post.publish_date|date:'M j' }}<sup>{{ post.publish_date|date:'S' }}</sup></p>
+    </div>
 </section>
 
-
-<section id="last" class="subsection">
-    <header>
-        <h1>Last</h1>
-        <p>But not least..</p>
-    </header>
-    <section id="area_description" class="subsection_body">
-        <h1>Ticket and hotels</h1>
-        <p>
-            For your booking pleasure, both <a href="{% url core:tickets %}">ticket sales</a>
-            <em>and</em> <a href="{% url accommodation:reserve %}">hotel reservations</a> are
-            anxiously awaiting your undivided attention.
-        </p>
-    </section>
-</section>
 
 {% endblock content %}

@@ -94,7 +94,7 @@
         color: $cream-color;
         text-shadow: 0 2px 0 $dark-color;
         text-transform: uppercase;
-        margin: 50px 0 20px 300px;
+        margin: 55px 0 20px 300px;
         padding-bottom: 20px;
         border-bottom: 1px dashed rgba(255,255,255,0.15);
     }
@@ -107,7 +107,7 @@
     .dateinfo {
         float: left;
         &#talk_dates {
-            margin-right: 45px;
+            margin-right: 55px;
         }
         p {
             @include sans-family;
@@ -646,5 +646,115 @@ a#next_hotel, a#prev_hotel {
     }
 }
 
-#home {
+#cta_tickets {
+    //@include column(10, true);
+    width: 100%;
+    background: url(../img/call_to_action.png) center top no-repeat;
+    text-align: center;
+    height: 90px;
+    @include sans-family;
+    font-size: 48px;
+    padding-top: 25px;
+    line-height: 1.0em;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: $sans-bold;
+    letter-spacing: 0;
+    a {
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        color: $base-color;
+        text-decoration: none;
+        @include transition;
+        @include transition-property(color);
+        &:hover {
+            color: $dark-color;
+            text-shadow: 0 1px 0 darken($dark-color, 20%);
+            top: -1px;
+        }
+        &:active {
+            color: $gold-color;
+            top: 0;
+        }
+    }
+
+    .star {
+        font-size: 0.45em;
+        vertical-align: 8px;
+        padding: 0 10px;
+        color: #444;
+    }
+
 }
+
+#home {
+    
+    .homesection {
+        margin-bottom: 50px;
+        width: 100%;
+        @include clearfix;
+        h1 {
+            @include column(3);
+            float: left;
+            @include sans-family;
+            font-weight: $sans-normal;
+            font-size: 36px;
+            text-transform: uppercase;
+            line-height: 1.0em;
+            padding-top: 5px;
+        }
+        .homesection_body {
+            @include column(7, true);
+            float: left;
+        }
+        p {
+            @include serif-family;
+            font-weight: $serif-normal;
+            font-size: 24px;
+            line-height: 1.5em;
+            margin-bottom: 1.0em;
+            color: $cream-color;
+        }
+    }
+
+    #home_venue {
+        h1 {
+            @include column(5, true);
+            &:first-child {
+                @include column(5);
+            }
+            float: left;
+            @include sans-family;
+            font-weight: $sans-normal;
+            font-size: 20px;
+            text-transform: uppercase;
+            strong {
+                font-size: 0.6em;
+                vertical-align: 3px;
+            }
+            a {
+                color: $gold-color;
+                text-decoration: none;
+                @include transition;
+                &:hover {
+                    color: white;
+                    text-decoration: underline;
+                }
+            }
+        }
+        img {
+            border: 6px solid white;
+            margin-left: 12px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        iframe {
+            border: 6px solid white;
+            margin: 20px 0;
+        }
+
+    }
+}
+
