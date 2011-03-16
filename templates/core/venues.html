@@ -1,0 +1,122 @@
+{% extends "standard_layout.html" %}
+
+{% block subtitle %} &mdash; Venues{% endblock subtitle %}
+
+{% block extra_content %}id="venues"{% endblock extra_content %}
+
+{% block content %}
+
+<header>
+    <h1>DjangoCon Venues</h1>
+</header>
+
+<section id="conference_venue" class="subsection">
+    <header>
+        <h1>Conference Venue</h1>
+        <p>An inspiring view over the old docks of Amsterdam</p>
+    </header>
+
+    <section id="conference_venue_info" class="subsection_body">
+        <h1>Pakhuis de Zwijger</h1>
+
+        <div class="venue_map">
+            {% with "Pakhuis de Zwijger, Piet Heinkade 179, 1019 HC Amsterdam"|urlencode as venue_address %}
+            <a href="http://maps.google.com/maps?q={{venue_address}}">
+                <img width="584" height="100" src="http://maps.google.com/maps/api/staticmap?center={{venue_address}}&size=584x100&sensor=false&markers={{venue_address}}&zoom=15">
+            </a>
+            {% endwith %}
+        </div>
+        <div class="venue_photos">
+            <img src="/static/img/venues/pakhuis-de-zwijger-front.jpg" alt="Pakhuis de Zwijger from the outside" width="290"/>
+            <img src="/static/img/venues/pakhuis-de-zwijger-inside.jpg" alt="Pakhuis de Zwijger on the inside" width="290"/>
+        </div>
+        <p>
+            <em>The conference days will be June 6-8</em>
+        </p>
+        <p>
+            The conference location is an old warehouse, part of the old eastern docks
+            of the port of Amsterdam. The docks are no longer in active use, since the
+            port of Amsterdam relocated to the very outskirts of the city and
+            became heavily industrialized.
+        </p>
+        <p>
+            Still the area is characterized by an amazing set of warehouses and old machinery.
+            From the conference venue w'll have a lovely view over the water. So if you
+            need room to think because of all the things you've learned at the conference.
+            It's there.
+        </p>
+        <p>
+            <em>Just wait and see how Amsterdam looks during the sunny month of June!</em>
+        </p>
+    </section>
+</section>
+<section id="sprint_venue" class="subsection">
+    <header>
+        <h1>Sprint venue</h1>
+        <p>Non-stop? Yessir!</p>
+    </header>
+
+    <section id="sprint_venue_info" class="subsection_body">
+        <h1>de Waag</h1>
+        <div class="venue_map">
+            {% with "Nieuwmarkt 4, 1012 CR Amsterdam"|urlencode as venue_address %}
+            <a href="http://maps.google.com/maps?q={{venue_address}}">
+                <img width="584" height="100" src="http://maps.google.com/maps/api/staticmap?center={{venue_address}}&size=584x100&sensor=false&markers={{venue_address}}&zoom=15">
+            </a>
+            {% endwith %}
+        </div>
+        <div class="venue_photos">
+            <img src="/static/img/venues/de-waag-front.jpg" alt="de Waag from the outside" width="290"/>
+            <img src="/static/img/venues/de-waag-inside.jpg" alt="de Waag on the inside" width="290"/>
+        </div>
+        <p>
+            <em>The sprint days will be June 9-10</em>
+        </p>
+        <p>
+            The sprint location is a place called De Waag which is an old castle in the
+            very heart of Amsterdam. It is the old weighing house and is famous for
+            housing the Amsterdam Guild of Surgeons during the 17th century which
+            was painted by Rembrandt van Rijn:  The Anatomy Lesson of Dr. Nicolaes Tulp.
+        </p>
+        <p>
+            Also the location is infamous for being the first to allow paying visitors
+            watch the Surgeons dissect dead human bodies. All in the name of science of course!
+        </p>
+
+        <h1>The sprints</h1>
+        <p>
+            The sprint location will be open for us 48-hours non stop,
+            meaning literally that we can sprint until we drop.
+            If (when) you drop we have field beds so you can sleep on location. Of course
+            if you prefer the calmth of your hotel, the hotels are all just around the corner.
+        </p>
+
+        <p>
+            We will do everything we can to make sure the sprints will be as fun
+            and productive as possible for <em>all</em> participants. This includes:
+
+            <ol>
+                <li>
+                    Running up to the the conference we'll coordinate with
+                    the Core Developers to make sure we have stuff to do that's both
+                    useful and doable.
+                </li>
+                <li>
+                    At least one of the talks on the main conference days will be
+                    dealing with contributing to Django in general and the sprint
+                    in particular.
+                </li>
+                <li>
+                    For those who are not familiar with sprints: we'll make sure to
+                    ease you into the experience on the actual sprint days.
+                </li>
+            </ol>
+
+            <em>Sprints are going to be awesome!</em>
+        </p>
+    </section>
+</section>
+
+{% endblock content %}
+
+
