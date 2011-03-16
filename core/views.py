@@ -20,8 +20,8 @@ def placeholder(
     return render(request, template_name, ctx)
 
 @cache_page(60*5) # Cache for 5 minutes
-def cached_direct(request, template_name, extra_context=None):
+def cached_direct(request, template, extra_context=None):
     ctx = extra_context and extra_context.copy() or {}
-    return render(request, template_name, ctx)
+    return render(request, template, ctx)
 
 
