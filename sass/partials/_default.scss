@@ -200,7 +200,6 @@
         }
         ol {
             list-style: decimal inside;
-            
         }
         ul {
             list-style: disc inside;
@@ -268,7 +267,7 @@
                 color: $base-color
             }
         }
-        ul {
+        ul,ol {
             list-style-position: inside;
         }
         input[type=text], textarea {
@@ -729,6 +728,7 @@ a#next_hotel, a#prev_hotel {
             font-weight: $sans-normal;
             font-size: 20px;
             text-transform: uppercase;
+            letter-spacing: 0;
             strong {
                 font-size: 0.6em;
                 vertical-align: 3px;

@@ -476,7 +476,7 @@ button:disabled:active, button:disabled:hover {
 .subsection .subsection_body a:hover {
   color: #b32017;
 }
-.subsection .subsection_body ul {
+.subsection .subsection_body ul, .subsection .subsection_body ol {
   list-style-position: inside;
 }
 .subsection .subsection_body input[type=text], .subsection .subsection_body textarea {
@@ -1028,6 +1028,7 @@ a#next_hotel:active, a#prev_hotel:active {
   font-weight: 300;
   font-size: 20px;
   text-transform: uppercase;
+  letter-spacing: 0;
 }
 #home #home_venue h1:first-child {
   width: 436px;
