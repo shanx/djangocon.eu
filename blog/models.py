@@ -29,6 +29,7 @@ class Post(DateAwareModel):
         ordering = ('-publish_date',)
         unique_together = ('publish_date', 'slug')
         verbose_name = 'Blog Post'
+        get_latest_by = 'publish_date'
     
     def __unicode__(self):
         return self.title
