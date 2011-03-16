@@ -35,7 +35,7 @@ class Post(DateAwareModel):
     
     def save(self, *args, **kwargs):
         self.body = unicode(smartyPants(markdown(self.body_markdown)))
-        super(BlogPost, self).save(*args, **kwargs)
+        super(Post, self).save(*args, **kwargs)
     
     @permalink
     def get_absolute_url(self):
