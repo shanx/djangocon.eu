@@ -5,12 +5,19 @@
 {% include "snippets/navigation.html" %}
 
 <header id="masthead">
-<h1><a href="{% url core:home %}">DjangoCon Europe 2011</a></h1>
-<h2>June <em>6<sup>th</sup></em>, <em>7<sup>th</sup></em> <span class="amp">&amp;</span> <em>8<sup>th</sup></em> 2011</h2>
-<h3>Join us in <em>Amsterdam</em> for <em>talks</em>, <em>sprints</em> and a ton of <em>fun</em>!</h3>
-    <!--Sprints to follow on the 9<sup>th</sup> and 10<sup>th</sup></h3>-->
-<div class="masthead_text" id="masthead_right">
-</div>
+    <h1>DjangoCon Europe 2011</h1>
+    <h2>Amsterdam 2011</h2>
+    <div class="dateblock">
+        <div class="dateinfo" id="talk_dates">
+            <p>Talks <strong>&#9733;</strong> <a href="location">Pakhuis de Zwijger</a></p>
+            <h3>June <em>6<sup>th</sup></em>, <em>7<sup>th</sup></em>, <em>8<sup>th</sup></em></h3>
+        </div>
+        <div class="dateinfo" id="sprint_dates">
+            <p>Sprints <strong>&#9733;</strong> <a href="location">De Waag</a></p>
+            <h3><em>9<sup>th</sup></em> <span class="amp">&amp;</span> <em>10<sup>th</sup></em></h3>
+        </div>
+    </div>
+    <h4>Join us in Amsterdam for a week of advanced Django talks, sprints, and play with Djangonauts from Europe and around the globe.</h4>
 </header>
 <section class="content" {% block extra_content %}{% endblock extra_content %}>
 {% block content %}{% endblock content %}

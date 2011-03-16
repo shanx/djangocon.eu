@@ -71,51 +71,90 @@
 }
 
 #masthead {
+    position: relative;
     @include grid(10);
-    margin: 48px auto 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    margin: 0 auto 20px;
+    padding-bottom: 30px;
     @include clearfix;
-    height: 312px;
-    background: transparent url(../img/masthead_10col_left_gradient.png) no-repeat center top;
+    height: 360px;
+    background: transparent url(../img/masthead_bg.png) center bottom no-repeat;
     h1 {
-        display: none;
-    }
-    h2,h3 {
-        padding-left: 344px;
+        @include column(4);
+        position: absolute;
+        left: -4px;
+        top: 72px;;
+        background: url(../img/masthead_mobile.png) left center no-repeat;
+        height: 360px;
+        text-indent: -9999px;
     }
     h2 {
-        padding-top: 105px;
-        @include serif-family;
-        font-weight: $serif-normal;
+        @include sans-family;
+        font-weight: $sans-bold;
+        font-size: 72px;
         color: $cream-color;
-        text-shadow: 0 3px 0 $dark-color;
-        sup {
-            font-size: 0.35em;
-            text-shadow: 0 2px 0 $dark-color;
+        text-shadow: 0 2px 0 $dark-color;
+        text-transform: uppercase;
+        margin: 50px 0 20px 300px;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed rgba(255,255,255,0.15);
+    }
+    .dateblock {
+        margin-left: 300px;
+        @include clearfix;
+        margin-bottom: 15px;
+        border-bottom: 1px dashed rgba(255,255,255,0.15);
+    }
+    .dateinfo {
+        float: left;
+        &#talk_dates {
+            margin-right: 45px;
         }
-        em {
-            font-style: normal;
-            color: white;
-            text-shadow: 0 4px 0 $dark-color;
-            font-size: 1.3em;
+        p {
+            @include sans-family;
+            font-weight: $sans-normal;
+            font-size: 20px;
+            text-transform: uppercase;
+            strong {
+                font-size: 0.6em;
+                vertical-align: 3px;
+            }
+            a {
+                color: $gold-color;
+                text-decoration: none;
+                @include transition;
+                &:hover {
+                    color: white;
+                    text-decoration: underline;
+                }
+            }
+        }
+        h3 {
+            @include serif-family;
+            font-weight: $serif-normal;
+            font-size: 44px;
+            color: $tan-color;
+            letter-spacing: 0;
+            text-shadow: 0 2px 0 $dark-color;
+            line-height: 1.5em;
+            em {
+                color: $cream-color;
+                font-style: normal;
+                sup {
+                    font-size: 0.35em;
+                }
+            }
+            .amp {
+                font-size: 0.7em;
+            }
         }
     }
-    h3 {
+    h4 {
+        color: black;
+        @include serif-family;
+        font-weight: $serif-normal;
+        margin-left: 300px;
         font-size: 18px;
-        @include sans-family;
-        font-weight: $sans-normal;
-        font-style: normal;
-        color: darken($dark-color, 10%);
-        text-shadow: 0 1px 0 rgba(255,255,255,0.1);
-        em {
-            //color: darken($dark-color, 20%);
-            font-style: normal;
-            font-weight: $sans-bold;
-        }
-        sup {
-            font-size: 0.7em;
-        }
+        //font-style: italic;
     }
 }
 
@@ -138,7 +177,7 @@
 
 .subsection {
     @include column(10, true);
-    margin-top: 48px;
+    margin-top: 24px;
     @include clearfix;
     &>header {
         @include column(3);
@@ -608,50 +647,4 @@ a#next_hotel, a#prev_hotel {
 }
 
 #home {
-   &>header {
-       @include grid(10);
-       margin: 0 auto;
-       @include clearfix;
-       height: 360px;
-       h1 {
-           @include column(4);
-           float: left;
-           position: relative;
-           left: -20px;
-           background: url(../img/masthead_mobile.png) left center no-repeat;
-           height: 360px;
-           text-indent: -9999px;
-       }
-       h2 {
-           @include sans-family;
-           font-weight: $sans-bold;
-           font-size: 72px;
-           color: $cream-color;
-           text-shadow: 0 2px 0 $dark-color;
-           padding-left: 320px;
-           text-transform: uppercase;
-           margin-top: 40px;
-           margin-bottom: 15px;
-        }
-        .dateinfo {
-            margin-bottom: 20px;
-            p {
-                @include sans-family;
-                font-weight: $sans-normal;
-                font-size: 24px;
-                text-transform: uppercase;
-                a {
-                    color: $gold-color;
-                    text-decoration: none;
-                    @include transition;
-                    &:hover {
-                        color: white;
-                        text-decoration: underline;
-                    }
-                }
-            }
-
-        }
-   }
-
 }

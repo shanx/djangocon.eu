@@ -233,55 +233,109 @@ button:disabled:active, button:disabled:hover {
 }
 
 #masthead {
+  position: relative;
   width: 896px;
   padding: 72px 48px 84px;
-  margin: 48px auto 0;
-  padding-top: 0;
-  padding-bottom: 0;
+  margin: 0 auto 20px;
+  padding-bottom: 30px;
   overflow: hidden;
   *zoom: 1;
-  height: 312px;
-  background: transparent url(../img/masthead_10col_left_gradient.png) no-repeat center top;
+  height: 360px;
+  background: transparent url(../img/masthead_bg.png) center bottom no-repeat;
 }
 #masthead h1 {
-  display: none;
-}
-#masthead h2, #masthead h3 {
-  padding-left: 344px;
+  width: 344px;
+  margin-right: 24px;
+  position: absolute;
+  left: -4px;
+  top: 72px;
+  background: url(../img/masthead_mobile.png) left center no-repeat;
+  height: 360px;
+  text-indent: -9999px;
 }
 #masthead h2 {
-  padding-top: 105px;
-  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
-  font-weight: 500;
-  font-weight: 500;
+  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-weight: 300;
+  font-weight: 700;
+  font-size: 72px;
   color: #f5e6d2;
-  text-shadow: 0 3px 0 #7e0008;
-}
-#masthead h2 sup {
-  font-size: 0.35em;
   text-shadow: 0 2px 0 #7e0008;
+  text-transform: uppercase;
+  margin: 50px 0 20px 300px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
 }
-#masthead h2 em {
-  font-style: normal;
-  color: white;
-  text-shadow: 0 4px 0 #7e0008;
-  font-size: 1.3em;
+#masthead .dateblock {
+  margin-left: 300px;
+  overflow: hidden;
+  *zoom: 1;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
 }
-#masthead h3 {
-  font-size: 18px;
+#masthead .dateinfo {
+  float: left;
+}
+#masthead .dateinfo#talk_dates {
+  margin-right: 45px;
+}
+#masthead .dateinfo p {
   font-family: "ronnia-condensed-1","ronnia-condensed-2";
   font-weight: 300;
   font-weight: 300;
-  font-style: normal;
-  color: #4b0005;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-size: 20px;
+  text-transform: uppercase;
 }
-#masthead h3 em {
-  font-style: normal;
-  font-weight: 700;
+#masthead .dateinfo p strong {
+  font-size: 0.6em;
+  vertical-align: 3px;
 }
-#masthead h3 sup {
+#masthead .dateinfo p a {
+  color: #ffff9e;
+  text-decoration: none;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+#masthead .dateinfo p a:hover {
+  color: white;
+  text-decoration: underline;
+}
+#masthead .dateinfo h3 {
+  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-weight: 500;
+  font-weight: 500;
+  font-size: 44px;
+  color: #dbcbb3;
+  letter-spacing: 0;
+  text-shadow: 0 2px 0 #7e0008;
+  line-height: 1.5em;
+}
+#masthead .dateinfo h3 em {
+  color: #f5e6d2;
+  font-style: normal;
+}
+#masthead .dateinfo h3 em sup {
+  font-size: 0.35em;
+}
+#masthead .dateinfo h3 .amp {
   font-size: 0.7em;
+}
+#masthead h4 {
+  color: black;
+  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-weight: 500;
+  font-weight: 500;
+  margin-left: 300px;
+  font-size: 18px;
 }
 
 .content {
@@ -303,7 +357,7 @@ button:disabled:active, button:disabled:hover {
 
 .subsection {
   width: 896px;
-  margin-top: 48px;
+  margin-top: 24px;
   overflow: hidden;
   *zoom: 1;
 }
@@ -878,67 +932,6 @@ a#next_hotel:active, a#prev_hotel:active {
 }
 #blog article .post_body a:hover {
   color: #b32017;
-  text-decoration: underline;
-}
-
-#home > header {
-  width: 896px;
-  padding: 72px 48px 84px;
-  margin: 0 auto;
-  overflow: hidden;
-  *zoom: 1;
-  height: 360px;
-}
-#home > header h1 {
-  width: 344px;
-  margin-right: 24px;
-  float: left;
-  position: relative;
-  left: -20px;
-  background: url(../img/masthead_mobile.png) left center no-repeat;
-  height: 360px;
-  text-indent: -9999px;
-}
-#home > header h2 {
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
-  font-weight: 300;
-  font-weight: 700;
-  font-size: 72px;
-  color: #f5e6d2;
-  text-shadow: 0 2px 0 #7e0008;
-  padding-left: 320px;
-  text-transform: uppercase;
-  margin-top: 40px;
-  margin-bottom: 15px;
-}
-#home > header .dateinfo {
-  margin-bottom: 20px;
-}
-#home > header .dateinfo p {
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
-  font-weight: 300;
-  font-weight: 300;
-  font-size: 24px;
-  text-transform: uppercase;
-}
-#home > header .dateinfo p a {
-  color: #ffff9e;
-  text-decoration: none;
-  -moz-transition-property: all;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -moz-transition-timing-function: ease;
-  -webkit-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  transition-timing-function: ease;
-}
-#home > header .dateinfo p a:hover {
-  color: white;
   text-decoration: underline;
 }
 
