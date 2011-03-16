@@ -881,6 +881,67 @@ a#next_hotel:active, a#prev_hotel:active {
   text-decoration: underline;
 }
 
+#home > header {
+  width: 896px;
+  padding: 72px 48px 84px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+  height: 360px;
+}
+#home > header h1 {
+  width: 344px;
+  margin-right: 24px;
+  float: left;
+  position: relative;
+  left: -20px;
+  background: url(../img/masthead_mobile.png) left center no-repeat;
+  height: 360px;
+  text-indent: -9999px;
+}
+#home > header h2 {
+  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-weight: 300;
+  font-weight: 700;
+  font-size: 72px;
+  color: #f5e6d2;
+  text-shadow: 0 2px 0 #7e0008;
+  padding-left: 320px;
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+#home > header .dateinfo {
+  margin-bottom: 20px;
+}
+#home > header .dateinfo p {
+  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-weight: 300;
+  font-weight: 300;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+#home > header .dateinfo p a {
+  color: #ffff9e;
+  text-decoration: none;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+#home > header .dateinfo p a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 /* Tablet Layout: 768px.
  * Gutters: 24px.
  * Outer margins: 28px.
