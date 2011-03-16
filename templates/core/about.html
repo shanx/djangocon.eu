@@ -1,1 +1,102 @@
-{# TODO #}
+{% extends "standard_layout.html" %}
+
+{% block subtitle %} &mdash; About{% endblock subtitle %}
+
+{% block extra_content %}id="about"{% endblock extra_content %}
+
+{% block content %}
+
+<header>
+    <h1>Django Association</h1>
+</header>
+
+<section id="about" class="subsection">
+    <header>
+        <h1>Organizer</h1>
+        <p><em>The</em> European conference on the Django framework.</p>
+    </header>
+
+    <section id="welcome" class="subsection_body">
+        <h1>For the community, by the community</h1>
+
+        <p>
+            DjangoCon Europe 2011 is hosted by the Dutch Django Association:
+            a non-profit organisation that focusses on promoting development
+            of the Django community and Django framework itself in the Netherlands.
+        </p>
+    </section>
+</section>
+<section id="more_info" class="subsection">
+    <header>
+        <h1>About the assocation</h1>
+        <p></p>
+    </header>
+
+    <section id="association" class="subsection_body">
+        <h1>Django vereniging</h1>
+        <p>
+            Please note that, because the Dutch Django Association is
+            a Dutch legal entity, some terms will be in Dutch.
+        </p>
+
+        <h1>Factual information</h1>
+        <ul>
+            <li>Official name of the Assocation: Django Vereniging.</li>
+            <li>Type of organisation: Vereniging met volledige rechtsbevoegdheid (statuten in notari&euml;le akte)</li>
+            <li>Statutory seat: Amsterdam.</li>
+            <li>Registration:
+                <ul>
+                    <li>Registered with: Chamber of Commerce in Amsterdam</li>
+                    <li>Registration number: 52112233</li>
+                </ul>
+            </li>
+            <li>Bank account:
+                <ul>
+                    <li>Bank: ABN-AMRO, Amsterdam</li>
+                    <li>Account holder: Django Vereniging, Amsterdam</li>
+                    <li>Account nr: 545557224</li>
+                    <li>IBAN: NL35ABNA0545557224</li>
+                    <li>BIC/SWIFT: ABNANL2A</li>
+                </ul>
+                <sub>
+                    Please note: ticket sales is through the <a href="{% url core:tickets %}">ticket service</a> <em>only</em>.
+                </sub>
+        </ul>
+
+
+Plaats Rekeninghouder: Amsterdam
+Plaats Bank: Amsterdam
+
+
+        <h1>Statutes of the Association</h1>
+        <p>
+            A copy of the statutes in Dutch can be found: <a href="/static/downloads/dutch-django-association-statutes.pdf">here</a>
+        </p>
+
+        <h1>Board members</h1>
+        <table>
+            <tr>
+                <th>Role</th>
+                <th>Name</th>
+                <th>E-mail address</th>
+            </tr>
+            <tr>
+                <td>Chairman</td>
+                <td>Remco Wendt</td>
+                <td>voorzitter@djangovereniging.nl</td>
+            </tr>
+            <tr>
+                <td>Secretary</td>
+                <td>Klaas van Schelven</td>
+                <td>secretaris@djangovereniging.nl</td>
+            </tr>
+            <tr>
+                <td>Treasurer</td>
+                <td>Joeri Bekker</td>
+                <td>penningmeester@djangovereniging.nl</td>
+            </tr>
+        </table>
+    </section>
+</section>
+
+{% endblock content %}
