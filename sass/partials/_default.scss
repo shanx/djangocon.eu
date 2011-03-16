@@ -211,6 +211,14 @@
                 margin-top: 0;
             }
         }
+        h2 {
+            @extend .big;
+            @include serif-family;
+            font-weight: $serif-normal;
+            color: $dark-color;
+            margin-bottom: 8px;
+            //font-style: italic;
+        }
         p, ul, li {
             margin-bottom: 1.0em;
         }
@@ -400,3 +408,34 @@ a#next_hotel, a#prev_hotel {
 
 }
 
+#purchase_button {
+    display: block;
+    position: relative;
+    background-color: $dark-color;
+    color: $cream-color;
+    font-size: 1.5em;
+    line-height: 2em;
+    text-align: center;
+    width: 100%;
+    @include border-radius(3px);
+    text-decoration: none;
+    font-weight: $sans-normal;
+    @include sans-family;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    margin: 24px 0;
+    @include transition-property("color, background-color");
+    &:hover {
+        color: white;
+        background-color: lighten($dark-color, 4%);
+        top: -2px;
+        @include box-shadow(darken($tan-color, 20%) 0 2px 0);
+    }
+    &:active {
+        color: white;
+        background-color: lighten($dark-color, 4%);
+        top: 0;
+        @include box-shadow(none);
+    }
+}

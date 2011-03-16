@@ -45,7 +45,7 @@ a img {
   line-height: 36px;
 }
 
-.big, h4 {
+.big, h4, .subsection .subsection_body h2 {
   font-size: 22px;
   line-height: 30px;
 }
@@ -394,6 +394,13 @@ button:disabled:active, button:disabled:hover {
 .subsection .subsection_body h1:first-child {
   margin-top: 0;
 }
+.subsection .subsection_body h2 {
+  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-weight: 500;
+  font-weight: 500;
+  color: #7e0008;
+  margin-bottom: 8px;
+}
 .subsection .subsection_body p, .subsection .subsection_body ul, .subsection .subsection_body li {
   margin-bottom: 1.0em;
 }
@@ -616,6 +623,53 @@ a#next_hotel:active, a#prev_hotel:active {
 }
 #reservation input {
   width: 502px;
+}
+
+#purchase_button {
+  display: block;
+  position: relative;
+  background-color: #7e0008;
+  color: #f5e6d2;
+  font-size: 1.5em;
+  line-height: 2em;
+  text-align: center;
+  width: 100%;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 300;
+  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  margin: 24px 0;
+  -moz-transition-property: color, background-color;
+  -webkit-transition-property: color, background-color;
+  -o-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+#purchase_button:hover {
+  color: white;
+  background-color: #920009;
+  top: -2px;
+  -moz-box-shadow: #ba9c6e 0 2px 0;
+  -webkit-box-shadow: #ba9c6e 0 2px 0;
+  -o-box-shadow: #ba9c6e 0 2px 0;
+  box-shadow: #ba9c6e 0 2px 0;
+}
+#purchase_button:active {
+  color: white;
+  background-color: #920009;
+  top: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
 }
 
 /* Tablet Layout: 768px.
