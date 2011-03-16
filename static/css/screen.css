@@ -625,6 +625,25 @@ a#next_hotel:active, a#prev_hotel:active {
   width: 502px;
 }
 
+#ticket_rates table {
+  width: 100%;
+}
+#ticket_rates table th {
+  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-weight: 300;
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+#ticket_rates table td {
+  font-size: 1.25em;
+  padding: 10px;
+}
+#ticket_rates table th, #ticket_rates table td {
+  border-bottom: 1px solid #dbcbb3;
+  text-align: center;
+}
+
 #purchase_button {
   display: block;
   position: relative;
