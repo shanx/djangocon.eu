@@ -1,24 +1,20 @@
-{% extends "base.html" %}
+{% extends "standard_layout.html" %}
 
 {% block subtitle %} &mdash; Home{% endblock subtitle %}
 
-{% block extra_body %}id="home"{% endblock extra_body %}
+{% block extra_content %}id="home"{% endblock extra_content %}
 
 
-{% block body %}
-{% include "nav_snippet.html" %}
-<header>
-    <h1>DjangoCon Europe 2011</h1>
-    <h2>Amsterdam 2011</h2>
-    <div class="dateinfo">
-        <p>Talks <strong>&#9733;</strong> <a href="location">Pakhuis de Zwijger</a></p>
-        <h3>June <em>6<sup>th</sup></em>, <em>7<sup>th</sup></em> <span class="amp">&amp;</span> <em>8<sup>th</sup></em></h3>
-    </div>
-    <div class="dateinfo">
-        <p>Sprints <strong>&#9733;</strong> <a href="location">De Waag</a></p>
-        <h3>June <em>9<sup>th</sup></em> <span class="amp">&amp;</span> <em>10<sup>th</sup></em></h3>
-    </div>
-</header>
+{% block content %}
+
+
+<section id="home_where">
+    <h1>Where</h1>
+</section>
+
+<section id="home_tickets">
+
+</section>
 
 <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.nl/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=201031125106460952811.00049e95db8eecc0fb55f&amp;ll=52.375835,4.907498&amp;spn=0.019728,0.055747&amp;output=embed"></iframe><br /><small>View <a href="http://maps.google.nl/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=201031125106460952811.00049e95db8eecc0fb55f&amp;ll=52.375835,4.907498&amp;spn=0.019728,0.055747&amp;source=embed" style="color:#0000FF;text-align:left">DjangoCon Europe 2011</a> in a larger map</small>
 
@@ -104,4 +100,4 @@
     </section>
 </section>
 
-{% endblock body %}
+{% endblock content %}
