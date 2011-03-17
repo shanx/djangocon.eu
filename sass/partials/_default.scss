@@ -316,6 +316,9 @@
         }
         ul,ol {
             list-style-position: inside;
+            ul,ol {
+                margin-left: 20px;
+            }
         }
         input[type=text], textarea {
             width: 568px;

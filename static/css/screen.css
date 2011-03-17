@@ -540,6 +540,9 @@ button:disabled:active, button:disabled:hover {
 .subsection .subsection_body ul, .subsection .subsection_body ol {
   list-style-position: inside;
 }
+.subsection .subsection_body ul ul, .subsection .subsection_body ul ol, .subsection .subsection_body ol ul, .subsection .subsection_body ol ol {
+  margin-left: 20px;
+}
 .subsection .subsection_body input[type=text], .subsection .subsection_body textarea {
   width: 568px;
 }
