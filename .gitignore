@@ -24,6 +24,6 @@ pip-log.txt
 uploads/
 settings/local.py
 .sass-cache/
-static_root/
+#static_root/
 docs/_build
 .epio-app
