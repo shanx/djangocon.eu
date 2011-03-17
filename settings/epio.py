@@ -19,3 +19,5 @@ CACHE_BACKEND = 'redis_cache.cache://{0}:{1}?password={2}'.format(
 
 STATIC_URL = '/static/'
 
+CACHE_BACKEND = 'locmem://'
+
