@@ -8,14 +8,13 @@ from django.template.loader import render_to_string
 from django.core.mail import send_mail
 from django.conf import settings
 from django.http import HttpResponseRedirect
+from django.views.decorators.cache import cache_page
 
 from .models import Hotel
 
 
+@cache_page(60*60*6)  # Cache for 6 hours
 def reserve(request, template_name='accommodation/reserve.html', extra_context=None):
     context = extra_context and extra_context.copy() or {}
     context['hotels'] = Hotel.objects.all()
     return direct_to_template(request, template_name, context)
-
-def reservation_received(request, template_name='accommodation/reservation_received.html', extra_context=None):
-    return direct_to_template(request, template_name, extra_context)
