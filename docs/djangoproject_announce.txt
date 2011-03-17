@@ -1,3 +1,3 @@
 DjangoCon Europe 2011 ticket sales announced
 
-The Dutch Django Association is happy to announce the immediate availability of ticket sales for DjangoCon Europe 2011 in Amsterdam. For more information, please read the blog entry on the DjangoCon Europe website: http://2011.djangocon.eu/blog/
+The Dutch Django Association is happy to announce the immediate availability of ticket sales for DjangoCon Europe 2011 in Amsterdam. For more information, please read the announcement on the DjangoCon Europe website: http://djangocon.eu/blog/.

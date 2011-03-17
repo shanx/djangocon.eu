@@ -1,8 +1,11 @@
-Dear Subscriber,
+Dear Djangonaut,
 
-A little while ago you left your e-mail address on the DjangoCon Europe website to be notified of any news regarding DjangoCon. W're happy you did that, because we can bring the news to you right away, 'stop the presses!':
+You subscribed to receive updates for DjangoCon Europe 2011, and we're pleased to announce that we have some updates to share!
 
-The Dutch Django Association is happy to announce the new DjangoCon Europe website is online and awaiting your full inspection. As of this moment ticket sales has started. We happily refer you to the first blog post that carries additional info: http://www.djangocon.eu/blog/
+The Dutch Django Association is happy to announce the new DjangoCon Europe website is online and awaiting your full inspection. Ticket sales are underway, talk submissions are being accepted: http://djangocon.eu.
 
-With kind regards,
+There are some important announcements on our blog regarding deadlines, particularly the special hotel room rates. Check out our announcement post at http://djangocon.eu/blog.
+
+Cheers,
+
 The DjangoCon Europe 2011 team

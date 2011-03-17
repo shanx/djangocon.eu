@@ -1,16 +1,18 @@
-# Ticket sales online and more
+# Houston, we have liftoff
 
-We are so happy to announce to all of you that as of this moment [ticket sales](/tickets/ "Tickets page"), [hotel reservations](/accommodation/reserve/ "Hotels page") and [talk submission](/talks/submit/ "Talk submission page") are alive and kicking! For your information, please be aware of the following _deadlines_:
+We are pleased to announce that DjangoCon Europe 2011 is open for business. [Tickets sales are underway](/tickets/ "Tickets page"), [hotel reservations](/accommodation/reserve/ "Hotels page") can be booked, and [talk submissions](/talks/submit/ "Talk submission page") are being accepted.
 
-## Ticket registration Deadlines:
+## Deadlines
 
-* Early bird registration is available until: _Friday, April 1st_.
-* Regular rate is available until: _Friday, May 13th_ (no kidding)
+Unfortunately, this year we got off to a very late start with registration—our sincere apologies.
 
-## Speaker registration deadlines:
+As a result, there are several deadlines already approaching. Notably, the conference hotels will only honor the special room rates if booked before __Friday, April 1st__. This is something we cannot control, and so we urge you to book your hotels in time to take advantage of the discounted rates.
 
-* Submission deadline is: _Friday, April 15th_.
-* Acceptance announcements are on: _Sunday, May 1st_.
+* Discounted hotel rooms available until: __Friday, April 1st__.
+* Early bird registration is available until: __Friday, April 1st__.
+* Regular rate is available until: __Friday, May 13th__.
+* Talk submission deadline is: __Friday, April 15th__.
+* Acceptance announcements are on: __Sunday, May 1st__.
 
 ## Talks
 
@@ -18,13 +20,27 @@ This edition of DjangoCon will focus on advanced topics. If you have anything in
 
 ## Sponsors
 
-W're hoping to welcome more sponsors in supporting this edition of DjangoCon. Have a look at the [sponsor page](/sponsors/ "Sponsor page") if you, or someone you know, may want to become our beloved sponsor.
+Additional sponsors for this year’s DjangoCon would be most welcome. If you (or someone you know) might be interested in supporting this prominent event in every djangonaut’s calendar, please have a look at the [sponsor page](/sponsors/ "Sponsor page").
 
-## Last request
+## One more thing…
 
 Buying your tickets early helps twice: the conference organizers get a better picture of the finances and you enjoy a lower rate. Attendance anxiety is a leading cause of emotional meltdown among conference organizers; please help fight this awful disease by booking [your tickets](/tickets/ "Tickets page") as early as possible.
 
-We would like to thank all volunteers who have helped until now, and who will help us out in the near future, into making this a fabulous edition of DjangoCon!
+We would like to thank the volunteers who have helped get us this far; their efforts are what make the conference awesome:
 
-We hope to see you all in Amsterdam in June for the _third edition of DjangoCon Europe_!
+* Joeri Bekker
+* Niels Bom
+* Jeroen Dekkers
+* Wim Feijen
+* Idan Gazit
+* Vincent Hillenbrink
+* Jannis Leidel
+* Yuri van der Meer
+* Gijs Molenar
+* Guyon Moree
+* Reinout van Rees
+* Klaas van Schelven
+* Remco Wendt
+
+We hope to see you all in Amsterdam in June for the third edition of DjangoCon Europe! If you have any questions or concerns, please don’t hesitate to contact us at [feedback@djangocon.eu](mailto:feedback@djangocon.eu).
 
