@@ -35,7 +35,7 @@ a img {
   letter-spacing: -1px;
 }
 
-.large, h2, #admin h1, #blog article header h1, #blog article header h1 a {
+.large, h2, #misc h1, #blog article header h1, #blog article header h1 a {
   font-size: 42px;
   line-height: 48px;
 }
@@ -799,7 +799,7 @@ a#next_hotel:active, a#prev_hotel:active {
   box-shadow: none;
 }
 
-#admin {
+#misc {
   width: auto;
   min-width: 600px;
   margin: 0 auto;
@@ -807,21 +807,21 @@ a#next_hotel:active, a#prev_hotel:active {
   text-align: center;
   color: #f5e6d2;
 }
-#admin header {
+#misc header {
   margin-top: 50px;
   margin-bottom: 25px;
 }
-#admin section {
+#misc section {
   margin-bottom: 50px;
 }
-#admin h1 {
+#misc h1 {
   font-family: "ronnia-condensed-1","ronnia-condensed-2";
   font-weight: 300;
   font-weight: 300;
   text-transform: uppercase;
   margin-bottom: 40px;
 }
-#admin a {
+#misc a {
   position: relative;
   background-color: #7e0008;
   color: #f5e6d2;
@@ -846,7 +846,7 @@ a#next_hotel:active, a#prev_hotel:active {
   -o-transition-property: color, background-color;
   transition-property: color, background-color;
 }
-#admin a:hover {
+#misc a:hover {
   color: white;
   background-color: #920009;
   top: -2px;
@@ -855,7 +855,7 @@ a#next_hotel:active, a#prev_hotel:active {
   -o-box-shadow: rgba(0, 0, 0, 0.6) 0 2px 0;
   box-shadow: rgba(0, 0, 0, 0.6) 0 2px 0;
 }
-#admin a:active {
+#misc a:active {
   color: white;
   background-color: #920009;
   top: 0;

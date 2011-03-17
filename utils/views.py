@@ -1,20 +1,8 @@
 from django import http
 from django.conf import settings
-from django.template import RequestContext, Context, loader
-from django.shortcuts import render_to_response
-from django.conf import settings
-from django.core.exceptions import ImproperlyConfigured
+from django.template import Context, loader
 from django.core.cache import cache
 from django.contrib.admin.views.decorators import staff_member_required
-
-from subscribers.models import Subscriber
-from subscribers.forms import SubscriberForm
-from blog.models import Post
-
-try:
-    subscription_cookie = getattr(settings, 'SUBSCRIPTION_COOKIE_NAME')
-except AttributeError:
-    raise ImproperlyConfigured("SUBSCRIPTION_COOKIE_NAME must be specified in settings.")
 
 @staff_member_required
 def flush_cache(request):
@@ -25,19 +13,28 @@ def flush_cache(request):
     messages.info(request, 'Cache Busted.')
     return HttpResponseRedirect('../')
 
-def server_error(request, template_name='500.html'):
+def server_error(request, template_name):
     """
-    A custom 500 error handler.
+    A custom error handler.
 
-    Templates: `500.html`
     Context:
         MEDIA_URL
             Path of media files (e.g. "media.example.org")
         STATIC_URL
             Path of static files (e.g. "static.example.org")
     """
-    t = loader.get_template(template_name) # You need to create a 500.html template.
-    return http.HttpResponseServerError(t.render(Context({
+    t = loader.get_template(template_name) 
+    return http.HttpResponse(t.render(Context({
         'MEDIA_URL': settings.MEDIA_URL,
         'STATIC_URL': settings.STATIC_URL,
     })))
+
+def server_404(request):
+    resp = server_error(request, template_name='404.html')
+    resp.status_code = 404
+    return resp
+
+def server_500(request):
+    return server_error(request, template_name='500.html')
+    resp.status_code = 500
+    return resp

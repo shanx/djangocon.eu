@@ -1,70 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>DjangoCon.eu 2010 - Berlin</title>
-    
-<style type="text/css" media="screen">
+{% extends "base.html" %}
 
-	html, body {
-		background-color: #586c78;
-		color: #fff;
-		font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
-		height: 100%;
-		width: 100%;
-	}
+{% block subtitle %} &mdash; Server Error{% endblock subtitle %}
 
-	.wrap_960 {
-		width: 960px;
-		margin: 0 auto;
-		padding: 0;
-		overflow: hidden;
-	}
+{% block extra_body %}id="misc"{% endblock extra_body %}
 
-	h1 {
-		width: 960px;
-		height: 450px;
-		margin-top: 150px;
-		background-image: url({{ STATIC_URL }}img/500.png);
-		text-indent: -9999px;
-	}
+{% block body %}
 
-	h2 {
-		color: #ccc;
-		text-align: center;
-		font-weight: normal;
-		font-size: 22px;
-		margin: 10px 0;
-	}
-	
-	p {
-		color: #909ca2;
-		text-align: center;
-		font-weight: 300;
-		font-size: 18px;
-		margin: 10px 0;
-		
-	}
-	
-	a {
-		color: #fff;
-		text-decoration: none;
-	}
-	
-	a:hover {
-		text-decoration: underline;
-	}
-	
-	
-</style>
+<header>
+    <img src="{{STATIC_URL}}img/masthead.png" width="490" height="540">
+</header>
 
-</head>
-<body>
-    <div class="wrap_960">
-        <h1>Server Error: 500</h1>
-        <h2>Now you have a dead pony on your conscience.</h2>
-		<p>You surely feel our pain. Please, <a href="mailto:contact@djangocon.eu" >drop us a line</a> and let us know where to look for the bug.</p>
-    </div>
-</body>
-</html>
+<section>
+<h1>D'oh. Server meltdown.</h1>
+<p><a href="{% url core:home %}">Uh oh. Back to the homepage?</a></p>
+</section>
+{% endblock body %}
+
+

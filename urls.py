@@ -7,7 +7,8 @@ from staticfiles.urls import staticfiles_urlpatterns
 admin.autodiscover()
 
 
-handler500 = 'utils.views.server_error'
+handler500 = 'utils.views.server_500'
+handler404 = 'utils.views.server_404'
 
 urlpatterns = patterns('',
     (r'^', include('core.urls', namespace='core', app_name='core')),
