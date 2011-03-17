@@ -67,7 +67,6 @@ INSTALLED_APPS = (
     'south',
 
     'core',
-    'subscribers',
     'blog',
     'accommodation',
     'speakers',

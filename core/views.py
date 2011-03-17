@@ -1,7 +1,6 @@
 from django.views.decorators.cache import cache_page
 from django.views.generic.simple import direct_to_template as render
 
-from subscribers.forms import SubscriberForm
 from blog.models import Post
 
 @cache_page(60*5) # Cache for 5 minutes
