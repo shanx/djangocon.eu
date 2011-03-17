@@ -24,23 +24,23 @@ class Post(DateAwareModel):
     body_markdown = models.TextField('Body', blank=False, help_text = "Use markdown syntax")
     body = models.TextField('Body', blank=True)
     objects = PublicManager()
-    
+
     class Meta:
         ordering = ('-publish_date',)
         unique_together = ('publish_date', 'slug')
         verbose_name = 'Blog Post'
         get_latest_by = 'publish_date'
-    
+
     def __unicode__(self):
         return self.title
-    
+
     def save(self, *args, **kwargs):
         self.body = unicode(smartyPants(markdown(self.body_markdown)))
         super(Post, self).save(*args, **kwargs)
-    
+
     @permalink
     def get_absolute_url(self):
-        return('blogpost_detail', (), {
+        return('blog:blogpost_detail', (), {
             'year': self.publish_date.year,
             'month': self.publish_date.month,
             'day': self.publish_date.day,
