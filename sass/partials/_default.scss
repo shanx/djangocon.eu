@@ -705,8 +705,23 @@ a#next_hotel, a#prev_hotel {
 
 }
 
+#association {
+    th {
+        @include sans-family;
+        font-size: 14px;
+        font-weight: $sans-normal;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    td {
+        padding: 5px;
+    }
+    td, th {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+}
+
 #home {
-    
     .homesection {
         margin-bottom: 50px;
         width: 100%;
@@ -796,7 +811,6 @@ a#next_hotel, a#prev_hotel {
             border: 6px solid white;
             margin: 20px 0;
         }
-
     }
 }
 
