@@ -338,6 +338,67 @@ button:disabled:active, button:disabled:hover {
   font-size: 20px;
 }
 
+#pagefooter {
+  width: 896px;
+  padding: 72px 48px 84px;
+  margin: 30px auto 50px;
+  padding: 30px 0;
+  overflow: hidden;
+  *zoom: 1;
+  background: url(../img/masthead_bg.png) center top no-repeat;
+  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-weight: 300;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+#pagefooter h1 {
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 1.0em;
+  line-height: 1.1em;
+  letter-spacing: 0;
+}
+#pagefooter h2 {
+  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-weight: 500;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+  text-transform: none;
+}
+#pagefooter a {
+  color: #ffff9e;
+  text-decoration: none;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+#pagefooter a:hover {
+  text-decoration: underline;
+  color: white;
+}
+#pagefooter h3 {
+  font-size: 14px;
+  font-weight: 300;
+}
+#pagefooter #footer_hosting {
+  margin-right: 30px;
+  padding-right: 30px;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  float: left;
+}
+
 .content {
   width: 896px;
   padding: 72px 48px 84px;
@@ -670,13 +731,6 @@ a#next_hotel:active, a#prev_hotel:active {
   font-weight: 300;
   text-transform: uppercase;
   width: 150px;
-}
-
-#reservation {
-  display: block;
-}
-#reservation input {
-  width: 502px;
 }
 
 #ticket_rates table {
