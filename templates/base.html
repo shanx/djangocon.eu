@@ -13,6 +13,11 @@
         <meta name="viewport" content="width=device-width; initial-scale=1.0;">
         <meta property="og:image" content="{{ STATIC_URL }}img/facebook.png">
         <link rel="shortcut icon" href="{{ STATIC_URL }}favicon.png">
+        {% block ieblocker %}
+        <!--[if lt IE 8 ]>
+        <meta http-equiv="refresh" content="0;url={% url core:ieblocker %}" />
+        <![endif]-->
+        {% endblock ieblocker %}
         {% block css %}
         <link rel="stylesheet" href="{{ STATIC_URL }}css/screen.css" media="screen, projection">
         {% endblock css %}

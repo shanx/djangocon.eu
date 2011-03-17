@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block ieblocker %}{% endblock ieblocker %}
+
+{% block subtitle %} &mdash; EINSUFFICIENTBROWSER{% endblock subtitle %}
+
+{% block extra_body %}id="misc"{% endblock extra_body %}
+
+{% block body %}
+
+<header>
+    <img src="{{STATIC_URL}}img/masthead.png" width="490" height="540">
+</header>
+
+<section>
+<h1>You're doing it wrong.</h1>
+<p>We really didn't bother building this for IE.</p>
+</section>
+{% endblock body %}
+
+
