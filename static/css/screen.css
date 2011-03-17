@@ -193,7 +193,7 @@ button:disabled:active, button:disabled:hover {
 #main_nav ul li.right {
   float: right;
 }
-#main_nav ul li #home {
+#main_nav ul li #nav_home {
   font-weight: 700;
 }
 #main_nav ul li #twitter {
