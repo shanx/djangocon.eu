@@ -161,11 +161,8 @@ button:disabled:active, button:disabled:hover {
 */
 #main_nav {
   width: 100%;
+  min-width: 992px;
   height: 48px;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
   padding: 0;
   margin: 0;
   background-color: #620000;
@@ -238,6 +235,7 @@ button:disabled:active, button:disabled:hover {
   padding: 72px 48px 84px;
   margin: 0 auto 20px;
   padding-bottom: 30px;
+  padding-top: 16px;
   overflow: hidden;
   *zoom: 1;
   height: 360px;
@@ -248,7 +246,7 @@ button:disabled:active, button:disabled:hover {
   margin-right: 24px;
   position: absolute;
   left: -4px;
-  top: 72px;
+  top: 16px;
   background: url(../img/masthead_mobile.png) left center no-repeat;
   height: 360px;
   text-indent: -9999px;
@@ -342,7 +340,8 @@ button:disabled:active, button:disabled:hover {
   width: 896px;
   padding: 72px 48px 84px;
   margin: 30px auto 50px;
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
   overflow: hidden;
   *zoom: 1;
   background: url(../img/masthead_bg.png) center top no-repeat;

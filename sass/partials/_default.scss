@@ -12,11 +12,13 @@
 
 #main_nav {
     width: 100%;
+    min-width: 992px;
     height: 48px;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
+//    position: absolute;
+//    min-width: 768px;
+//    left: 0;
+//    right: 0;
+//    top: 0;
     padding: 0;
     margin: 0;
     background-color: #620000;
@@ -75,6 +77,7 @@
     @include grid(10);
     margin: 0 auto 20px;
     padding-bottom: 30px;
+    padding-top: 16px;
     @include clearfix;
     height: 360px;
     background: transparent url(../img/masthead_bg.png) center bottom no-repeat;
@@ -82,7 +85,7 @@
         @include column(4);
         position: absolute;
         left: -4px;
-        top: 72px;;
+        top: 16px;;
         background: url(../img/masthead_mobile.png) left center no-repeat;
         height: 360px;
         text-indent: -9999px;
@@ -161,7 +164,8 @@
 #pagefooter {
     @include grid(10);
     margin: 30px auto 50px;
-    padding: 30px 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
     @include clearfix;
     background: url(../img/masthead_bg.png) center top no-repeat;
     @include sans-family;
