@@ -89,7 +89,7 @@ html {
   width: 100%;
   background: #b32017 url(../img/bg_tiling.png) repeat left top;
   background: url(../img/bg.png) repeat-x left top, #b32017 url(../img/bg_tiling.png) repeat left top;
-  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
   font-weight: 500;
   font-weight: 500;
 }
@@ -107,7 +107,7 @@ button {
   padding: 8px 10px;
   color: #fff;
   text-decoration: none;
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 700;
   font-size: 16px;
@@ -185,7 +185,7 @@ button:disabled:active, button:disabled:hover {
   display: block-inline;
   float: left;
   height: 48px;
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 300;
   font-size: 16px;
@@ -254,7 +254,7 @@ button:disabled:active, button:disabled:hover {
   text-indent: -9999px;
 }
 #masthead h2 {
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 700;
   font-size: 72px;
@@ -279,7 +279,7 @@ button:disabled:active, button:disabled:hover {
   margin-right: 55px;
 }
 #masthead .dateinfo p {
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 300;
   font-size: 20px;
@@ -310,7 +310,7 @@ button:disabled:active, button:disabled:hover {
   text-decoration: underline;
 }
 #masthead .dateinfo h3 {
-  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
   font-weight: 500;
   font-weight: 500;
   font-size: 44px;
@@ -331,7 +331,7 @@ button:disabled:active, button:disabled:hover {
 }
 #masthead h4 {
   color: black;
-  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
   font-weight: 500;
   font-weight: 500;
   margin-left: 300px;
@@ -346,7 +346,7 @@ button:disabled:active, button:disabled:hover {
   overflow: hidden;
   *zoom: 1;
   background: url(../img/masthead_bg.png) center top no-repeat;
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 300;
   font-size: 14px;
@@ -360,7 +360,7 @@ button:disabled:active, button:disabled:hover {
   letter-spacing: 0;
 }
 #pagefooter h2 {
-  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
   font-weight: 500;
   font-weight: 500;
   font-size: 28px;
@@ -407,7 +407,7 @@ button:disabled:active, button:disabled:hover {
 }
 .content > header > h1 {
   width: 896px;
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 300;
   text-transform: uppercase;
@@ -430,7 +430,7 @@ button:disabled:active, button:disabled:hover {
 .subsection > header h1 {
   margin-bottom: 24px;
   color: #f5e6d2;
-  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
   font-weight: 500;
   font-weight: 500;
   font-style: italic;
@@ -439,7 +439,7 @@ button:disabled:active, button:disabled:hover {
 .subsection > header p, .subsection > header li {
   color: #f5e6d2;
   font-size: 16px;
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 300;
   text-transform: uppercase;
@@ -497,7 +497,7 @@ button:disabled:active, button:disabled:hover {
   border-radius: 4px;
 }
 .subsection .subsection_body h1 {
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 700;
   color: #7e0008;
@@ -510,7 +510,7 @@ button:disabled:active, button:disabled:hover {
   margin-top: 0;
 }
 .subsection .subsection_body h2 {
-  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
   font-weight: 500;
   font-weight: 500;
   color: #7e0008;
@@ -551,7 +551,7 @@ form .formrow {
   margin-bottom: 36px;
 }
 form .formrow > label, form .formrow > .required > label {
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 300;
   color: #333;
@@ -572,7 +572,7 @@ form .formrow > .required > label {
 form .formrow > .required em {
   display: block;
   float: left;
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 300;
   font-size: 12px;
@@ -603,7 +603,7 @@ form .errorlist {
   color: #7e0008;
 }
 form input[type=text], form textarea {
-  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -639,7 +639,7 @@ a#next_hotel, a#prev_hotel {
   border-radius: 3px;
   text-decoration: none;
   font-weight: 300;
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-size: 14px;
   letter-spacing: 1px;
@@ -669,7 +669,7 @@ a#next_hotel:active, a#prev_hotel:active {
   padding: 10px 15px;
 }
 .hotel h1 {
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 700;
   text-transform: uppercase;
@@ -725,7 +725,7 @@ a#next_hotel:active, a#prev_hotel:active {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .hotel table th {
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-size: 14px;
   font-weight: 300;
@@ -737,7 +737,7 @@ a#next_hotel:active, a#prev_hotel:active {
   width: 100%;
 }
 #ticket_rates table th {
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 300;
   font-size: 16px;
@@ -769,7 +769,7 @@ a#next_hotel:active, a#prev_hotel:active {
   border-radius: 3px;
   text-decoration: none;
   font-weight: 300;
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -815,7 +815,7 @@ a#next_hotel:active, a#prev_hotel:active {
   margin-bottom: 50px;
 }
 #misc h1 {
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 300;
   text-transform: uppercase;
@@ -837,7 +837,7 @@ a#next_hotel:active, a#prev_hotel:active {
   border-radius: 3px;
   text-decoration: none;
   font-weight: 500;
-  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
   font-weight: 500;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
   margin: 24px 0;
@@ -904,7 +904,7 @@ a#next_hotel:active, a#prev_hotel:active {
   margin: 50px 0;
 }
 #blog article header h1, #blog article header h1 a {
-  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
   font-weight: 500;
   font-weight: 500;
   color: #f5e6d2;
@@ -939,7 +939,7 @@ a#next_hotel:active, a#prev_hotel:active {
   width: 252px;
   margin-right: 24px;
   float: left;
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   color: #f5e6d2;
@@ -955,7 +955,7 @@ a#next_hotel:active, a#prev_hotel:active {
   vertical-align: 6px;
 }
 #blog article aside .author em {
-  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
   font-weight: 500;
   font-weight: 500;
   font-style: italic;
@@ -982,7 +982,7 @@ a#next_hotel:active, a#prev_hotel:active {
 }
 #blog article .post_body h1 {
   color: #7e0008;
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 700;
   letter-spacing: 0;
@@ -991,7 +991,7 @@ a#next_hotel:active, a#prev_hotel:active {
 }
 #blog article .post_body h2 {
   color: #7e0008;
-  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
   font-weight: 500;
   font-weight: 700;
   margin: 10px 0;
@@ -1023,7 +1023,7 @@ a#next_hotel:active, a#prev_hotel:active {
   background: url(../img/call_to_action.png) center top no-repeat;
   text-align: center;
   height: 90px;
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-size: 48px;
   padding-top: 25px;
@@ -1073,7 +1073,7 @@ a#next_hotel:active, a#prev_hotel:active {
 }
 
 #association th {
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-size: 14px;
   font-weight: 300;
@@ -1097,7 +1097,7 @@ a#next_hotel:active, a#prev_hotel:active {
   width: 252px;
   margin-right: 24px;
   float: left;
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 300;
   font-size: 36px;
@@ -1110,7 +1110,7 @@ a#next_hotel:active, a#prev_hotel:active {
   float: left;
 }
 #home .homesection p {
-  font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+  font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
   font-weight: 500;
   font-weight: 500;
   font-size: 24px;
@@ -1143,7 +1143,7 @@ a#next_hotel:active, a#prev_hotel:active {
   margin-bottom: 12px;
 }
 #home #home_blog .meta {
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 300;
   font-size: 16px;
@@ -1152,7 +1152,7 @@ a#next_hotel:active, a#prev_hotel:active {
 #home #home_venue h1 {
   width: 436px;
   float: left;
-  font-family: "ronnia-condensed-1","ronnia-condensed-2";
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 300;
   font-size: 20px;

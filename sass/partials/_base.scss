@@ -15,14 +15,14 @@ $sub-ok-color: white;
 $sans-normal: 300;
 $sans-bold: 700;
 @mixin sans-family {
-    font-family: "ronnia-condensed-1","ronnia-condensed-2";
+    font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
     font-weight: $sans-normal;
 }
 
 $serif-normal: 500;
 $serif-bold: 700;
 @mixin serif-family {
-    font-family: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+    font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
     font-weight: $serif-normal;
 }
 
