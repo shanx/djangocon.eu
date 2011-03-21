@@ -2,7 +2,7 @@ Dear Djangonaut,
 
 You subscribed to receive updates for DjangoCon Europe 2011, and we're pleased to announce that we have some updates to share!
 
-The Dutch Django Association is happy to announce the new DjangoCon Europe website is online and awaiting your full inspection. Ticket sales are underway, talk submissions are being accepted: http://djangocon.eu.
+The Dutch Django Association is happy to announce the new DjangoCon Europe website is online and awaiting your full inspection. Ticket sales are underway, talk submissions are being accepted. Read the full announcement here: http://www.djangocon.eu/blog/2011/3/17/its-alive/
 
 There are some important announcements on our blog regarding deadlines, particularly the special hotel room rates. Check out our announcement post at http://djangocon.eu/blog.
 
