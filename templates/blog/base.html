@@ -1,7 +1,7 @@
 {% extends "standard_layout.html" %}
 {% block subtitle %} &mdash; Blog{% endblock subtitle %}
 {% block extra_head %}
-<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url blog:blog_rss %}">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url blog:rss %}">
 {% endblock extra_head %}
 
 {% block extra_content %}id="blog"{% endblock extra_content %}

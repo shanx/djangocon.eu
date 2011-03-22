@@ -9,6 +9,6 @@ urlpatterns = patterns('blog.views',
         'blogpost_detail', name='blogpost_detail'),
 )
 
-urlpatterns += patterns ('',
-    url(r'rss/$', LatestBlogPostFeed, name='blog_rss'),
+urlpatterns += patterns('',
+    url(r'rss/$', LatestBlogPostFeed(), name='rss'),
 )
