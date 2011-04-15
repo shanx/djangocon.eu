@@ -1,0 +1,77 @@
+{% extends "standard_layout.html" %}
+
+{% block subtitle %} &mdash; Tickets{% endblock subtitle %}
+
+{% block extra_content %}id="tickets"{% endblock extra_content %}
+
+{% block content %}
+
+<header>
+    <h1>DjangoCon is sold out</h1>
+</header>
+
+<section id="ticket_info" class="subsection">
+    <header>
+        <h1>Sold out</h1>
+        <p>
+            If you don't have a ticket yet, read on to see what you can do
+            about it.
+        </p>
+    </header>
+
+    <section id="ticket_rates" class="subsection_body">
+        <h1>Waiting list</h1>
+        <p>
+            As of this moment DjangoCon Europe 2011 is sold out. You can
+            subscribe yourself to the waitlist by using the form down below.
+        </p>
+
+        <h2>Policy</h2>
+        <p>
+            Our waiting list policy is as follows:
+            <ul>
+                <li>
+                    If tickets become available we will notify those who
+                    have subscribed to the waiting list
+                </li>
+                <li>
+                    Those tickets will be made available through the ticket shop.
+                </li>
+                <li>
+                    Tickets will be sold on a first come, first serve basis.
+                </li>
+            </ul>
+        </p>
+    </section>
+</section>
+
+<section id="talk_form" class="subsection">
+    <header>
+        <h1>Wait list</h1>
+        <p>Please subscribe yourself here if you want to be notified when extra tickets become available</p>
+    </header>
+    <form action="#waitlist_form" class="subsection_body" method="POST" accept-charset="utf-8" id="form-waitlist-submit">
+        <h1>Your Details</h1>
+        {% for field in waitlist_form %}
+        <div class="formrow {% if field.errors %}error{% endif %}">
+            {% if field.field.required %}
+            <div class="required">{{ field.label_tag }} <em>required</em></div>
+            {% else %}
+                {{ field.label_tag }}
+            {% endif %}
+            {{ field.errors }}
+            {% if field.help_text %}
+            <p class="help">{{ field.help_text }}</p>
+            {% endif %}
+            {{ field }}
+        </div>
+        {% endfor %}
+
+        <button type="submit">OK, Put me on the waiting list!</button>
+    </form>
+
+
+
+</section>
+
+{% endblock content %}

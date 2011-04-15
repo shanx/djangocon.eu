@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     (r'^blog/', include('blog.urls', namespace='blog', app_name='blog')),
     (r'^hotels/', include('accommodation.urls', namespace='accommodation', app_name='accommodation')),
     (r'^talks/', include('talks.urls', namespace='talks', app_name='talks')),
+    (r'^waitlist/', include('waitlist.urls', namespace='waitlist', app_name='waitlist')),
     (r'^barn/', include(admin.site.urls)),
 )
 

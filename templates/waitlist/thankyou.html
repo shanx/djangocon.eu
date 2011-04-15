@@ -1,0 +1,21 @@
+{% extends 'standard_layout.html' %}
+{% load talk_tags %}
+
+{% block subtitle %} &mdash; Waiting list submission received{% endblock subtitle %}
+
+{% block extra_content %}id="waitlist_thankyou"{% endblock extra_content %}
+
+{% block content %}
+<header>
+    <h1>Submission received</h1>
+</header>
+<section id="waitlist_whatsnext" class="subsection">
+    <section class="subsection_body">
+        <h1>You have been put on the waiting list</h1>
+        <p>
+            If additional tickets become available we will let you know. Those
+            tickets will be sold on a first come, first serve basis.
+        </p>
+    </section>
+</section>
+{% endblock content %}
