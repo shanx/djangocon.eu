@@ -35,7 +35,13 @@
 <section id="hotels" class="subsection">
     <header>
         <h1>Choices</h1>
-        <p><a href="http://www.preferredhotelreservations.nl/?l=en">Preferred Hotel Reservations</a> is providing room booking services for the conference. Special rates and conditions are available for delegates at the following hotels in the city centre of Amsterdam.</p>
+        <p>
+            <a href="http://www.preferredhotelreservations.nl/?l=en">Preferred Hotel Reservations</a> is providing room booking services for the conference.
+        </p>
+        <p>
+            <del>Special rates and conditions are available for delegates at the following hotels in the city centre of Amsterdam.</del>
+            The deadline to make use of the conference roomblock was: April 15<sup>th</sup>. Hotel bookings are now on request.
+        </p>
         <nav id="nav_hotels">
             <a href="#" id="prev_hotel">&larr; previous</a>
             <a href="#" id="next_hotel">next &rarr;</a>
@@ -60,35 +66,35 @@
             </div>
             <p>{{ hotel.description }}</p>
             <table>
-                <caption>All rates are per room, per night.</caption>
-                <tr>
-                    <th>Single room rate</th>
-                    <td>&euro; {{ hotel.rate_single }}</td>
-                </tr>
-                <tr>
-                    <th>Double room rate</th>
-                    <td>&euro; {{ hotel.rate_double }}</td>
-                </tr>
-                <tr>
-                    <th>Breakfast</th>
-                    <td>{{ hotel.breakfast }}</td>
-                </tr>
-                <tr>
-                    <th>Municipal tax</th>
-                    <td>{{ hotel.city_tax }}%</td>
-                </tr>
-                <tr>
-                    <th>WiFi</th>
-                    <td>{{ hotel.wifi }}</td>
-                </tr>
-                <tr>
-                    <th>Cancellation Policy</th>
-                    <td>{{ hotel.cancellation_policy }}</td>
-                </tr>
-                <tr>
-                    <th>Offer Valid Through</th>
-                    <td>{{ hotel.date_available }}</td>
-                </tr>
+                {# <caption>All rates are per room, per night.</caption> #}
+                {# <tr> #}
+                {#     <th>Single room rate</th> #}
+                {#     <td>&euro; {{ hotel.rate_single }}</td> #}
+                {# </tr> #}
+                {# <tr> #}
+                {#     <th>Double room rate</th> #}
+                {#     <td>&euro; {{ hotel.rate_double }}</td> #}
+                {# </tr> #}
+                {# <tr> #}
+                {#     <th>Breakfast</th> #}
+                {#     <td>{{ hotel.breakfast }}</td> #}
+                {# </tr> #}
+                {# <tr> #}
+                {#     <th>Municipal tax</th> #}
+                {#     <td>{{ hotel.city_tax }}%</td> #}
+                {# </tr> #}
+                {# <tr> #}
+                {#     <th>WiFi</th> #}
+                {#     <td>{{ hotel.wifi }}</td> #}
+                {# </tr> #}
+                {# <tr> #}
+                {#     <th>Cancellation Policy</th> #}
+                {#     <td>{{ hotel.cancellation_policy }}</td> #}
+                {# </tr> #}
+                {# <tr> #}
+                {#     <th>Offer Valid Through</th> #}
+                {#     <td>{{ hotel.date_available }}</td> #}
+                {# </tr> #}
             </table>
         </section>
         {% endfor %}
@@ -131,7 +137,7 @@
         <p>
             Sharing a room is a great way to save on hotel costs. We've set up
             a <a href="https://convore.com/djangocon-europe-2011/room-sharing">convore topic</a>
-            which you can use to advertise your arrival/departure dates and 
+            which you can use to advertise your arrival/departure dates and
             find a roommate for the conference.
         </p>
     </section>
