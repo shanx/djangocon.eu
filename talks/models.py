@@ -51,9 +51,12 @@ class Review(models.Model):
 
     talk = models.ForeignKey(Talk)
 
-    voter = models.ForeignKey(User, verbose_name=_('voter'), unique=True)
+    voter = models.ForeignKey(User, verbose_name=_('voter'))
     vote = models.IntegerField(_("vote"), choices=VOTE_CHOICES)
     comments = models.TextField(_('comments'), blank=True, help_text=_('Any other comments or requirements.'))
+
+    class Meta:
+        unique_together = (('talk', 'voter'),)
 
     def __unicode__(self):
         return '%s by %s' % (self.get_vote_display(), self.voter)
