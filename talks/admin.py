@@ -18,6 +18,12 @@ class TalkAdmin(admin.ModelAdmin):
     list_filter = ('level', 'length', 'accepted', 'scheduled',)
     search_fields = ('title', 'abstract',)
     inlines = (ReviewInline, )
-    ordering = ('review_result',)
+    ordering = ('-review_result',)
+
+    def save_formset(self, request, form, formset, change):
+        formset.save()
+        # Save form again to have review_result denorm field work
+        # This is a quick and ugly hack
+        form.save()
 
 admin.site.register(Talk, TalkAdmin)
