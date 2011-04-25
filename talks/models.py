@@ -2,6 +2,7 @@
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django.contrib.auth.models import User
 
 from speakers.models import Speaker
 
@@ -22,6 +23,7 @@ class Talk(models.Model):
     description = models.TextField(_('description'), help_text=_("Detailed outline for review; will not be published."))
     level = models.CharField(_("audience level"), max_length=20, choices=LEVEL_CHOICES, db_index=True)
     length = models.CharField(_("talk length"), max_length=20, choices=LENGTH_CHOICES, db_index=True)
+    review_result = models.IntegerField(_('review result'), editable=False, default=0)
 
     comments = models.TextField(_('comments'), blank=True, help_text=_('Any other comments or requirements.'))
 
@@ -34,3 +36,25 @@ class Talk(models.Model):
 
     def __unicode__(self):
         return '%s' % self.title
+
+    def save(self, *args, **kwargs):
+        # Simple denorm so we can easily order Talks based on reveiw outcome
+        self.review_result = sum([review.vote for review in self.review_set.all()])
+        super(Talk, self).save(*args, **kwargs)
+
+class Review(models.Model):
+    VOTE_CHOICES = (
+        (-1, 'No'),
+        (0,  'Maybe'),
+        (1, 'Yes')
+    )
+
+    talk = models.ForeignKey(Talk)
+
+    voter = models.ForeignKey(User, verbose_name=_('voter'), unique=True)
+    vote = models.IntegerField(_("vote"), choices=VOTE_CHOICES)
+    comments = models.TextField(_('comments'), blank=True, help_text=_('Any other comments or requirements.'))
+
+    def __unicode__(self):
+        return '%s by %s' % (self.get_vote_display(), self.voter)
+

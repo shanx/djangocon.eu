@@ -1,9 +1,23 @@
 from django.contrib import admin
-from talks.models import Talk
+from django.contrib.auth.models import User
+from talks.models import Talk, Review
+
+class ReviewInline(admin.TabularInline):
+    model = Review
+    radio_fields = {'vote': admin.VERTICAL}
+    extra = 1
+    can_delete = False
+
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == "voter":
+            kwargs["initial"] = request.user.id
+        return super(ReviewInline, self).formfield_for_foreignkey(db_field, request, **kwargs)
 
 class TalkAdmin(admin.ModelAdmin):
-    list_display = ('title', 'speakers_list', 'level', 'length', 'accepted', 'scheduled',)
+    list_display = ('title', 'speakers_list', 'level', 'length', 'review_result', 'accepted', 'scheduled',)
     list_filter = ('level', 'length', 'accepted', 'scheduled',)
     search_fields = ('title', 'abstract',)
+    inlines = (ReviewInline, )
+    ordering = ('review_result',)
 
 admin.site.register(Talk, TalkAdmin)
