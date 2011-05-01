@@ -31,6 +31,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     str(PROJECT_DIR.child('static')),
 )
+STATICFILES_STORAGE = ('staticfiles.storage.StaticFileStorage')
+STATICFILES_FINDERS = ('staticfiles.finders.FileSystemFinder', 'staticfiles.finders.AppDirectoriesFinder')
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 MIDDLEWARE_CLASSES = (
