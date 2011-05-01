@@ -13,8 +13,10 @@ class Talk(models.Model):
     )
 
     LENGTH_CHOICES = (
+        ('lightning', '5 minutes'),
         ('short', '20 minutes'),
         ('long', '45 minutes'),
+        ('keynote', '60 minutes'),
     )
 
     title = models.CharField(_("talk title"), max_length=255)
