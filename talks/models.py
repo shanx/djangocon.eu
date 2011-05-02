@@ -6,6 +6,12 @@ from django.contrib.auth.models import User
 
 from speakers.models import Speaker
 
+class PublicManager(models.Manager):
+    """Returns talks that are accepted."""
+
+    def accepted(self):
+        return self.get_query_set().filter(accepted=True)
+
 class Talk(models.Model):
     LEVEL_CHOICES = (
         ('intermediate', 'Intermediate'),
@@ -32,6 +38,8 @@ class Talk(models.Model):
     accepted = models.BooleanField(_('accepted'))
     scheduled = models.BooleanField(_('scheduled'))
 
+    objects = PublicManager()
+
     @property
     def speakers_list(self):
         return ', '.join(['%s' % speaker for speaker in self.speakers.all()])
@@ -43,6 +51,9 @@ class Talk(models.Model):
         # Simple denorm so we can easily order Talks based on reveiw outcome
         self.review_result = sum([review.vote for review in self.review_set.all()])
         super(Talk, self).save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return '/talks/%i/' % self.id
 
 class Review(models.Model):
     VOTE_CHOICES = (

@@ -1,0 +1,65 @@
+{% extends 'standard_layout.html' %}
+{% load talk_tags %}
+
+{% block subtitle %} &mdash; {{talk.title}}{% endblock subtitle %}
+
+{% block extra_content %}id="talk"{% endblock extra_content %}
+
+{% block content %}
+<header>
+    <h1>{{talk.title}}</h1>
+</header>
+<section id="talk" class="subsection">
+    <header>
+        <h1> {{ talk.slot_set.get.day.date|date:"l, j M Y" }}</h1>
+	<h1>{{ talk.slot_set.get.starttime|time:"H:i" }} - {{ talk.slot_set.get.endtime|time:"H:i" }}</h1>
+    </header>
+
+    <section class="subsection_body">
+        <h1>Abstract</h1>
+        <p>
+	    {{ talk.abstract }}
+        </p>
+    </section>
+
+</section>
+
+{% for speaker in talk.speakers.all %}
+<section id="about_speaker" class="subsection">
+    <header>
+        <p>&nbsp;</p>
+    </header>
+    <section class="subsection_body">
+        <h1>About {{ speaker.name }}</h1>
+        <p>
+	    {{ speaker.biography }}
+        </p>
+
+	{% if speaker.organisation %}
+	<h2>Organisation/company</h2>
+	<p>{{ speaker.organisation }}</p>
+	{% endif %}
+	{% if speaker.website %}
+	<h2>Website</h2>
+	<p><a href="{{speaker.website}}">{{ speaker.website }}</a></p>
+	{% endif %}
+	{% if speaker.twitter %}
+	<h2>Twitter</h2>
+	<p><a href="https://twitter.com/{{speaker.twitter}}">{{ speaker.twitter }}</a></p>
+	{% endif %}
+	{% if speaker.linkedin %}
+	<h2>LinkedIn</h2>
+	<p><a href="https://www.linkedin.com/in/{{speaker.linkedin}}">{{ speaker.linkedin }}</a></p>
+	{% endif %}
+	{% if speaker.github %}
+	<h2>Github</h2>
+	<p><a href="https://github.com/{{speaker.github}}">{{ speaker.github }}</a></p>
+	{% endif %}
+	{% if speaker.bitbucket %}
+	<h2>Bitbucket</h2>
+	<p><a href="https://bitbucket.org/{{speaker.bitbucket}}">{{ speaker.bitbucket }}</a></p>
+	{% endif %}
+    </section>
+</section>
+{% endfor %}
+{% endblock content %}

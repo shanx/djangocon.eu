@@ -5,6 +5,7 @@ from __future__ import absolute_import
 from django.shortcuts import get_object_or_404, redirect
 from django.template import RequestContext
 from django.views.generic.simple import direct_to_template as render
+from django.views.generic import list_detail
 from django.views.decorators.cache import cache_page
 
 from speakers.forms import SpeakerForm
@@ -41,3 +42,11 @@ def submit(request, template='talks/submit.html', extra_context=None):
 def thankyou(request, template='talks/thankyou.html', extra_context=None):
     ctx = extra_context and extra_context.copy() or {}
     return render(request, 'talks/thankyou.html', ctx)
+
+@cache_page(60*60*6)  # cache page for 6 hours
+def talk_detail(request, id):
+    return list_detail.object_detail(
+        request,
+        queryset=Talk.objects.accepted(),
+        template_object_name='talk',
+        object_id=id)
