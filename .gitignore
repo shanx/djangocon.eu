@@ -8,6 +8,7 @@
 # Tmp files
 .DS_Store
 *.swp
+*~
 
 # Ignore all directories/files created by virtualenv/pip
 bin
@@ -27,3 +28,4 @@ settings/local.py
 static_root/
 docs/_build
 .epio-app
+
