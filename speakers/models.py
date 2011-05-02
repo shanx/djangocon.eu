@@ -13,7 +13,13 @@ class Speaker(models.Model):
     github = models.CharField(_('github username'), blank=True, max_length=100)
     bitbucket = models.CharField(_('bitbucket username'), blank=True, max_length=100)
 
+    notified = models.BooleanField(_('notified'))
+
     biography = models.TextField(_('short biography'))
 
     def __unicode__(self):
         return self.name
+
+    @property
+    def talk_list(self):
+        return ', '.join(['%s' % talk for talk in self.talk_set.all()])
