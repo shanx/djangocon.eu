@@ -14,7 +14,7 @@ class ReviewInline(admin.TabularInline):
         return super(ReviewInline, self).formfield_for_foreignkey(db_field, request, **kwargs)
 
 class TalkAdmin(admin.ModelAdmin):
-    list_display = ('title', 'speakers_list', 'level', 'length', 'review_result', 'accepted', 'scheduled',)
+    list_display = ('title', 'speakers_list', 'level', 'length', 'review_result', 'accepted', 'scheduled', 'verified')
     list_filter = ('level', 'length', 'accepted', 'scheduled',)
     search_fields = ('title', 'abstract',)
     inlines = (ReviewInline, )
