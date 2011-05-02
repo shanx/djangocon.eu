@@ -10,6 +10,8 @@ class Speaker(models.Model):
 
     twitter = models.CharField(_('twitter username'), blank=True, max_length=100)
     linkedin = models.CharField(_('linkedin username'), help_text=_('Found in your profile url; "http://linkedin.com/in/<your_username>".'), blank=True, max_length=100)
+    github = models.CharField(_('github username'), blank=True, max_length=100)
+    bitbucket = models.CharField(_('bitbucket username'), blank=True, max_length=100)
 
     biography = models.TextField(_('short biography'))
 
