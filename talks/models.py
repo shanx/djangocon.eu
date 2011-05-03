@@ -19,7 +19,6 @@ class Talk(models.Model):
     )
 
     LENGTH_CHOICES = (
-        ('lightning', '5 minutes'),
         ('short', '20 minutes'),
         ('long', '45 minutes'),
         ('keynote', '60 minutes'),
@@ -56,6 +55,7 @@ class Talk(models.Model):
     def get_absolute_url(self):
         return '/talks/%i/' % self.id
 
+
 class Review(models.Model):
     VOTE_CHOICES = (
         (-1, 'No'),
@@ -74,4 +74,13 @@ class Review(models.Model):
 
     def __unicode__(self):
         return '%s by %s' % (self.get_vote_display(), self.voter)
+
+
+class LightningTalk(models.Model):
+    talk_title = models.CharField(_('talk title'), max_length=255)
+    speaker_name = models.CharField(_('speaker name'), max_length=255)
+    speaker_email = models.EmailField(_('speaker email address'))
+
+    def __unicode__(self):
+        return '%s' % self.talk_title
 

@@ -11,8 +11,8 @@ from django.views.decorators.cache import cache_page
 from speakers.forms import SpeakerForm
 from speakers.models import Speaker
 
-from .forms import TalkForm
-from .models import Talk
+from .forms import TalkForm, LightningTalkForm
+from .models import Talk, LightningTalk
 
 @cache_page(60*60*6)  # cache page for 6 hours
 def submit(request, template='talks/submit.html', extra_context=None):
@@ -36,12 +36,28 @@ def submit(request, template='talks/submit.html', extra_context=None):
         'speaker_form': speaker_form,
         'talk_form': talk_form,
     })
-    return render(request, 'talks/submit.html', context)
+    return render(request, template, context)
 
 @cache_page(60*60*6)  # cache page for 6 hours
 def thankyou(request, template='talks/thankyou.html', extra_context=None):
     ctx = extra_context and extra_context.copy() or {}
-    return render(request, 'talks/thankyou.html', ctx)
+    return render(request, template, ctx)
+
+@cache_page(60*60*6)  # cache page for 6 hours
+def lightningtalk_submit(request, template='talks/lightningtalk_submit.html', extra_context=None):
+    context = extra_context and extra_context.copy() or {}
+    if request.method == 'POST':
+        lightningtalk_form = LightningTalkForm(request.POST)
+        if lightningtalk_form.is_valid():
+            lightning_talk = lightningtalk_form.save()
+            return redirect('talks:thankyou')
+    else:
+        lightningtalk_form = LightningTalkForm()
+
+    context.update({
+        'lightningtalk_form': lightningtalk_form,
+    })
+    return render(request, template, context)
 
 @cache_page(60*60*6)  # cache page for 6 hours
 def talk_detail(request, id):
@@ -50,3 +66,4 @@ def talk_detail(request, id):
         queryset=Talk.objects.accepted(),
         template_object_name='talk',
         object_id=id)
+

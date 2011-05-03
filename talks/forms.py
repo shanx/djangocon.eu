@@ -3,7 +3,7 @@ from __future__ import absolute_import
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
-from .models import Talk
+from .models import Talk, LightningTalk
 
 class TalkForm(forms.ModelForm):
     allow_recording = forms.BooleanField(label=_('I permit the recording and streaming of my talk'), help_text=_('Check the box below to indicate your acceptance.'), required=True)
@@ -14,3 +14,10 @@ class TalkForm(forms.ModelForm):
     class Meta:
         model = Talk
         fields = ('title', 'abstract', 'description', 'level', 'length', 'comments', )
+
+
+class LightningTalkForm(forms.ModelForm):
+    allow_recording = forms.BooleanField(label=_('I permit the recording and streaming of my talk'), help_text=_('Check the box below to indicate your acceptance.'), required=True)
+
+    class Meta:
+        model = LightningTalk

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
-from talks.models import Talk, Review
+from talks.models import Talk, Review, LightningTalk
 
 class ReviewInline(admin.TabularInline):
     model = Review
@@ -26,4 +26,9 @@ class TalkAdmin(admin.ModelAdmin):
         # This is a quick and ugly hack
         form.save()
 
+class LightningTalkAdmin(admin.ModelAdmin):
+    list_display = ('talk_title', 'speaker_name', 'speaker_email')
+    search_fields = ('talk_title', 'speaker_name', 'speaker_email')
+
 admin.site.register(Talk, TalkAdmin)
+admin.site.register(LightningTalk, LightningTalkAdmin)

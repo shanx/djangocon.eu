@@ -96,43 +96,27 @@
 
 <section id="talk_form" class="subsection">
     <header>
-        <h1><del>Propose a talk</del></h1>
-        <p>The talk submission deadline was April 15<sup>th</sup></p>
-    </header>
-    <section class="subsection_body">
-        <h1>Talk submission is closed</h1>
+        <h1>Propose a Lightning Talk</h1>
         <p>
-            Talk submissions is now closed, the DjangoCon program
-            committee is now looking at all the proposals and building the
-            talk schedule. Accepted talks will be announced on May
-            1<sup>st</sup> 2011.
+            The talk submission deadline for regular talks was April 15<sup>th</sup>.
+            If you missed the boat, we would love to see you do a lightning talk.
         </p>
-</section>
-
-<section id="talk_form" class="subsection">
-    <header>
-        <h1>Propose a Talk</h1>
-        <p>Use this form to submit your talk proposal.</p>
     </header>
-    <form action="#talk_form" class="subsection_body" method="POST" accept-charset="utf-8" id="form-talk-submit">
-        <h1>Your Details</h1>
-        {% for field in speaker_form %}
-        <div class="formrow {% if field.errors %}error{% endif %}">
-            {% if field.field.required %}
-            <div class="required">{{ field.label_tag }} <em>required</em></div>
-            {% else %}
-                {{ field.label_tag }}
-            {% endif %}
-            {{ field.errors }}
-            {% if field.help_text %}
-            <p class="help">{{ field.help_text }}</p>
-            {% endif %}
-            {{ field }}
-        </div>
-        {% endfor %}
+    <form action="#lightningtalk_form" class="subsection_body" method="POST" accept-charset="utf-8" id="form-lightningtalk-submit">
+        <h1>Lightning Talk Proposal</h1>
+        <p>
+            Lightning talks are:
+            <ul>
+                <li>Strict 5 minute presentations</li>
+                <li>Given at the end of the day</li>
+                <li>Presentations where almost anything goes</li>
+            </ul>
+            If you submit a lightning talk you will be invited be the MC of the day
+            to do a presentation. People will be invited based on the order of who submitted
+            first.
+        </p>
 
-        <h1>Talk Proposal</h1>
-        {% for field in talk_form %}
+        {% for field in lightningtalk_form %}
         <div class="formrow {% if field.errors %}error{% endif %}">
             {% if field.field.required %}
             <div class="required">{{ field.label_tag }} <em>required</em></div>
@@ -146,10 +130,8 @@
             {{ field }}
         </div>
         {% endfor %}
-        <button type="submit">OK, Submit this talk!</button>
+        <button type="submit">OK, Submit this lightning talk!</button>
     </form>
-
-
 
 </section>
             {% if message %}
