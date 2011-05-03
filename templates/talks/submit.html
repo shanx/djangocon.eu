@@ -80,7 +80,9 @@
             community&mdash;so long as your talk fits into 5 minutes.
         </p>
         <p>
-            Lightning talks and open-space registration is ad-hoc and will take
+            Lightning talks submissions are
+            <a href="{% url talks:lightningtalk_submit %}">now open</a>.
+            Open-space registration is ad-hoc and will take
             place during DjangoCon; instructions on how to register will be
             posted to the site. Registration for these will be
             first-come-first-served.
@@ -107,51 +109,53 @@
             talk schedule. Accepted talks will be announced on May
             1<sup>st</sup> 2011.
         </p>
+        <h1>Submit a lightning talk</h1>
+        <p>Lightning talk submission is <a href="{% url talks:lightningtalk_submit %}">now open</a></p>
 </section>
 
-<section id="talk_form" class="subsection">
-    <header>
-        <h1>Propose a Talk</h1>
-        <p>Use this form to submit your talk proposal.</p>
-    </header>
-    <form action="#talk_form" class="subsection_body" method="POST" accept-charset="utf-8" id="form-talk-submit">
-        <h1>Your Details</h1>
-        {% for field in speaker_form %}
-        <div class="formrow {% if field.errors %}error{% endif %}">
-            {% if field.field.required %}
-            <div class="required">{{ field.label_tag }} <em>required</em></div>
-            {% else %}
-                {{ field.label_tag }}
-            {% endif %}
-            {{ field.errors }}
-            {% if field.help_text %}
-            <p class="help">{{ field.help_text }}</p>
-            {% endif %}
-            {{ field }}
-        </div>
-        {% endfor %}
-
-        <h1>Talk Proposal</h1>
-        {% for field in talk_form %}
-        <div class="formrow {% if field.errors %}error{% endif %}">
-            {% if field.field.required %}
-            <div class="required">{{ field.label_tag }} <em>required</em></div>
-            {% else %}
-                {{ field.label_tag }}
-            {% endif %}
-            {{ field.errors }}
-            {% if field.help_text %}
-            <p class="help">{{ field.help_text }}</p>
-            {% endif %}
-            {{ field }}
-        </div>
-        {% endfor %}
-        <button type="submit">OK, Submit this talk!</button>
-    </form>
-
-
-
-</section>
+{# <section id="talk_form" class="subsection"> #}
+{#     <header> #}
+{#         <h1>Propose a Talk</h1> #}
+{#         <p>Use this form to submit your talk proposal.</p> #}
+{#     </header> #}
+{#     <form action="#talk_form" class="subsection_body" method="POST" accept-charset="utf-8" id="form-talk-submit"> #}
+{#         <h1>Your Details</h1> #}
+{#         {% for field in speaker_form %} #}
+{#         <div class="formrow {% if field.errors %}error{% endif %}"> #}
+{#             {% if field.field.required %} #}
+{#             <div class="required">{{ field.label_tag }} <em>required</em></div> #}
+{#             {% else %} #}
+{#                 {{ field.label_tag }} #}
+{#             {% endif %} #}
+{#             {{ field.errors }} #}
+{#             {% if field.help_text %} #}
+{#             <p class="help">{{ field.help_text }}</p> #}
+{#             {% endif %} #}
+{#             {{ field }} #}
+{#         </div> #}
+{#         {% endfor %} #}
+{#  #}
+{#         <h1>Talk Proposal</h1> #}
+{#         {% for field in talk_form %} #}
+{#         <div class="formrow {% if field.errors %}error{% endif %}"> #}
+{#             {% if field.field.required %} #}
+{#             <div class="required">{{ field.label_tag }} <em>required</em></div> #}
+{#             {% else %} #}
+{#                 {{ field.label_tag }} #}
+{#             {% endif %} #}
+{#             {{ field.errors }} #}
+{#             {% if field.help_text %} #}
+{#             <p class="help">{{ field.help_text }}</p> #}
+{#             {% endif %} #}
+{#             {{ field }} #}
+{#         </div> #}
+{#         {% endfor %} #}
+{#         <button type="submit">OK, Submit this talk!</button> #}
+{#     </form> #}
+{#  #}
+{#  #}
+{#  #}
+{# </section> #}
             {% if message %}
             <p id="talks_message">{{ message }}</p>
             {% endif %}

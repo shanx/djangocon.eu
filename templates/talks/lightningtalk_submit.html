@@ -1,98 +1,14 @@
 {% extends 'standard_layout.html' %}
 {% load talk_tags %}
 
-{% block subtitle %} &mdash; Submit A Talk{% endblock subtitle %}
+{% block subtitle %} &mdash; Submit A Lightning Talk{% endblock subtitle %}
 
-{% block extra_content %}id="talk_submit"{% endblock extra_content %}
+{% block extra_content %}id="lightningtalk_submit"{% endblock extra_content %}
 
 {% block content %}
 <header>
-    <h1>Talk Submission</h1>
+    <h1>Lightning Talk Submission</h1>
 </header>
-<section id="talk_guidelines" class="subsection">
-    <header>
-        <h1>Guidelines</h1>
-        <p>We've done our best to keep the administrativa to a minimum, please read the guidelines carefully before submitting a talk.</p>
-    </header>
-    <section class="subsection_body">
-        <h1>This is a community conference</h1>
-        <p>
-            Because DjangoCon Europe is a community conference, we want to
-            hear from <em>you</em> about the cool new extension to Django
-            you've created, the best way to scale a Django project, how to
-            make apps that are reusable, etc.
-        </p>
-        <p>
-            We are aiming for a conference with a focus on advanced topics.
-            You can assume that all attendees have a good understanding about
-            the Django framework and will understand (and welcome) an in-depth
-            talk.
-        </p>
-        <h1>Make it easy to review</h1>
-        <p>
-            We have to use the information you provide to decide whether or not
-            to accept your proposal. Keep it brief and focused; the reviewers
-            are all seasoned Django professionals.
-        </p>
-        <h1>Important Dates</h1>
-        <ul>
-            <li><strong>April 15<sup>th</sup></strong>: submission deadline</li>
-            <li><strong>May 1<sup>st</sup></strong>: acceptance announcements</li>
-        </ul>
-        <h1>Speakers must register, too</h1>
-        <p>
-            DjangoCon Europe is a volunteer-run conference funded mainly by ticket sales;
-            everybody pays to attend (including speakers). Talk submission is not a substitute
-            for purchasing a ticket. If you plan on giving a talk, please make sure to purchase
-            conference tickets and arrange transportation/lodging for yourself.
-        </p>
-        <h1>Talks are Public</h1>
-        <p>
-            <strong>All talks</strong> given at DjangoCon will be recorded and
-            published online; people submitting a talk must explicitly
-            authorize the recording and publishing of their talk by checking
-            the <em>{{ talk_form.allow_recording.label_tag }}</em> checkbox.
-        </p>
-        <h1>Format Guidelines</h1>
-        <p>
-            There are two types of talks that can be given at DjangoCon:
-            <ul>
-                <li>
-                    Short (20 minutes): Speakers should budget <strong>15 minutes</strong>
-                    for the actual presentation and <strong>5 minutes</strong> for answering questions from the audience.
-                </li>
-                <li>
-                    Normal (45 minutes): Speakers should budget <strong>30 minutes</strong>
-                    for the actual presentation and <strong>15 minutes</strong> for answering questions from the audience.
-                </li>
-            </ul>
-        </p>
-
-        <h1>Talk Alternatives</h1>
-        <p>
-            If a short presentation is overkill for your topic, consider giving
-            a 5-minute lightning talk! There will be several lightning-talk
-            sessions throughout the conference, as well as adjoining "Open
-            Spaces" for informal and spontaneous presentations. Lightning talks
-            can be on a wide variety of topics! Talk about a cool project
-            you're working on, some technique or tool that you want to
-            highlight, or a cool story you wish to share with the Django
-            community&mdash;so long as your talk fits into 5 minutes.
-        </p>
-        <p>
-            Lightning talks and open-space registration is ad-hoc and will take
-            place during DjangoCon; instructions on how to register will be
-            posted to the site. Registration for these will be
-            first-come-first-served.
-        </p>
-
-        <h1>Questions?</h1>
-        <p>
-            If you have any further questions don't hestitate to contact us at
-            <a href="mailto:speakers@djangocon.eu">speakers@djangocon.eu</a>.
-        </p>
-    </section>
-</section>
 
 <section id="talk_form" class="subsection">
     <header>
@@ -109,9 +25,11 @@
             <ul>
                 <li>Strict 5 minute presentations</li>
                 <li>Given at the end of the day</li>
-                <li>Presentations where almost anything goes</li>
+                <li>Presentations that don't necessarily fit in the main schedule</li>
             </ul>
-            If you submit a lightning talk you will be invited be the MC of the day
+        </p>
+        <p>
+            If you submit a lightning talk you will be invited by the lightning talk host of the day
             to do a presentation. People will be invited based on the order of who submitted
             first.
         </p>
