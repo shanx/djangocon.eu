@@ -917,3 +917,18 @@ a#next_hotel, a#prev_hotel {
     }
 }
 
+#talk {
+    &>header>h1 {
+        font-size: 42px;
+        line-height: 1.3em;
+    }
+
+    #talkdetails header h2 {
+        @include sans-family;
+        font-weight: $sans-normal;
+        color: $cream-color;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+}
+

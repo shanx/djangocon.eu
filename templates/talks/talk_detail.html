@@ -9,10 +9,12 @@
 <header>
     <h1>{{talk.title}}</h1>
 </header>
-<section id="talk" class="subsection">
+<section id="talkdetails" class="subsection">
     <header>
-        <h1> {{ talk.slot_set.get.day.date|date:"l, j M Y" }}</h1>
-	<h1>{{ talk.slot_set.get.starttime|time:"H:i" }} - {{ talk.slot_set.get.endtime|time:"H:i" }}</h1>
+        {% with talk.slot_set.get as d %}
+        <h1>{{ d.day.date|date:'l, F j'}}<sup>{{ d.day.date|date:'S'}}</sup></h1>
+        <h2>{{ d.starttime|time:"H:i" }}&ndash;{{ d.endtime|time:"H:i" }}</h2>
+        {% endwith %}
     </header>
 
     <section class="subsection_body">

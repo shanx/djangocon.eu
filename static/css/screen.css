@@ -1267,6 +1267,19 @@ a#next_hotel:active, a#prev_hotel:active {
   font-size: 16px;
 }
 
+#talk > header > h1 {
+  font-size: 42px;
+  line-height: 1.3em;
+}
+#talk #talkdetails header h2 {
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
+  font-weight: 300;
+  font-weight: 300;
+  color: #f5e6d2;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
 /* Tablet Layout: 768px.
  * Gutters: 24px.
  * Outer margins: 28px.
