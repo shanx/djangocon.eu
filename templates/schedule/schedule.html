@@ -7,37 +7,31 @@
 {% block content %}
 <header>
     <h1>Conference Schedule</h1>
-    <p><a href="/schedule/ical">ical</a></p>
+    <p class="schedule_ical"><a href="/schedule/ical">Download Schedule (iCal)</a></p>
 </header>
 
 {% for slot in slots %}
 {% ifchanged slot.day.date %}
 {% if not forloop.first %}
-        </table>
-    </section>
+    </table>
 </section>
 {% endif %}
-<section id="schedule_{{ slot.day.date|date:'D' }}" class="subsection">
+<section id="schedule_{{ slot.day.date|date:'D' }}" class="schedule_day">
     <header>
         {% with slot.day.date as d %}
-            <h1>{{ d|date:'l, F j'}}<sup>{{ d|date:'S'}}</sup></h1>
-            
+            <h1>{{ d|date:'l, F j'}}<sup>{{ d|date:'S'}}</sup></h1>            
         {% endwith %}
     </header>
-    <section class="subsection_body">
-        <table>
+    <table>
 {% endifchanged %}
-            <tr>
-                <th>{{ slot.starttime|time:"H:i" }} - {{ slot.endtime|time:"H:i" }}</th>
-                <td>
-                    <a href="{{ slot.talk.get_absolute_url }}">{{ slot.talk.title }}</a><br>
-                    {{slot.talk.speakers.all|join:", "}}
-                </td>
-            </tr>
+        <tr>
+            <th>{{ slot.starttime|time:"H:i" }}&ndash;{{ slot.endtime|time:"H:i" }}</th>
+            <td>
+                <a href="{{ slot.talk.get_absolute_url }}">{{ slot.talk.title }}</a>
+                <p class="speakers">{{slot.talk.speakers.all|join:", "}}</p>
+            </td>
+        </tr>
 {% endfor %}
-        </table>
-    </section>
+    </table>
 </section>
-
-
 {% endblock content %}
