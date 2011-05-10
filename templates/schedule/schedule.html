@@ -1,0 +1,44 @@
+{% extends 'standard_layout.html' %}
+
+{% block subtitle %} &mdash; Schedule{% endblock subtitle %}
+
+{% block extra_content %}id="schedule"{% endblock extra_content %}
+
+{% block content %}
+<header>
+    <h1>Schedule</h1>
+</header>
+<section id="schule" class="subsection">
+    <header>
+        <h1>schedule</h1>
+	<p><a href="/schedule/ical">ical</a></p>
+    </header>
+
+    <section class="subsection_body">
+        <h1>Schedule</h1>
+	<table>
+	    {% for slot in slots %}
+	    {% ifchanged %}
+	    <tr>
+	        <td colspan="3">
+		    {{ slot.day.date|date:"l, j M Y"}}
+		</td>
+	    </tr>
+	    {% endifchanged %}
+	    <tr>
+	        <td>
+		    {{ slot.starttime|time:"H:i" }} - {{ slot.endtime|time:"H:i" }}
+		</td>
+		<td>
+		    <a href="{{ slot.talk.get_absolute_url }}">{{ slot.talk.title }}</a>
+		</td>
+		<td>
+		    {% for speaker in slot.talk.speakers.all %}{% if not forloop.first %}, {% endif %}{{ speaker }}{% endfor %}
+		</td>
+	    </tr>
+	    {% endfor %}
+	</table>
+    </section>
+</section>
+
+{% endblock content %}
