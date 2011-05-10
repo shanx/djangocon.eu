@@ -20,6 +20,7 @@ class WaitList(models.Model):
     batch = models.IntegerField(_('batch'), blank=True, null=True)
     user = models.ForeignKey(User, verbose_name=_('batched by'), null=True)
     comment = models.TextField(_('comment'), blank=True)
+    done = models.BooleanField(_('done'), default=False)
 
     def __unicode__(self):
         return self.name
