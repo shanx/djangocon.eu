@@ -860,3 +860,48 @@ a#next_hotel, a#prev_hotel {
     }
 }
 
+#schedule {
+    .schedule_ical a {
+        @extend button;
+    }
+
+    .schedule_day {
+        h1 {
+            @include serif-family;
+            font-size: 42px;
+            color: $cream-color;
+            font-weight: normal;
+        }
+    }
+    table {
+        display: block;
+        padding: 10px;
+        background: $cream-color;
+        th,td {
+            vertical-align: top;
+            margin: 5px 0;
+            text-align: left;
+            font-size: 24px;
+            line-height: 1.5em;
+        }
+        th {
+            width: 160px;
+            @include sans-family;
+            padding-top: 4px;
+        }
+        td {
+            a {
+                display: block;
+                @include serif-family;
+                color: $base-color;
+            }
+            .speakers {
+                @include sans-family;
+                text-transform: uppercase;
+                color: #444;
+                font-size: 16px;
+            }
+        }
+    }
+}
+

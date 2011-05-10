@@ -99,7 +99,7 @@ html {
   font-style: italic;
 }
 
-button {
+button, #schedule .schedule_ical a {
   border: 0;
   margin-top: 30px;
   background: #7e0008 url(../img/button_overlay.png) repeat-x;
@@ -135,16 +135,16 @@ button {
   cursor: pointer;
   text-transform: uppercase;
 }
-button:hover {
+button:hover, #schedule .schedule_ical a:hover {
   background-color: #b32017;
 }
-button:active {
+button:active, #schedule .schedule_ical a:active {
   top: 1px;
 }
-button:disabled {
+button:disabled, #schedule .schedule_ical a:disabled {
   background-color: #666;
 }
-button:disabled:active, button:disabled:hover {
+button:disabled:active, #schedule .schedule_ical a:disabled:active, button:disabled:hover, #schedule .schedule_ical a:disabled:hover {
   top: 0;
   cursor: default;
 }
@@ -545,7 +545,7 @@ button:disabled:active, button:disabled:hover {
 .subsection .subsection_body input[type=text], .subsection .subsection_body textarea {
   width: 568px;
 }
-.subsection .subsection_body button {
+.subsection .subsection_body button, .subsection .subsection_body #schedule .schedule_ical a, #schedule .schedule_ical .subsection .subsection_body a {
   width: 100%;
 }
 
@@ -1199,6 +1199,45 @@ a#next_hotel:active, a#prev_hotel:active {
 #home #home_venue iframe {
   border: 6px solid white;
   margin: 20px 0;
+}
+
+#schedule .schedule_day h1 {
+  font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
+  font-weight: 500;
+  font-size: 42px;
+  color: #f5e6d2;
+  font-weight: normal;
+}
+#schedule table {
+  display: block;
+  padding: 10px;
+  background: #f5e6d2;
+}
+#schedule table th, #schedule table td {
+  vertical-align: top;
+  margin: 5px 0;
+  text-align: left;
+  font-size: 24px;
+  line-height: 1.5em;
+}
+#schedule table th {
+  width: 160px;
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
+  font-weight: 300;
+  padding-top: 4px;
+}
+#schedule table td a {
+  display: block;
+  font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
+  font-weight: 500;
+  color: #b32017;
+}
+#schedule table td .speakers {
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #444;
+  font-size: 16px;
 }
 
 /* Tablet Layout: 768px.
