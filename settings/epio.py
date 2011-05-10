@@ -19,7 +19,7 @@ CACHE_BACKEND = 'redis_cache.cache://{0}:{1}?password={2}'.format(
 
 STATIC_URL = '/static/'
 
-CACHE_BACKEND = 'locmem://'
+#CACHE_BACKEND = 'locmem://'
 
 MEDIA_ROOT = PROJECT_DIR.parent.child('data')
 
