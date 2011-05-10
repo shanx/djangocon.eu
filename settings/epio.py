@@ -23,3 +23,8 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = PROJECT_DIR.parent.child('data')
 
+# Sorl Thumbnail Settings
+THUMBNAIL_KVSTORE = 'sorl.thumbnail.kvstores.redis_kvstore.KVStore'
+THUMBNAIL_REDIS_HOST = config['redis']['host']
+THUMBNAIL_REDIS_PORT = config['redis']['port']
+THUMBNAIL_REDIS_PASSWORD = config['redis']['password']

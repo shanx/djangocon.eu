@@ -67,6 +67,7 @@ INSTALLED_APPS = (
 
     'staticfiles',
     'south',
+    'sorl.thumbnail',
 
     'core',
     'blog',
