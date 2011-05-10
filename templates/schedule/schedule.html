@@ -6,39 +6,38 @@
 
 {% block content %}
 <header>
-    <h1>Schedule</h1>
+    <h1>Conference Schedule</h1>
+    <p><a href="/schedule/ical">ical</a></p>
 </header>
-<section id="schule" class="subsection">
-    <header>
-        <h1>schedule</h1>
-	<p><a href="/schedule/ical">ical</a></p>
-    </header>
 
-    <section class="subsection_body">
-        <h1>Schedule</h1>
-	<table>
-	    {% for slot in slots %}
-	    {% ifchanged %}
-	    <tr>
-	        <td colspan="3">
-		    {{ slot.day.date|date:"l, j M Y"}}
-		</td>
-	    </tr>
-	    {% endifchanged %}
-	    <tr>
-	        <td>
-		    {{ slot.starttime|time:"H:i" }} - {{ slot.endtime|time:"H:i" }}
-		</td>
-		<td>
-		    <a href="{{ slot.talk.get_absolute_url }}">{{ slot.talk.title }}</a>
-		</td>
-		<td>
-		    {% for speaker in slot.talk.speakers.all %}{% if not forloop.first %}, {% endif %}{{ speaker }}{% endfor %}
-		</td>
-	    </tr>
-	    {% endfor %}
-	</table>
+{% for slot in slots %}
+{% ifchanged slot.day.date %}
+{% if not forloop.first %}
+        </table>
     </section>
 </section>
+{% endif %}
+<section id="schedule_{{ slot.day.date|date:'D' }}" class="subsection">
+    <header>
+        {% with slot.day.date as d %}
+            <h1>{{ d|date:'l, F j'}}<sup>{{ d|date:'S'}}</sup></h1>
+            
+        {% endwith %}
+    </header>
+    <section class="subsection_body">
+        <table>
+{% endifchanged %}
+            <tr>
+                <th>{{ slot.starttime|time:"H:i" }} - {{ slot.endtime|time:"H:i" }}</th>
+                <td>
+                    <a href="{{ slot.talk.get_absolute_url }}">{{ slot.talk.title }}</a><br>
+                    {{slot.talk.speakers.all|join:", "}}
+                </td>
+            </tr>
+{% endfor %}
+        </table>
+    </section>
+</section>
+
 
 {% endblock content %}
