@@ -99,7 +99,7 @@ html {
   font-style: italic;
 }
 
-button, #schedule .schedule_ical a {
+button {
   border: 0;
   margin-top: 30px;
   background: #7e0008 url(../img/button_overlay.png) repeat-x;
@@ -135,16 +135,16 @@ button, #schedule .schedule_ical a {
   cursor: pointer;
   text-transform: uppercase;
 }
-button:hover, #schedule .schedule_ical a:hover {
+button:hover {
   background-color: #b32017;
 }
-button:active, #schedule .schedule_ical a:active {
+button:active {
   top: 1px;
 }
-button:disabled, #schedule .schedule_ical a:disabled {
+button:disabled {
   background-color: #666;
 }
-button:disabled:active, #schedule .schedule_ical a:disabled:active, button:disabled:hover, #schedule .schedule_ical a:disabled:hover {
+button:disabled:active, button:disabled:hover {
   top: 0;
   cursor: default;
 }
@@ -545,7 +545,7 @@ button:disabled:active, #schedule .schedule_ical a:disabled:active, button:disab
 .subsection .subsection_body input[type=text], .subsection .subsection_body textarea {
   width: 568px;
 }
-.subsection .subsection_body button, .subsection .subsection_body #schedule .schedule_ical a, #schedule .schedule_ical .subsection .subsection_body a {
+.subsection .subsection_body button {
   width: 100%;
 }
 
@@ -1201,6 +1201,33 @@ a#next_hotel:active, a#prev_hotel:active {
   margin: 20px 0;
 }
 
+#schedule .schedule_ical {
+  margin: 10px 0;
+  font-size: 24px;
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+#schedule .schedule_ical a {
+  color: #ffff9e;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  text-decoration: none;
+}
+#schedule .schedule_ical a:hover {
+  color: white;
+  text-decoration: underline;
+}
 #schedule .schedule_day h1 {
   font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Cambria, Georgia, serif;
   font-weight: 500;

@@ -861,8 +861,20 @@ a#next_hotel, a#prev_hotel {
 }
 
 #schedule {
-    .schedule_ical a {
-        @extend button;
+    .schedule_ical {
+        margin: 10px 0;
+        font-size: 24px;
+        @include sans-family;
+        text-transform: uppercase;
+        a {
+            color: $gold-color;
+            @include transition;
+            text-decoration: none;
+            &:hover {
+                color: white;
+                text-decoration: underline;
+            }
+        }
     }
 
     .schedule_day {
