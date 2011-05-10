@@ -21,3 +21,5 @@ STATIC_URL = '/static/'
 
 CACHE_BACKEND = 'locmem://'
 
+MEDIA_ROOT = PROJECT_DIR.parent.child('data')
+
