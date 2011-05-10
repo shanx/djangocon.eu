@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     (r'^talks/', include('talks.urls', namespace='talks', app_name='talks')),
     (r'^waitlist/', include('waitlist.urls', namespace='waitlist', app_name='waitlist')),
     (r'^barn/', include(admin.site.urls)),
+    (r'^schedule/', include('schedule.urls', namespace='schedule', app_name='schedule')),
 )
 
 urlpatterns += patterns('utils.views',

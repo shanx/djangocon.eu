@@ -32,9 +32,17 @@ class Slot(models.Model):
     def __unicode__(self):
         return '%s/%s: %s' % (self.day, self.starttime, self.talk)
 
+    @property
     def endtime(self):
-        dt = datetime.combine(self.day.date, self.starttime) + timedelta(minutes=self.length)
-        return dt.time()
+        return self.end_as_datetime.time()
+
+    @property
+    def start_as_datetime(self):
+        return datetime.combine(self.day.date, self.starttime)
+
+    @property
+    def end_as_datetime(self):
+        return datetime.combine(self.day.date, self.starttime) + timedelta(minutes=self.length)
 
     class Meta:
         ordering = ('day__date', 'starttime',)
