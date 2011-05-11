@@ -1,3 +1,4 @@
+
 {% extends 'standard_layout.html' %}
 
 {% block subtitle %} &mdash; Schedule{% endblock subtitle %}
@@ -27,8 +28,12 @@
         <tr>
             <th>{{ slot.starttime|time:"H:i" }}&ndash;{{ slot.endtime|time:"H:i" }}</th>
             <td>
+{% if slot.talk.speakers.all.0.name == "break" %}
+                {{ slot.talk.title }}
+{% else %}
                 <a href="{{ slot.talk.get_absolute_url }}">{{ slot.talk.title }}</a>
                 <p class="speakers">{{slot.talk.speakers.all|join:", "}}</p>
+{% endif %}
             </td>
         </tr>
 {% endfor %}
