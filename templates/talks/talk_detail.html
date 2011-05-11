@@ -20,7 +20,7 @@
     <section class="subsection_body">
         <h1>Abstract</h1>
         <p>
-	    {{ talk.abstract|safe }}
+	    {{ talk.abstract|safe|urlize|linebreaks }}
         </p>
     </section>
 
@@ -34,7 +34,7 @@
     <section class="subsection_body">
         <h1>About {{ speaker.name }}</h1>
         <p>
-	    {{ speaker.biography|safe }}
+	    {{ speaker.biography|safe|urlize|linebreaks }}
         </p>
         <table class="speakerlinks">
             {% if speaker.organisation %}
@@ -52,7 +52,7 @@
             {% if speaker.twitter %}
             <tr>
                 <th>Twitter</th>
-                <td><a href="https://twitter.com/{{speaker.twitter}}">{{ speaker.twitter }}</a></td>
+                <td><a href="https://twitter.com/{{speaker.twitter}}">@{{ speaker.twitter }}</a></td>
             </tr>
             {% endif %}
             {% if speaker.linkedin %}
