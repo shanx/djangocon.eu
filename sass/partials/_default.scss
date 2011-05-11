@@ -932,3 +932,25 @@ a#next_hotel, a#prev_hotel {
     }
 }
 
+#about_speaker table {
+    width: 100%;
+    th {
+        @include sans-family;
+        font-weight: $sans-normal;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    td {
+        font-size: 1.25em;
+        padding: 10px;
+    }
+    th,td {
+        border-bottom: 1px solid $tan-color;
+        text-align: center;
+    }
+    tr:last-of-type {
+        th:last-of-type, td:last-of-type {
+            border-bottom: none;
+        }        
+    }
+}

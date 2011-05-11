@@ -36,31 +36,45 @@
         <p>
 	    {{ speaker.biography|safe }}
         </p>
+        <table class="speakerlinks">
+            {% if speaker.organisation %}
+            <tr>
+                <th>Organisation/company</th>
+                <td>{{ speaker.organisation }}</td>
+            </tr>
+            {% endif %}
+            {% if speaker.website %}
+            <tr>
+                <th>Website</th>
+                <td><a href="{{speaker.website}}">{{ speaker.website }}</a></td>
+            </tr>
+            {% endif %}
+            {% if speaker.twitter %}
+            <tr>
+                <th>Twitter</th>
+                <td><a href="https://twitter.com/{{speaker.twitter}}">{{ speaker.twitter }}</a></td>
+            </tr>
+            {% endif %}
+            {% if speaker.linkedin %}
+            <tr>
+                <th>LinkedIn</th>
+                <td><a href="https://www.linkedin.com/in/{{speaker.linkedin}}">{{ speaker.linkedin }}</a></td>
+            </tr>
+            {% endif %}
+            {% if speaker.github %}
+            <tr>
+                <th>Github</th>
+                <td><a href="https://github.com/{{speaker.github}}">{{ speaker.github }}</a></td>
+            </tr>
+            {% endif %}
+            {% if speaker.bitbucket %}
+            <tr>
+                <th>Bitbucket</th>
+                <td><a href="https://bitbucket.org/{{speaker.bitbucket}}">{{ speaker.bitbucket }}</a></td>
+            </tr>
+            {% endif %}
+        </table>
 
-	{% if speaker.organisation %}
-	<h2>Organisation/company</h2>
-	<p>{{ speaker.organisation }}</p>
-	{% endif %}
-	{% if speaker.website %}
-	<h2>Website</h2>
-	<p><a href="{{speaker.website}}">{{ speaker.website }}</a></p>
-	{% endif %}
-	{% if speaker.twitter %}
-	<h2>Twitter</h2>
-	<p><a href="https://twitter.com/{{speaker.twitter}}">{{ speaker.twitter }}</a></p>
-	{% endif %}
-	{% if speaker.linkedin %}
-	<h2>LinkedIn</h2>
-	<p><a href="https://www.linkedin.com/in/{{speaker.linkedin}}">{{ speaker.linkedin }}</a></p>
-	{% endif %}
-	{% if speaker.github %}
-	<h2>Github</h2>
-	<p><a href="https://github.com/{{speaker.github}}">{{ speaker.github }}</a></p>
-	{% endif %}
-	{% if speaker.bitbucket %}
-	<h2>Bitbucket</h2>
-	<p><a href="https://bitbucket.org/{{speaker.bitbucket}}">{{ speaker.bitbucket }}</a></p>
-	{% endif %}
     </section>
 </section>
 {% endfor %}

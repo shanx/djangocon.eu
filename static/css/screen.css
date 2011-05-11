@@ -1280,6 +1280,28 @@ a#next_hotel:active, a#prev_hotel:active {
   letter-spacing: 2px;
 }
 
+#about_speaker table {
+  width: 100%;
+}
+#about_speaker table th {
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
+  font-weight: 300;
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+#about_speaker table td {
+  font-size: 1.25em;
+  padding: 10px;
+}
+#about_speaker table th, #about_speaker table td {
+  border-bottom: 1px solid #dbcbb3;
+  text-align: center;
+}
+#about_speaker table tr:last-of-type th:last-of-type, #about_speaker table tr:last-of-type td:last-of-type {
+  border-bottom: none;
+}
+
 /* Tablet Layout: 768px.
  * Gutters: 24px.
  * Outer margins: 28px.
