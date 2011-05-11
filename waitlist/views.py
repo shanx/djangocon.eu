@@ -2,16 +2,11 @@
 
 from __future__ import absolute_import
 
-from django.shortcuts import get_object_or_404, redirect
-from django.template import RequestContext
+from django.shortcuts import redirect
 from django.views.generic.simple import direct_to_template as render
 from django.views.decorators.cache import cache_page
 
-from speakers.forms import SpeakerForm
-from speakers.models import Speaker
-
 from .forms import WaitListForm
-from .models import WaitList
 
 @cache_page(60*60*6)  # cache page for 6 hours
 def submit(request, template='waitlist/submit.html', extra_context=None):
