@@ -1,0 +1,79 @@
+{% extends "standard_layout.html" %}
+
+{% block subtitle %} &mdash; Sprints{% endblock subtitle %}
+
+{% block extra_content %}id="sprints"{% endblock extra_content %}
+
+{% block content %}
+
+<header>
+    <h1>Sprint registration</h1>
+</header>
+
+<section id="sprint_info" class="subsection">
+    <header>
+        <h1>Please register yourself</h1>
+        <p>
+            Since we do want to make sure we have enough room for
+            everyone.
+        </p>
+    </header>
+
+    <section id="sprint_registration" class="subsection_body">
+        <h1>Register yourself as a sprint participant</h1>
+        <p>
+            So great that you intend to help the Django community with improving
+            the Django framework.
+        </p>
+
+        <h1>Important info</h1>
+        <p>
+            <ul>
+                <li>
+                    Sprints are open to anyone, even if you didn't buy a
+                    conference ticket, you are welcome to join us at 'De Waag'
+                </li>
+                <li>
+                    You can also join us remote for sprinting by joining
+                    #django-sprint on Freenode.
+                </li>
+                <li>
+                    Sprint days are Thursday June 9<sup>th</sup> and Friday
+                    June 10<sup>th</sup>
+                </li>
+                <li>
+                    Read information about Django sprints in general on the
+                    <a href="http://code.djangoproject.com/wiki/Sprints">Django Project website</a>
+                </li>
+            </ul>
+        </p>
+    </section>
+</section>
+
+<section id="participant_form" class="subsection">
+    <header>
+        <h1>Registration form</h1>
+        <p>Please subscribe yourself here if you want to join the sprints at 'De Waag'</p>
+    </header>
+    <form action="#participant_form" class="subsection_body" method="POST" accept-charset="utf-8" id="form-participant-submit">
+        <h1>Your Details</h1>
+        {% for field in participant_form %}
+        <div class="formrow {% if field.errors %}error{% endif %}">
+            {% if field.field.required %}
+            <div class="required">{{ field.label_tag }} <em>required</em></div>
+            {% else %}
+                {{ field.label_tag }}
+            {% endif %}
+            {{ field.errors }}
+            {% if field.help_text %}
+            <p class="help">{{ field.help_text }}</p>
+            {% endif %}
+            {{ field }}
+        </div>
+        {% endfor %}
+
+        <button type="submit">Let me join the sprints!</button>
+    </form>
+</section>
+
+{% endblock content %}

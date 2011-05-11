@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     (r'^hotels/', include('accommodation.urls', namespace='accommodation', app_name='accommodation')),
     (r'^talks/', include('talks.urls', namespace='talks', app_name='talks')),
     (r'^waitlist/', include('waitlist.urls', namespace='waitlist', app_name='waitlist')),
+    (r'^sprints/', include('sprints.urls', namespace='sprints', app_name='sprints')),
     (r'^barn/', include(admin.site.urls)),
     (r'^schedule/', include('schedule.urls', namespace='schedule', app_name='schedule')),
 )
