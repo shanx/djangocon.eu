@@ -41,19 +41,6 @@
             line-height: 48px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            &.right {
-                float: right;
-            }
-            #nav_home {
-                font-weight: $sans-bold;
-            }
-            #twitter {
-                width: 30px;
-                text-indent: -9999px;
-                background-image: url(../img/twitter.png);
-                background-position: center;
-                background-repeat: no-repeat;
-            }
             a {
                 display: block;
                 height: 48px;
@@ -67,6 +54,41 @@
                     background: black;
                     background: rgba(0,0,0,0.65);
                 }
+            }
+            a.forum {
+                display: block;
+                height: 12px;
+                margin: 0;
+                padding: 36px 10px 0;
+                font-size: 8px;
+                line-height: 1.0em;
+                text-align: center;
+                @include sans-family;
+                text-transform: uppercase;
+                background-position: center 9px;
+                background-repeat: no-repeat;
+                @include transition-timing-function(linear);
+                @include transition-duration(150ms);
+                color: transparentize($cream-color, 1.0);
+                &:hover {
+                    color: white;
+                    background: black;
+                    background-position: center 6px;
+                    background-repeat: no-repeat;
+                }
+                &#twitter {
+                    background-image: url(../img/twitter.png);
+                }
+                &#convore {
+                    background-image: url(../img/convore.png);
+                }
+            }
+
+            &.right {
+                float: right;
+            }
+            #nav_home {
+                font-weight: $sans-bold;
             }
         }
     }

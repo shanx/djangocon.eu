@@ -190,19 +190,6 @@ button:disabled:active, button:disabled:hover {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-#main_nav ul li.right {
-  float: right;
-}
-#main_nav ul li #nav_home {
-  font-weight: 700;
-}
-#main_nav ul li #twitter {
-  width: 30px;
-  text-indent: -9999px;
-  background-image: url(../img/twitter.png);
-  background-position: center;
-  background-repeat: no-repeat;
-}
 #main_nav ul li a {
   display: block;
   height: 48px;
@@ -227,6 +214,47 @@ button:disabled:active, button:disabled:hover {
   color: white;
   background: black;
   background: rgba(0, 0, 0, 0.65);
+}
+#main_nav ul li a.forum {
+  display: block;
+  height: 12px;
+  margin: 0;
+  padding: 36px 10px 0;
+  font-size: 8px;
+  line-height: 1.0em;
+  text-align: center;
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  background-position: center 9px;
+  background-repeat: no-repeat;
+  -moz-transition-timing-function: linear;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -moz-transition-duration: 150ms;
+  -webkit-transition-duration: 150ms;
+  -o-transition-duration: 150ms;
+  transition-duration: 150ms;
+  color: rgba(245, 230, 210, 0);
+}
+#main_nav ul li a.forum:hover {
+  color: white;
+  background: black;
+  background-position: center 6px;
+  background-repeat: no-repeat;
+}
+#main_nav ul li a.forum#twitter {
+  background-image: url(../img/twitter.png);
+}
+#main_nav ul li a.forum#convore {
+  background-image: url(../img/convore.png);
+}
+#main_nav ul li.right {
+  float: right;
+}
+#main_nav ul li #nav_home {
+  font-weight: 700;
 }
 
 #masthead {
