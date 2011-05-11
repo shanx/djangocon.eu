@@ -12,35 +12,31 @@
 
 <section id="ticket_info" class="subsection">
     <header>
-        <h1>Sold out</h1>
+        <h1>No tickets, no glory</h1>
         <p>
-            If you don't have a ticket yet, read on to see what you can do
-            about it.
+            DjangoCon is sold out and the waiting list is closed.
         </p>
     </header>
 
     <section id="ticket_rates" class="subsection_body">
-        <h1>Waiting list</h1>
+        <h1>Conference sold out, waiting list closed</h1>
         <p>
-            As of this moment DjangoCon Europe 2011 is sold out. You can
-            subscribe yourself to the waiting list by using the form down below.
+            As of this moment DjangoCon Europe 2011 is sold out and we have
+            closed the waiting list. If you where not able to buy a ticket
+            yet or put yourself on the waiting list, you'll have to follow
+            DjangoCon comfortably from your chair using our live video stream.
         </p>
 
-        <h2>Policy</h2>
+        <h1>You are on the waiting list, now what?</h1>
         <p>
-            Our waiting list policy is as follows:
-            <ul>
-                <li>
-                    If tickets become available we will notify those who
-                    have subscribed to the waiting list
-                </li>
-                <li>
-                    Those tickets will be made available through the ticket shop.
-                </li>
-                <li>
-                    Tickets will be sold on a first come, first serve basis.
-                </li>
-            </ul>
+            Starting May 18<sup>th</sup> we will start inviting people who have
+            subscribed to the waiting list. People who put themselves on the
+            waiting list first will be invited first to buy their ticket. From
+            then on it is first-come, first-served.
+        </p>
+        <p>
+            Tickets are sold at the regular rate. The night owl rate has been
+            scratched entirely.
         </p>
 
         <h2>Ticket rates</h2>
@@ -70,30 +66,30 @@
     </section>
 </section>
 
-<section id="talk_form" class="subsection">
-    <header>
-        <h1>Waiting list</h1>
-        <p>Please subscribe yourself here if you want to be notified when extra tickets become available</p>
-    </header>
-    <form action="#waitlist_form" class="subsection_body" method="POST" accept-charset="utf-8" id="form-waitlist-submit">
-        <h1>Your Details</h1>
-        {% for field in waitlist_form %}
-        <div class="formrow {% if field.errors %}error{% endif %}">
-            {% if field.field.required %}
-            <div class="required">{{ field.label_tag }} <em>required</em></div>
-            {% else %}
-                {{ field.label_tag }}
-            {% endif %}
-            {{ field.errors }}
-            {% if field.help_text %}
-            <p class="help">{{ field.help_text }}</p>
-            {% endif %}
-            {{ field }}
-        </div>
-        {% endfor %}
-
-        <button type="submit">OK, Put me on the waiting list!</button>
-    </form>
-</section>
+{# <section id="talk_form" class="subsection"> #}
+{#     <header> #}
+{#         <h1>Waiting list</h1> #}
+{#         <p>Please subscribe yourself here if you want to be notified when extra tickets become available</p> #}
+{#     </header> #}
+{#     <form action="#waitlist_form" class="subsection_body" method="POST" accept-charset="utf-8" id="form-waitlist-submit"> #}
+{#         <h1>Your Details</h1> #}
+{#         {% for field in waitlist_form %} #}
+{#         <div class="formrow {% if field.errors %}error{% endif %}"> #}
+{#             {% if field.field.required %} #}
+{#             <div class="required">{{ field.label_tag }} <em>required</em></div> #}
+{#             {% else %} #}
+{#                 {{ field.label_tag }} #}
+{#             {% endif %} #}
+{#             {{ field.errors }} #}
+{#             {% if field.help_text %} #}
+{#             <p class="help">{{ field.help_text }}</p> #}
+{#             {% endif %} #}
+{#             {{ field }} #}
+{#         </div> #}
+{#         {% endfor %} #}
+{#  #}
+{#         <button type="submit">OK, Put me on the waiting list!</button> #}
+{#     </form> #}
+{# </section> #}
 
 {% endblock content %}
