@@ -22,3 +22,10 @@ urlpatterns = patterns('',
 urlpatterns += patterns('utils.views',
     url(r'^flush_cache/$', 'flush_cache', name='flush_cache'),
 )
+
+if settings.DEBUG:
+    urlpatterns += patterns('',
+        url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+            'document_root': settings.MEDIA_ROOT,
+        }),
+   )
