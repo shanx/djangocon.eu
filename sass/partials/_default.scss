@@ -240,11 +240,10 @@
         @include sans-family;
         font-weight: $sans-normal;
         font-size: 18px;
-
         margin: 0;
-        padding: 0;
+        padding: 10px 0 0 0;
         text-transform: uppercase;
-        color: $cream-color;
+        color: black;
         letter-spacing: 1px;
         height: 24px;
         line-height: 24px;
@@ -255,6 +254,27 @@
         height: 150px;
         width: 100%;
     }
+    .row {
+        height: 150px;
+        width: 100%;
+    }
+    a {
+        display: block;
+        border: none;
+        height: 150px;
+        margin-right: 24px;
+        float: left;
+        &.large_sponsor {
+            width: 436px;
+        }
+        &.small_sponsor {
+            width: 160px;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
 
 }
 

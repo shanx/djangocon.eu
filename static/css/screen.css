@@ -439,9 +439,9 @@ button:disabled:active, button:disabled:hover {
   font-weight: 300;
   font-size: 18px;
   margin: 0;
-  padding: 0;
+  padding: 10px 0 0 0;
   text-transform: uppercase;
-  color: #f5e6d2;
+  color: black;
   letter-spacing: 1px;
   height: 24px;
   line-height: 24px;
@@ -451,6 +451,26 @@ button:disabled:active, button:disabled:hover {
   overflow: hidden;
   height: 150px;
   width: 100%;
+}
+#sponsors .row {
+  height: 150px;
+  width: 100%;
+}
+#sponsors a {
+  display: block;
+  border: none;
+  height: 150px;
+  margin-right: 24px;
+  float: left;
+}
+#sponsors a.large_sponsor {
+  width: 436px;
+}
+#sponsors a.small_sponsor {
+  width: 160px;
+}
+#sponsors a:last-child {
+  margin-right: 0;
 }
 
 .content {

@@ -1,9 +1,19 @@
 {% extends "base.html" %}
 
+{% block extra_js %}
+    <script src="{{ STATIC_URL }}js/jquery.cycle.all.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#cycle").cycle({
+                fx: 'scrollUp' 
+            });
+        });
+    </script>
+{% endblock extra_js %}
+
+
 {% block body %}
-
 {% include "snippets/navigation.html" %}
-
 <header id="masthead">
     <h1>DjangoCon Europe 2011</h1>
     <h2>Amsterdam 2011</h2>
@@ -21,7 +31,7 @@
 </header>
 <section id="sponsors">
     <h1>This conference is made possible by&hellip;</h1>
-    <div class="cycle">
+    <div id="cycle">
         {% for s in sponsors_large %}
             {% if not forloop.counter|divisibleby:"2" %}
             <div class="row">
@@ -32,7 +42,7 @@
             {% endif %}
         {% endfor %}
         {% for s in sponsors_small %}
-            {% if not forloop.counter|divisibleby:"5"%}
+            {% if forloop.counter0|divisibleby:"5" %}
             <div class="row">
             {% endif %}
             <a href="{{ s.url }}" class="small_sponsor"><img src="{{ s.image.url }}" width="160" height="150"></a>
