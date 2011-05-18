@@ -16,3 +16,6 @@ class Sponsor(models.Model):
     image = ImageField(upload_to='sponsors')
     about = models.TextField(blank=True, null=True)
 
+    def __unicode__(self):
+        return self.name
+
