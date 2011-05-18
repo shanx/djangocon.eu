@@ -185,7 +185,7 @@ button:disabled:active, button:disabled:hover {
   font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
   font-weight: 300;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 48px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -261,7 +261,7 @@ button:disabled:active, button:disabled:hover {
   position: relative;
   width: 896px;
   padding: 72px 48px 84px;
-  margin: 0 auto 20px;
+  margin: 0 auto 5px;
   padding-bottom: 30px;
   padding-top: 16px;
   overflow: hidden;
@@ -424,6 +424,33 @@ button:disabled:active, button:disabled:hover {
   padding-right: 30px;
   border-right: 1px solid rgba(0, 0, 0, 0.3);
   float: left;
+}
+
+#sponsors {
+  width: 896px;
+  padding: 72px 48px 84px;
+  margin: 0 auto;
+  padding: 0 0 15px 0;
+  background: transparent url(../img/masthead_bg.png) center bottom no-repeat;
+}
+#sponsors > h1 {
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
+  font-weight: 300;
+  font-weight: 300;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  color: #f5e6d2;
+  letter-spacing: 1px;
+  height: 24px;
+  line-height: 24px;
+}
+#sponsors .cycle {
+  display: block;
+  overflow: hidden;
+  height: 150px;
+  width: 100%;
 }
 
 .content {

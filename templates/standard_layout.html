@@ -19,6 +19,29 @@
     </div>
     <h4>Join us in Amsterdam for a week of advanced Django talks, sprints, and play with Djangonauts from Europe and around the globe.</h4>
 </header>
+<section id="sponsors">
+    <h1>This conference is made possible by&hellip;</h1>
+    <div class="cycle">
+        {% for s in sponsors_large %}
+            {% if not forloop.counter|divisibleby:"2" %}
+            <div class="row">
+            {% endif %}
+            <a href="{{ s.url }}" class="large_sponsor"><img src="{{ s.image.url }}" width="436" height="150"></a>
+            {% if forloop.counter|divisibleby:"2" or forloop.last %}
+            </div>
+            {% endif %}
+        {% endfor %}
+        {% for s in sponsors_small %}
+            {% if not forloop.counter|divisibleby:"5"%}
+            <div class="row">
+            {% endif %}
+            <a href="{{ s.url }}" class="small_sponsor"><img src="{{ s.image.url }}" width="160" height="150"></a>
+            {% if forloop.counter|divisibleby:"5" or forloop.last %}
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
 <section class="content" {% block extra_content %}{% endblock extra_content %}>
 {% block content %}{% endblock content %}
 </section>
