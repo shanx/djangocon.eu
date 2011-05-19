@@ -1,7 +1,7 @@
 import tempfile
 from fabric.api import local, env
 
-APPS_TO_SYNC = ('accommodation', 'blog', 'schedule', 'speakers', 'talks', 'waitlist')
+APPS_TO_SYNC = ('accommodation', 'blog', 'schedule', 'speakers', 'talks', 'waitlist', 'sponsors')
 
 def production():
     env['epioapp'] = 'djangocon-eu-2011'
