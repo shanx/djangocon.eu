@@ -430,7 +430,8 @@ button:disabled:active, button:disabled:hover {
   width: 896px;
   padding: 72px 48px 84px;
   margin: 0 auto;
-  padding: 0 0 15px 0;
+  padding-top: 0;
+  padding-bottom: 15px;
   background: transparent url(../img/masthead_bg.png) center bottom no-repeat;
 }
 #sponsors > h1 {
@@ -449,28 +450,49 @@ button:disabled:active, button:disabled:hover {
 #sponsors .cycle {
   display: block;
   overflow: hidden;
-  height: 150px;
+  height: 170px;
   width: 100%;
 }
 #sponsors .row {
-  height: 150px;
+  height: 170px;
   width: 100%;
+}
+#sponsors .sponsor {
+  display: block;
+  height: 170px;
+  float: left;
+  margin-right: 24px;
+}
+#sponsors .sponsor.kryptonite, #sponsors .sponsor.diamond {
+  width: 436px;
+}
+#sponsors .sponsor.platinum, #sponsors .sponsor.gold, #sponsors .sponsor.producer {
+  width: 160px;
+}
+#sponsors .sponsor.last {
+  margin-right: 0;
 }
 #sponsors a {
   display: block;
   border: none;
   height: 150px;
-  margin-right: 24px;
-  float: left;
+  width: 100%;
 }
-#sponsors a.large_sponsor {
-  width: 436px;
-}
-#sponsors a.small_sponsor {
-  width: 160px;
-}
-#sponsors a:last-child {
-  margin-right: 0;
+#sponsors p {
+  font-family: "ronnia-condensed-1","ronnia-condensed-2", "Arial Narrow", sans-serif;
+  font-weight: 300;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  height: 18px;
+  line-height: 20px;
+  width: auto;
+  margin: 0px auto;
+  font-size: 12px;
+  text-align: center;
+  color: #f5e6d2;
+  border-top: 1px dotted #7e0008;
+  padding-top: 1px;
 }
 
 .content {
