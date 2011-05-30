@@ -7,36 +7,38 @@
 {% block content %}
 
 <header>
-    <h1>Sprint registration</h1>
+    <h1>Sprint registration is closed</h1>
 </header>
 
 <section id="sprint_info" class="subsection">
     <header>
-        <h1>Please register yourself</h1>
+        <h1>We have no more room</h1>
         <p>
-            Since we do want to make sure we have enough room for
-            everyone.
+            If you wish to join please do so through IRC.
         </p>
     </header>
 
     <section id="sprint_registration" class="subsection_body">
-        <h1>Register yourself as a sprint participant</h1>
+        <h1>We have reached our limit for the sprint venue</h1>
         <p>
-            So great that you intend to help the Django community with improving
-            the Django framework. Please read the important info below and subscribe
-            yourself as a Sprint participant.
+            We calculated a max. of 50% of conference participants to join in
+            for the sprints. Historically around 25% of conference
+            participants would join. It is great to see that this many
+            sprinters will show up to help out! But unfortunately we cannot
+            allow for more sprinters to participate due to safety regulations.
         </p>
 
         <h1>Important info</h1>
         <p>
             <ul>
                 <li>
-                    Sprints are open to anyone, even if you didn't buy a
-                    conference ticket, you are welcome to join us at 'De Waag'
+                    Sprints are open to those that have subscribed as a sprint
+                    participant. If you didn't subscribe to this list, please
+                    join us via IRC in #django-sprint on Freenode.
                 </li>
                 <li>
-                    You can also join us remote for sprinting by joining
-                    #django-sprint on Freenode.
+                    Sprint location is 'De Waag', for more info read the
+                    <a href="/venues/">Venues page</a>.
                 </li>
                 <li>
                     Sprint days are Thursday June 9<sup>th</sup> and Friday
@@ -51,30 +53,30 @@
     </section>
 </section>
 
-<section id="participant_form" class="subsection">
-    <header>
-        <h1>Registration form</h1>
-        <p>Please subscribe yourself here if you want to join the sprints at 'De Waag'</p>
-    </header>
-    <form action="#participant_form" class="subsection_body" method="POST" accept-charset="utf-8" id="form-participant-submit">
-        <h1>Your Details</h1>
-        {% for field in participant_form %}
-        <div class="formrow {% if field.errors %}error{% endif %}">
-            {% if field.field.required %}
-            <div class="required">{{ field.label_tag }} <em>required</em></div>
-            {% else %}
-                {{ field.label_tag }}
-            {% endif %}
-            {{ field.errors }}
-            {% if field.help_text %}
-            <p class="help">{{ field.help_text }}</p>
-            {% endif %}
-            {{ field }}
-        </div>
-        {% endfor %}
-
-        <button type="submit">Let me join the sprints!</button>
-    </form>
-</section>
+{# <section id="participant_form" class="subsection"> #}
+{#     <header> #}
+{#         <h1>Registration form</h1> #}
+{#         <p>Please subscribe yourself here if you want to join the sprints at 'De Waag'</p> #}
+{#     </header> #}
+{#     <form action="#participant_form" class="subsection_body" method="POST" accept-charset="utf-8" id="form-participant-submit"> #}
+{#         <h1>Your Details</h1> #}
+{#         {% for field in participant_form %} #}
+{#         <div class="formrow {% if field.errors %}error{% endif %}"> #}
+{#             {% if field.field.required %} #}
+{#             <div class="required">{{ field.label_tag }} <em>required</em></div> #}
+{#             {% else %} #}
+{#                 {{ field.label_tag }} #}
+{#             {% endif %} #}
+{#             {{ field.errors }} #}
+{#             {% if field.help_text %} #}
+{#             <p class="help">{{ field.help_text }}</p> #}
+{#             {% endif %} #}
+{#             {{ field }} #}
+{#         </div> #}
+{#         {% endfor %} #}
+{#  #}
+{#         <button type="submit">Let me join the sprints!</button> #}
+{#     </form> #}
+{# </section> #}
 
 {% endblock content %}
