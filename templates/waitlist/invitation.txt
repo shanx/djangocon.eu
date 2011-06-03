@@ -1,0 +1,29 @@
+---------------------------
+Email: {{ waitlist.email }}
+Subject: DjangoCon waitlist - invitation to buy ticket
+
+
+
+
+Hi {{ waitlist.name }},
+
+You have subscribed yourself to the DjangoCon Europe 2011 ticket waiting list and we would hereby like to invite you to buy your ticket. Please buy your ticket ASAP.
+
+Tickets can be bought here: https://v1.paylogic.nl/frontoffice/?command=paymentMenu&merchantModuleID=49332&language=en
+
+Tickets assigned to you are:
+{% if waitlist.ticket_type == 'corporate' %} - {{ waitlist.nr_tickets }}x corporate regular rate € 599,-{% endif %}
+{% if waitlist.ticket_type == 'individual' %} - {{ waitlist.nr_tickets }}x individual regular rate € 399,-{% endif %}
+{% if waitlist.ticket_type == 'student' %} - {{ waitlist.nr_tickets }}x student regular rate € 199,-{% endif %}
+
+Please note:
+- This link is private, please don't share it with anyone
+- Please only buy the ticket assigned to you, since other people on the waiting list need to buy their tickets too. If you buy tickets other than those assigned, we will have to cancel them, unfortunately.
+
+Regards,
+The DjangoCon Europe 2011 team
+
+
+
+
+
