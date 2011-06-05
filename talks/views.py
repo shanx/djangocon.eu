@@ -6,7 +6,7 @@ from django.shortcuts import get_object_or_404, redirect
 from django.template import RequestContext
 from django.views.generic.simple import direct_to_template as render
 from django.views.generic import list_detail
-from django.views.decorators.cache import cache_page
+from django.views.decorators.cache import cache_page, never_cache
 
 from speakers.forms import SpeakerForm
 from speakers.models import Speaker
@@ -43,7 +43,8 @@ def thankyou(request, template='talks/thankyou.html', extra_context=None):
     ctx = extra_context and extra_context.copy() or {}
     return render(request, template, ctx)
 
-@cache_page(60*60*6)  # cache page for 6 hours
+# NOTE: better would be to cache_page and purge specific key after post/save
+@never_cache
 def lightningtalk_submit(request, template='talks/lightningtalk_submit.html', extra_context=None):
     context = extra_context and extra_context.copy() or {}
     if request.method == 'POST':
@@ -54,9 +55,12 @@ def lightningtalk_submit(request, template='talks/lightningtalk_submit.html', ex
     else:
         lightningtalk_form = LightningTalkForm()
 
+    lightningtalks = LightningTalk.objects.all().order_by('id')
     context.update({
         'lightningtalk_form': lightningtalk_form,
+        'lightningtalks': lightningtalks,
     })
+
     return render(request, template, context)
 
 @cache_page(60*60*6)  # cache page for 6 hours

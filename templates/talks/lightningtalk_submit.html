@@ -10,6 +10,27 @@
     <h1>Lightning Talk Submission</h1>
 </header>
 
+<section id="talks" class="subsection">
+    <header>
+        <h1>Submitted lightning talk proposals</h1>
+        <p>
+            These proposals where already submitted by your co-DjangoCon
+            conspirators. Submit a lightning talk yourself <a href="#talk_form">downbelow</a>
+        </p>
+    </header>
+    <section class="subsection_body">
+        <h1>List of received lightning talks</h1>
+        <p>
+            <ol>
+                {% for lt in lightningtalks %}
+                <li>{{ lt.talk_title }} - {{ lt.speaker_name }}</li>
+                {% endfor %}
+            </ol>
+        </p>
+    </section>
+</section>
+
+
 <section id="talk_form" class="subsection">
     <header>
         <h1>Propose a Lightning Talk</h1>
@@ -18,42 +39,41 @@
             If you missed the boat, we would love to see you do a lightning talk.
         </p>
     </header>
-    <form action="#lightningtalk_form" class="subsection_body" method="POST" accept-charset="utf-8" id="form-lightningtalk-submit">
-        <h1>Lightning Talk Proposal</h1>
-        <p>
-            Lightning talks are:
-            <ul>
-                <li>Strict 5 minute presentations</li>
-                <li>Given at the end of the day</li>
-                <li>Presentations that don't necessarily fit in the main schedule</li>
-            </ul>
-        </p>
-        <p>
-            If you submit a lightning talk you will be invited by the lightning talk host of the day
-            to do a presentation. People will be invited based on the order of who submitted
-            first.
-        </p>
 
-        {% for field in lightningtalk_form %}
-        <div class="formrow {% if field.errors %}error{% endif %}">
-            {% if field.field.required %}
-            <div class="required">{{ field.label_tag }} <em>required</em></div>
-            {% else %}
-                {{ field.label_tag }}
-            {% endif %}
-            {{ field.errors }}
-            {% if field.help_text %}
-            <p class="help">{{ field.help_text }}</p>
-            {% endif %}
-            {{ field }}
-        </div>
-        {% endfor %}
-        <button type="submit">OK, Submit this lightning talk!</button>
-    </form>
+    <section class="subsection_body">
+        <form action="#lightningtalk_form" method="POST" accept-charset="utf-8" id="form-lightningtalk-submit">
+            <h1>Lightning Talk Proposal</h1>
+            <p>
+                Lightning talks are:
+                <ul>
+                    <li>Strict 5 minute presentations</li>
+                    <li>Given at the end of the day</li>
+                    <li>Presentations that don't necessarily fit in the main schedule</li>
+                </ul>
+            </p>
+            <p>
+                If you submit a lightning talk you will be invited by the lightning talk host of the day
+                to do a presentation. People will be invited based on the order of who submitted
+                first. Lightning talks will take place on Monday and Tuesday.
+            </p>
 
+            {% for field in lightningtalk_form %}
+            <div class="formrow {% if field.errors %}error{% endif %}">
+                {% if field.field.required %}
+                <div class="required">{{ field.label_tag }} <em>required</em></div>
+                {% else %}
+                    {{ field.label_tag }}
+                {% endif %}
+                {{ field.errors }}
+                {% if field.help_text %}
+                <p class="help">{{ field.help_text }}</p>
+                {% endif %}
+                {{ field }}
+            </div>
+            {% endfor %}
+            <button type="submit">OK, Submit this lightning talk!</button>
+        </form>
+    </section>
 </section>
-            {% if message %}
-            <p id="talks_message">{{ message }}</p>
-            {% endif %}
 
 {% endblock content %}
