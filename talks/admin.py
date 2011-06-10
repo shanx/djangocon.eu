@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
-from talks.models import Talk, Review, LightningTalk
+from talks.models import Talk, Review, LightningTalk, Slides
 
 class ReviewInline(admin.TabularInline):
     model = Review
@@ -32,3 +32,4 @@ class LightningTalkAdmin(admin.ModelAdmin):
 
 admin.site.register(Talk, TalkAdmin)
 admin.site.register(LightningTalk, LightningTalkAdmin)
+admin.site.register(Slides)

@@ -22,6 +22,16 @@
         <p>
 	    {{ talk.abstract|safe|urlize|linebreaks }}
         </p>
+	{% for slides in talk.slides.all %}
+	<p>
+	  <a href="{{ slides.file.url }}">Slides<a>
+	</p>
+	{% endfor %}
+	{% if talk.video %}
+	<p>
+	  <a href="{{talk.video }}">Video</a>
+	</p>
+	{% endif %}
     </section>
 
 </section>

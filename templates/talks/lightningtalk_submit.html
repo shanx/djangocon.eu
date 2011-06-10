@@ -23,7 +23,11 @@
         <p>
             <ol>
                 {% for lt in lightningtalks %}
-                <li>{{ lt.talk_title }} - {{ lt.speaker_name }}</li>
+                <li>{{ lt.talk_title }} - {{ lt.speaker_name }}
+		  {% if lt.slides %}
+		  - <a href="{{ lt.slides.file.url }}">slides</a>
+		  {% endif %}
+		</li>
                 {% endfor %}
             </ol>
         </p>

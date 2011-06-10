@@ -12,6 +12,15 @@ class PublicManager(models.Manager):
     def accepted(self):
         return self.get_query_set().filter(accepted=True)
 
+class Slides(models.Model):
+    file = models.FileField(_('file'), upload_to='slides')
+
+    def __unicode__(self):
+        return '%s' % self.file.name
+
+    class Meta:
+        verbose_name_plural = "Slides"
+
 class Talk(models.Model):
     LEVEL_CHOICES = (
         ('intermediate', 'Intermediate'),
@@ -37,6 +46,9 @@ class Talk(models.Model):
     accepted = models.BooleanField(_('accepted'))
     scheduled = models.BooleanField(_('scheduled'))
     verified = models.BooleanField(_('verified'))
+
+    slides = models.ManyToManyField(Slides)
+    video = models.URLField(blank=True)
 
     objects = PublicManager()
 
@@ -80,6 +92,7 @@ class LightningTalk(models.Model):
     talk_title = models.CharField(_('talk title'), max_length=255)
     speaker_name = models.CharField(_('speaker name'), max_length=255)
     speaker_email = models.EmailField(_('speaker email address'))
+    slides = models.ForeignKey(Slides, null=True, blank=True, verbose_name=_('slides'))
 
     def __unicode__(self):
         return '%s' % self.talk_title
