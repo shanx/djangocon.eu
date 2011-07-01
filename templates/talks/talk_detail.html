@@ -22,18 +22,27 @@
         <p>
 	    {{ talk.abstract|safe|urlize|linebreaks }}
         </p>
-	{% for slides in talk.slides.all %}
-	<p>
-	  <a href="{{ slides.file.url }}">Slides<a>
-	</p>
-	{% endfor %}
-	{% if talk.video %}
-	<p>
-	  <a href="{{talk.video }}">Video</a>
-	</p>
-	{% endif %}
     </section>
 
+</section>
+
+<section id="talkvideo" class="subsection">
+    <header>
+        <p>&nbsp;</p>
+    </header>
+    <section class="subsection_body">
+        <h1>Talk</h1>
+
+        {% if talk.video %}
+        <embed src="{{ talk.video }}" type="application/x-shockwave-flash" width="590" height="418" wmode="transparent" allowscriptaccess="always" allowfullscreen="true" ></embed>
+        {% endif %}
+
+        {% for slides in talk.slides.all %}
+        <p>
+            <a href="{{ slides.file.url }}">Download slides<a>
+        </p>
+        {% endfor %}
+    </section>
 </section>
 
 {% for speaker in talk.speakers.all %}
