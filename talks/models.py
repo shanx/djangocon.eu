@@ -47,7 +47,7 @@ class Talk(models.Model):
     scheduled = models.BooleanField(_('scheduled'))
     verified = models.BooleanField(_('verified'))
 
-    slides = models.ManyToManyField(Slides)
+    slides = models.ManyToManyField(Slides, blank=True)
     video = models.URLField(blank=True)
 
     objects = PublicManager()
