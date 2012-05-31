@@ -1,0 +1,1 @@
+web: gunicorn -b 0.0.0.0:$PORT -k gevent djangocon.deploy.wsgi_heroku:application
