@@ -1,1 +1,1 @@
-web: gunicorn wsgi_heroku:application
+web: gunicorn -b 0.0.0.0 wsgi_heroku:application
