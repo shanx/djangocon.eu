@@ -11,7 +11,7 @@ DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 redis_url = urlparse.urlparse(os.environ.get('REDISCLOUD_URL', 'redis://redis:@localhost:6379'))
 
-CACHE_BACKEND = 'redis_cache.cache://{0}:{1}?password={2}'.format(
+CACHE_BACKEND = 'redis_cache.cache://{0}:{1}?password={2}&db=0'.format(
     redis_url.hostname,
     redis_url.port,
     redis_url.password)
