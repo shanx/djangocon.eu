@@ -6,6 +6,9 @@ import dj_database_url
 
 from .base import *
 
+INSTALLED_APPS += (
+    'storages',
+)
 
 DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
