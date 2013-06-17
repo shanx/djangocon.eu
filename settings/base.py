@@ -1,4 +1,6 @@
+from os import environ
 from unipath import FSPath as Path
+
 
 PROJECT_DIR = Path(__file__).absolute().ancestor(2)
 
@@ -6,7 +8,7 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Remco Wendt', 'chairman@djangocon.eu'),
+    ('Remco Wendt', 'voorzitter@djangovereniging.nl'),
     ('Idan Gazit', 'idan@gazit.me'),
 )
 MANAGERS = ADMINS
@@ -16,7 +18,7 @@ LANGUAGE_CODE = 'en-us'
 SITE_ID = 1
 USE_I18N = False
 
-SECRET_KEY = 'g67hv!)_@y%z0n=qpz5x*9xpf@xdqh%%$+s^02s18px0^j7903'
+SECRET_KEY = environ.get('DJANGO_SECRET_KEY')
 
 CACHE_BACKEND = 'redis_cache.cache://127.0.0.1:6379'
 CACHE_MIDDLEWARE_SECONDS = 60 * 60 * 6 # cache for 6 hrs

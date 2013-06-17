@@ -11,13 +11,13 @@ django-taggit
 redis
 django-redis-cache
 sorl-thumbnail
-epio
 django-fixture-generator==0.2.0
 django-model-utils
 python-dateutil>=1.0,<2.0
 vobject
 fabric
-gevent==0.13.7
 gunicorn==0.14.3
 dj-database-url==0.2.0
 psycopg2==2.4.5
+boto==2.9.0
+django-storages==1.1.8
