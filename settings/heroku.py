@@ -6,6 +6,7 @@ import dj_database_url
 
 from .base import *
 
+DEBUG = int(environ.get('DJANGO_DEBUG', 0)) == 1
 DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 redis_url = urlparse.urlparse(os.environ.get('REDISCLOUD_URL', 'redis://redis:@localhost:6379'))
