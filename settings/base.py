@@ -71,6 +71,8 @@ INSTALLED_APPS = (
     'staticfiles',
     'south',
     'sorl.thumbnail',
+    'gunicorn',
+    'storages',
 
     'core',
     'blog',

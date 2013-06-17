@@ -16,6 +16,7 @@ django-model-utils
 python-dateutil>=1.0,<2.0
 vobject
 fabric
+gevent==0.13.7
 gunicorn==0.14.3
 dj-database-url==0.2.0
 psycopg2==2.4.5

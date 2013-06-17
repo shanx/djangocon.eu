@@ -6,13 +6,9 @@ import dj_database_url
 
 from .base import *
 
-INSTALLED_APPS += (
-    'storages',
-)
-
 DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
-redis_url = urlparse.urlparse(os.environ.get('REDISCLOUD_URL'))
+redis_url = urlparse.urlparse(os.environ.get('REDISCLOUD_URL', 'redis://redis:@localhost:6379'))
 
 CACHE_BACKEND = 'redis_cache.cache://{0}:{1}?password={2}'.format(
     redis_url.hostname,
