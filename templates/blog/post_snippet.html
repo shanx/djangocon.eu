@@ -7,7 +7,7 @@
         {% endif %}
     </header>
     <aside>
-        <time pubdate="true" datetime="{{post.publish_date|date:'c'}}">{{ post.publish_date|date:'M j' }}<sup>{{ post.publish_date|date:'S' }}</sup></time>
+        <time pubdate="true" datetime="{{post.publish_date|date:'c'}}">{{ post.publish_date|date:'M j' }}<sup>{{ post.publish_date|date:'S' }}</sup> {{ post.publish_date|date:'Y' }}</time>
         <p class="author"><em>by</em> {{ post.author.get_full_name }}</p>
     </aside>
     <section class="post_body">
